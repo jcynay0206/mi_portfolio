@@ -4,47 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AzureGold Studio | Elite Web Design & SEO</title>
-    <meta name="description" content="Luxury web design and express redesign for elite brands. Minimalist interfaces and high speed.">
+    <meta name="description" content="Luxury web design and express redesign for elite brands. Specialists in minimalist interfaces and high performance.">
     
     <link rel="alternate" hreflang="es" href="https://jcynay0206.github.io/mi_portfolio/index.html" />
     <link rel="alternate" hreflang="en" href="https://jcynay0206.github.io/mi_portfolio/index-en.html" />
     <link rel="icon" type="image/png" href="favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        :root { --azul-profundo: #0f172a; --dorado: #d4af37; --dorado-oscuro: #b8860b; --blanco: #ffffff; --gris-suave: #94a3b8; }
+        /* --- ELITE COLOR PALETTE --- */
+        :root {
+            --azul-profundo: #0f172a; 
+            --azul-claro: #1e293b;
+            --dorado: #d4af37;        
+            --dorado-oscuro: #b8860b;
+            --blanco: #ffffff;
+            --gris-suave: #94a3b8;
+            --azul-pastel: #f0f9ff;   
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--blanco); color: var(--azul-profundo); line-height: 1.6; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--blanco); 
+            color: var(--azul-profundo); 
+            line-height: 1.6; 
+        }
+
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 8%; background: rgba(255, 255, 255, 0.98); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.5rem; color: var(--azul-profundo); text-decoration: none; }
+
+        /* --- NAVIGATION --- */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1.2rem 8%; 
+            background: rgba(255, 255, 255, 0.98); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid var(--dorado);
+        }
+
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-weight: 700; 
+            font-size: 1.5rem; 
+            color: var(--azul-profundo); 
+            text-decoration: none; 
+        }
+
         .logo span { color: var(--dorado); }
+
         .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--azul-profundo); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover, .lang-active { color: var(--dorado) !important; font-weight: 700; }
-        .hero { height: 100vh; background: radial-gradient(circle at top right, #f0f9ff, #ffffff); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1.5rem; }
-        .hero h1 span { color: var(--dorado); }
-        .btn-gold { background: linear-gradient(45deg, var(--dorado), var(--dorado-oscuro)); color: white; padding: 1.2rem 3.5rem; border: none; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.4s; cursor: pointer; display: inline-block; }
+
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--azul-profundo); 
+            font-weight: 500; 
+            font-size: 0.9rem; 
+            transition: 0.3s; 
+        }
+
+        .nav-links a:hover, .lang-active { 
+            color: var(--dorado) !important; 
+            font-weight: 700; 
+        }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            height: 100vh; 
+            background: radial-gradient(circle at top right, var(--azul-pastel), #ffffff); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            padding: 0 10%; 
+        }
+
+        .hero h1 { 
+            font-size: clamp(2.5rem, 5vw, 4.5rem); 
+            margin-bottom: 1.5rem; 
+            color: var(--azul-profundo);
+        }
+
+        .hero h1 span { 
+            color: var(--dorado); 
+            display: block;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--azul-claro);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-gold { 
+            background: linear-gradient(45deg, var(--dorado), var(--dorado-oscuro)); 
+            color: white; 
+            padding: 1.2rem 3.5rem; 
+            border: none; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            transition: 0.4s; 
+            cursor: pointer; 
+            display: inline-block; 
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5); 
+        }
+
+        /* --- SECTIONS --- */
         section { padding: 100px 10%; }
-        .section-tag { color: var(--dorado); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; display: block; text-align: center; margin-bottom: 1rem; }
-        h2 { font-size: 3rem; text-align: center; margin-bottom: 4rem; }
-        .grid-proceso, .servicios-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
-        .step, .service-card { text-align: center; padding: 2rem; border: 1px solid #f1f5f9; border-radius: 20px; transition: 0.4s; }
-        .service-card:hover { border-color: var(--dorado); transform: translateY(-10px); }
-        .contacto-wrapper { background: var(--azul-profundo); border-radius: 30px; padding: 4rem; color: white; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-        input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; }
-        footer { padding: 3rem 10%; text-align: center; border-top: 1px solid #f1f5f9; color: var(--gris-suave); }
+
+        .section-tag { 
+            color: var(--dorado); 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            display: block; 
+            text-align: center; 
+            margin-bottom: 1rem; 
+        }
+
+        h2 { font-size: 3rem; text-align: center; margin-bottom: 4rem; color: var(--azul-profundo); }
+
+        .grid-proceso { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 3rem; 
+        }
+
+        .step { 
+            text-align: center; 
+            padding: 3rem 2rem; 
+            border: 1px solid #f1f5f9; 
+            border-radius: 20px; 
+            transition: 0.4s; 
+            background: #fff;
+        }
+
+        .step:hover { 
+            border-color: var(--dorado); 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .step h3 { color: var(--dorado); margin-bottom: 1rem; font-size: 1.5rem; }
+
+        /* --- CONTACT --- */
+        .contacto-wrapper { 
+            background: var(--azul-profundo); 
+            border-radius: 30px; 
+            padding: 5rem 4rem; 
+            color: white; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 4rem; 
+            align-items: center;
+        }
+
+        .contacto-wrapper h2 { color: white; text-align: left; margin-bottom: 1rem; }
+
+        input, textarea { 
+            width: 100%; 
+            padding: 1.2rem; 
+            margin-bottom: 1.2rem; 
+            background: rgba(255,255,255,0.08); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            border-radius: 12px; 
+            color: white; 
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--dorado);
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* --- FOOTER --- */
+        footer { 
+            padding: 4rem 10%; 
+            text-align: center; 
+            border-top: 1px solid #f1f5f9; 
+            color: var(--gris-suave); 
+            background: #fff;
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="#" class="logo">Azure<span>Gold</span></a>
         <ul class="nav-links">
             <li><a href="#inicio">Home</a></li>
             <li><a href="#proceso">Methodology</a></li>
-            <li><a href="#servicios">Services</a></li>
             <li><a href="#contacto">Contact</a></li>
             <li><a href="index.html">ES</a> | <a href="index-en.html" class="lang-active">EN</a></li>
         </ul>
@@ -52,35 +220,59 @@
 
     <header id="inicio" class="hero">
         <span class="section-tag" data-aos="fade-up">Boutique Web Design Studio</span>
-        <h1 data-aos="fade-up">The new era of <span>Elite Web Design</span>.</h1>
-        <p data-aos="fade-up">We build powerful digital identities for brands that refuse to be ordinary.</p>
-        <a href="#contacto" class="btn-gold" data-aos="zoom-in">Book a Consultation</a>
+        <h1 data-aos="fade-up">The new era of <span>Elite Web Design</span></h1>
+        <p data-aos="fade-up" data-aos-delay="100">We create powerful digital identities for brands that refuse to settle for ordinary.</p>
+        <a href="#contacto" class="btn-gold" data-aos="zoom-in" data-aos-delay="200">Book a Consultation</a>
     </header>
 
     <section id="proceso">
+        <span class="section-tag" data-aos="fade-up">Our Methodology</span>
         <h2 data-aos="fade-up">The Path to Excellence</h2>
         <div class="grid-proceso">
-            <div class="step" data-aos="fade-up"><h3>01. Strategy</h3><p>We analyze your goals to trace a unique path for your brand.</p></div>
-            <div class="step" data-aos="fade-up" data-aos-delay="100"><h3>02. Elite Design</h3><p>Impactful interfaces that breathe your brand values.</p></div>
-            <div class="step" data-aos="fade-up" data-aos-delay="200"><h3>03. Launch</h3><p>Fast, secure, and SEO-optimized deployment.</p></div>
+            <div class="step" data-aos="fade-up" data-aos-delay="100">
+                <h3>01. Strategy</h3>
+                <p>We analyze your business goals to trace a unique and winning digital roadmap.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+                <h3>02. Elite Design</h3>
+                <p>Impactful and minimalist visual interfaces that breathe your brand's core values.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="300">
+                <h3>03. Launch</h3>
+                <p>High-speed, secure, and fully Google-optimized (SEO) deployment.</p>
+            </div>
         </div>
     </section>
 
     <section id="contacto">
         <div class="contacto-wrapper" data-aos="fade-up">
-            <div><h2>Let's talk</h2><p>I will get back to you in less than 24 hours.</p></div>
+            <div class="contacto-info">
+                <h2>Let's discuss your next project</h2>
+                <p>Transform your digital presence today. I will get back to you within 24 hours.</p>
+                <p style="margin-top: 20px; color: var(--dorado); font-weight: 600;">📍 Global Service</p>
+            </div>
             <form action="https://formspree.io/f/xvzbgbvk" method="POST">
                 <input type="hidden" name="_next" value="https://jcynay0206.github.io/mi_portfolio/success-en.html">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" rows="4" placeholder="Your project..." required></textarea>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Corporate Email" required>
+                <textarea name="message" rows="4" placeholder="Tell me about your vision..." required></textarea>
                 <button type="submit" class="btn-gold" style="width: 100%;">Send Request</button>
             </form>
         </div>
     </section>
 
-    <footer>&copy; 2026 AzureGold Studio. All rights reserved.</footer>
+    <footer>
+        &copy; 2026 AzureGold Studio. All rights reserved. <br>
+        <small>Elite Web Design & Express SEO</small>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        AOS.init({ 
+            duration: 1000, 
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
