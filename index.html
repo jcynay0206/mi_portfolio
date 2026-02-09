@@ -3,281 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AzureGold Studio | Diseño Web Elite & SEO</title>
-    <meta name="description" content="Diseño web de lujo y rediseño express para marcas elite. Especialistas en interfaces minimalistas y alta velocidad.">
+    <title>AzureGold Studio | Arquitectura Digital de Lujo</title>
     
-    <link rel="alternate" hreflang="es" href="https://jcynay0206.github.io/mi_portfolio/index.html" />
-    <link rel="alternate" hreflang="en" href="https://jcynay0206.github.io/mi_portfolio/index-en.html" />
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png?v=1">
+    <link rel="apple-touch-icon" href="favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,900&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* --- PALETA DE COLORES ELITE --- */
-        :root {
-            --azul-profundo: #0f172a; /* Fondo principal oscuro */
-            --azul-claro: #1e293b;
-            --dorado: #d4af37;        /* Dorado AzureGold */
-            --dorado-oscuro: #b8860b;
-            --blanco: #ffffff;
-            --gris-suave: #94a3b8;
-            --azul-pastel: #f0f9ff;   /* Fondo del Hero */
-        }
-
+        :root { --fondo: #0a0a0a; --dorado: #d4af37; --blanco: #ffffff; --text-muted: #888; }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: var(--fondo); color: var(--blanco); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--blanco); 
-            color: var(--azul-profundo); 
-            line-height: 1.6; 
-        }
+        /* NAVEGACIÓN */
+        nav { padding: 2rem 5%; display: flex; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; mix-blend-mode: difference; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.8rem; color: var(--blanco); text-decoration: none; letter-spacing: -1px; }
+        .nav-links { display: flex; list-style: none; gap: 3rem; }
+        .nav-links a { text-decoration: none; color: var(--blanco); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; transition: 0.4s; }
+        .nav-links a:hover { color: var(--dorado); }
 
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        /* HERO */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; position: relative; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 12vw, 10rem); line-height: 0.85; font-style: italic; margin-bottom: 2rem; }
+        .hero h1 span { display: block; color: var(--dorado); -webkit-text-stroke: 1px var(--dorado); -webkit-text-fill-color: transparent; }
+        .hero-sub { max-width: 400px; margin-left: auto; text-align: right; border-right: 3px solid var(--dorado); padding-right: 20px; font-weight: 200; }
 
-        /* --- NAVEGACIÓN --- */
-        nav { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 1.2rem 8%; 
-            background: rgba(255, 255, 255, 0.98); 
-            position: fixed; 
-            width: 100%; 
-            top: 0; 
-            z-index: 1000; 
-            border-bottom: 2px solid var(--dorado); /* Línea dorada distintiva */
-        }
+        /* SOBRE NOSOTROS */
+        .about { padding: 150px 8%; display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: center; }
+        .about-image { width: 100%; height: 600px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80') center/cover; filter: grayscale(100%); transition: 0.6s; border: 1px solid #333; }
+        .about-image:hover { filter: grayscale(0%); border-color: var(--dorado); }
+        .about-content h2 { font-size: 4rem; margin-bottom: 2rem; line-height: 1; font-family: 'Playfair Display', serif; }
+        .about-content p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
 
-        .logo { 
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-            font-weight: 700; 
-            font-size: 1.5rem; 
-            color: var(--azul-profundo); 
-            text-decoration: none; 
-        }
+        /* SERVICIOS */
+        .services { padding: 100px 8%; }
+        .service-item { display: flex; justify-content: space-between; align-items: flex-end; padding: 4rem 0; border-bottom: 1px solid #333; transition: 0.5s; }
+        .service-item:hover { padding-left: 2rem; border-bottom-color: var(--dorado); }
+        .service-item h3 { font-size: 3rem; font-family: 'Playfair Display', serif; }
+        .service-item span { color: var(--dorado); font-family: 'Playfair Display', serif; font-style: italic; }
 
-        .logo span { color: var(--dorado); }
+        /* CONTACTO */
+        .contact { padding: 150px 8%; background: var(--dorado); color: var(--fondo); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact h2 { font-size: 5rem; line-height: 0.9; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
+        input, textarea { width: 100%; background: transparent; border: none; border-bottom: 2px solid var(--fondo); padding: 1.5rem 0; margin-bottom: 1rem; font-size: 1.2rem; color: var(--fondo); outline: none; font-family: 'Inter', sans-serif; }
+        ::placeholder { color: rgba(0,0,0,0.4); }
+        .btn-black { background: var(--fondo); color: var(--blanco); padding: 1.5rem 3rem; border: none; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; cursor: pointer; margin-top: 2rem; transition: 0.3s; }
+        .btn-black:hover { transform: scale(1.05); }
 
-        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        footer { padding: 50px 8%; text-align: center; font-size: 0.7rem; color: #444; letter-spacing: 2px; }
 
-        .nav-links a { 
-            text-decoration: none; 
-            color: var(--azul-profundo); 
-            font-weight: 500; 
-            font-size: 0.9rem; 
-            transition: 0.3s; 
-        }
-
-        .nav-links a:hover, .lang-active { 
-            color: var(--dorado) !important; 
-            font-weight: 700; 
-        }
-
-        /* --- HERO SECTION --- */
-        .hero { 
-            height: 100vh; 
-            background: radial-gradient(circle at top right, var(--azul-pastel), #ffffff); 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            padding: 0 10%; 
-        }
-
-        .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 4.5rem); 
-            margin-bottom: 1.5rem; 
-            color: var(--azul-profundo);
-        }
-
-        .hero h1 span { 
-            color: var(--dorado); 
-            display: block;
-        }
-
-        .hero p {
-            max-width: 600px;
-            color: var(--azul-claro);
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .btn-gold { 
-            background: linear-gradient(45deg, var(--dorado), var(--dorado-oscuro)); 
-            color: white; 
-            padding: 1.2rem 3.5rem; 
-            border: none; 
-            border-radius: 50px; 
-            font-weight: 600; 
-            text-decoration: none; 
-            transition: 0.4s; 
-            cursor: pointer; 
-            display: inline-block; 
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-gold:hover { 
-            transform: translateY(-3px); 
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5); 
-        }
-
-        /* --- SECCIONES --- */
-        section { padding: 100px 10%; }
-
-        .section-tag { 
-            color: var(--dorado); 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            display: block; 
-            text-align: center; 
-            margin-bottom: 1rem; 
-        }
-
-        h2 { font-size: 3rem; text-align: center; margin-bottom: 4rem; color: var(--azul-profundo); }
-
-        .grid-proceso { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 3rem; 
-        }
-
-        .step { 
-            text-align: center; 
-            padding: 3rem 2rem; 
-            border: 1px solid #f1f5f9; 
-            border-radius: 20px; 
-            transition: 0.4s; 
-            background: #fff;
-        }
-
-        .step:hover { 
-            border-color: var(--dorado); 
-            transform: translateY(-10px); 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        .step h3 { color: var(--dorado); margin-bottom: 1rem; font-size: 1.5rem; }
-
-        /* --- CONTACTO --- */
-        .contacto-wrapper { 
-            background: var(--azul-profundo); 
-            border-radius: 30px; 
-            padding: 5rem 4rem; 
-            color: white; 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 4rem; 
-            align-items: center;
-        }
-
-        .contacto-wrapper h2 { color: white; text-align: left; margin-bottom: 1rem; }
-
-        input, textarea { 
-            width: 100%; 
-            padding: 1.2rem; 
-            margin-bottom: 1.2rem; 
-            background: rgba(255,255,255,0.08); 
-            border: 1px solid rgba(255,255,255,0.1); 
-            border-radius: 12px; 
-            color: white; 
-            font-family: 'Inter', sans-serif;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--dorado);
-            background: rgba(255,255,255,0.12);
-        }
-
-        /* --- FOOTER --- */
-        footer { 
-            padding: 4rem 10%; 
-            text-align: center; 
-            border-top: 1px solid #f1f5f9; 
-            color: var(--gris-suave); 
-            background: #fff;
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 60px 5%; }
-            .contacto-wrapper { padding: 3rem 2rem; }
-        }
+        @media (max-width: 768px) { .about, .contact-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 4.5rem; } .about-image { height: 350px; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">Azure<span>Gold</span></a>
+        <a href="#" class="logo">AZURE.GOLD</a>
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proceso">Metodología</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="index.html" class="lang-active">ES</a> | <a href="index-en.html">EN</a></li>
+            <li><a href="#about">Estudio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="index.html" style="color:var(--dorado)">ES</a> | <a href="index-en.html">EN</a></li>
         </ul>
     </nav>
 
-    <header id="inicio" class="hero">
-        <span class="section-tag" data-aos="fade-up">Estudio Boutique de Diseño Web</span>
-        <h1 data-aos="fade-up">La nueva era del <span>Diseño Web de Lujo</span></h1>
-        <p data-aos="fade-up" data-aos-delay="100">Creamos identidades digitales potentes para marcas que no se conforman con lo ordinario.</p>
-        <a href="#contacto" class="btn-gold" data-aos="zoom-in" data-aos-delay="200">Reserva una Consultoría</a>
-    </header>
+    <section class="hero">
+        <h1 data-aos="fade-right">Arquitectura<br><span>Digital</span></h1>
+        <div class="hero-sub" data-aos="fade-left">
+            <p>AzureGold Studio. No diseñamos sitios web, construimos legados digitales para marcas que dominan su industria.</p>
+        </div>
+    </section>
 
-    <section id="proceso">
-        <span class="section-tag" data-aos="fade-up">Nuestra Metodología</span>
-        <h2 data-aos="fade-up">El Camino a la Excelencia</h2>
-        <div class="grid-proceso">
-            <div class="step" data-aos="fade-up" data-aos-delay="100">
-                <h3>01. Estrategia</h3>
-                <p>Analizamos tus objetivos comerciales para trazar una ruta digital única y ganadora.</p>
+    <section id="about" class="about">
+        <div class="about-image" data-aos="zoom-in"></div>
+        <div class="about-content" data-aos="fade-up">
+            <span style="color:var(--dorado); letter-spacing: 5px;">LA VISIÓN</span>
+            <h2 style="margin-top:1rem">Diseño que impone autoridad.</h2>
+            <p>AzureGold nace para erradicar lo genérico. En un mercado saturado de plantillas, nosotros somos el sastre digital de alta costura.</p>
+            <p>Fusionamos una estética cruda y minimalista con una estrategia técnica impecable. Ayudamos a fundadores y marcas de élite a proyectar una imagen que no solo atrae, sino que convierte.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service-item" data-aos="fade-up">
+            <h3>Diseño Web</h3>
+            <span>01 / Sitios de Autor</span>
+        </div>
+        <div class="service-item" data-aos="fade-up">
+            <h3>Identidad de Marca</h3>
+            <span>02 / Poder Visual</span>
+        </div>
+        <div class="service-item" data-aos="fade-up">
+            <h3>SEO de Élite</h3>
+            <span>03 / Dominio Total</span>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-grid">
+            <div data-aos="fade-right">
+                <h2>¿Listos para elevar el nivel?</h2>
+                <p>Tu transformación digital comienza con una conversación privada.</p>
             </div>
-            <div class="step" data-aos="fade-up" data-aos-delay="200">
-                <h3>02. Diseño Elite</h3>
-                <p>Interfaces visuales impactantes y minimalistas que respiran los valores de tu marca.</p>
-            </div>
-            <div class="step" data-aos="fade-up" data-aos-delay="300">
-                <h3>03. Lanzamiento</h3>
-                <p>Un despliegue de alta velocidad, seguro y totalmente optimizado para Google (SEO).</p>
+            <div data-aos="fade-left">
+                <form action="https://formspree.io/f/xvzbgbvk" method="POST">
+                    <input type="hidden" name="_next" value="https://jcynay0206.github.io/mi_portfolio/success.html">
+                    <input type="text" name="name" placeholder="NOMBRE COMPLETO" required>
+                    <input type="email" name="email" placeholder="EMAIL CORPORATIVO" required>
+                    <textarea name="message" rows="4" placeholder="¿CUÁL ES TU VISIÓN?" required></textarea>
+                    <button type="submit" class="btn-black">Enviar Solicitud</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <section id="contacto">
-        <div class="contacto-wrapper" data-aos="fade-up">
-            <div class="contacto-info">
-                <h2>¿Hablamos de tu próximo proyecto?</h2>
-                <p>Transforma tu presencia digital hoy mismo. Te contactaré en menos de 24 horas.</p>
-                <p style="margin-top: 20px; color: var(--dorado); font-weight: 600;">📍 Servicio Global</p>
-            </div>
-            <form action="https://formspree.io/f/xvzbgbvk" method="POST">
-                <input type="hidden" name="_next" value="https://jcynay0206.github.io/mi_portfolio/success.html">
-                <input type="text" name="name" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email Corporativo" required>
-                <textarea name="message" rows="4" placeholder="Cuéntame sobre tu visión..." required></textarea>
-                <button type="submit" class="btn-gold" style="width: 100%;">Enviar Solicitud</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        &copy; 2026 AzureGold Studio. Todos los derechos reservados. <br>
-        <small>Diseño Web Elite & SEO Express</small>
-    </footer>
+    <footer>AZUREGOLD STUDIO &copy; 2026 — TODOS LOS DERECHOS RESERVADOS.</footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ 
-            duration: 1000, 
-            once: true,
-            offset: 100
-        });
-    </script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
 </body>
 </html>
