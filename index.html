@@ -9,41 +9,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,900&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --fondo: #0a0a0a; --dorado: #d4af37; --blanco: #ffffff; --text-muted: #888; }
+        :root { 
+            --fondo: #0a0a0a; 
+            --dorado: #d4af37; 
+            --azul-marca: #1e3a8a; /* Azul Profundo Azure */
+            --blanco: #ffffff; 
+            --text-muted: #888; 
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background-color: var(--fondo); color: var(--blanco); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* NAVEGACIÓN */
         nav { padding: 2rem 5%; display: flex; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; mix-blend-mode: difference; }
-        .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.8rem; color: var(--blanco); text-decoration: none; letter-spacing: -1px; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.8rem; text-decoration: none; letter-spacing: -1px; display: flex; gap: 4px; }
+        .logo .azure { color: var(--azul-marca); }
+        .logo .gold { color: var(--dorado); }
         .nav-links { display: flex; list-style: none; gap: 3rem; }
         .nav-links a { text-decoration: none; color: var(--blanco); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; transition: 0.4s; }
         .nav-links a:hover { color: var(--dorado); }
+
+        /* HERO */
         .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; position: relative; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 12vw, 10rem); line-height: 0.85; font-style: italic; margin-bottom: 2rem; }
-        .hero h1 span { display: block; color: var(--dorado); -webkit-text-stroke: 1px var(--dorado); -webkit-text-fill-color: transparent; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 9rem); line-height: 0.85; font-style: italic; margin-bottom: 2rem; }
+        .hero .azure-text { color: var(--azul-marca); }
+        .hero .gold-text { color: var(--dorado); -webkit-text-stroke: 1px var(--dorado); -webkit-text-fill-color: transparent; display: block; }
         .hero-sub { max-width: 400px; margin-left: auto; text-align: right; border-right: 3px solid var(--dorado); padding-right: 20px; font-weight: 200; }
+
+        /* SECCIÓN SOBRE MÍ */
         .about { padding: 150px 8%; display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
         .about-image { width: 100%; height: 650px; background: url('about.jpg') center/cover no-repeat; border-radius: 4px; filter: grayscale(30%); transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); border: 1px solid rgba(212, 175, 55, 0.2); }
         .about-image:hover { filter: grayscale(0%); transform: scale(1.02); border-color: var(--dorado); }
         .about-content h2 { font-size: 4rem; margin-bottom: 2rem; line-height: 1; font-family: 'Playfair Display', serif; }
         .about-content p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+        /* SERVICIOS */
         .services { padding: 100px 8%; }
         .service-item { display: flex; justify-content: space-between; align-items: flex-end; padding: 4rem 0; border-bottom: 1px solid #333; transition: 0.5s; }
         .service-item:hover { padding-left: 2rem; border-bottom-color: var(--dorado); }
         .service-item h3 { font-size: 3rem; font-family: 'Playfair Display', serif; }
         .service-item span { color: var(--dorado); font-family: 'Playfair Display', serif; font-style: italic; }
+
+        /* CONTACTO */
         .contact { padding: 150px 8%; background: var(--dorado); color: var(--fondo); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
         .contact h2 { font-size: 5rem; line-height: 0.9; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
         input, textarea { width: 100%; background: transparent; border: none; border-bottom: 2px solid var(--fondo); padding: 1.5rem 0; margin-bottom: 1rem; font-size: 1.2rem; color: var(--fondo); outline: none; font-family: 'Inter', sans-serif; }
         .btn-black { background: var(--fondo); color: var(--blanco); padding: 1.5rem 3rem; border: none; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; cursor: pointer; margin-top: 2rem; transition: 0.3s; }
         .btn-black:hover { transform: scale(1.05); }
+
         footer { padding: 50px 8%; text-align: center; font-size: 0.7rem; color: #444; letter-spacing: 2px; }
+
         @media (max-width: 768px) { .about, .contact-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 4.5rem; } .about-image { height: 400px; } }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">AZURE.GOLD</a>
+        <a href="#" class="logo"><span class="azure">AZURE.</span><span class="gold">GOLD</span></a>
         <ul class="nav-links">
             <li><a href="#about">Estudio</a></li>
             <li><a href="#services">Servicios</a></li>
@@ -51,29 +72,39 @@
             <li><a href="index.html" style="color:var(--dorado)">ES</a> | <a href="index-en.html">EN</a></li>
         </ul>
     </nav>
+
     <section class="hero">
-        <h1 data-aos="fade-right">Arquitectura<br><span>Digital</span></h1>
+        <h1 data-aos="fade-right">
+            <span class="azure-text">Arquitectura</span>
+            <span class="gold-text">Digital</span>
+        </h1>
         <div class="hero-sub" data-aos="fade-left">
             <p>AzureGold Studio. No diseñamos sitios web, construimos legados digitales para marcas que dominan su industria.</p>
         </div>
     </section>
+
     <section id="about" class="about">
         <div class="about-image" data-aos="zoom-in"></div>
         <div class="about-content" data-aos="fade-up">
-            <span style="color:var(--dorado); letter-spacing: 5px; font-weight: bold;">THE VISIONARY</span>
+            <span style="color:var(--dorado); letter-spacing: 5px; font-weight: bold;">LA VISIONARIA</span>
             <h2 style="margin-top:1rem">Diseño que impone autoridad.</h2>
             <p>AzureGold nace para erradicar lo genérico. En un mercado saturado de plantillas, nosotros somos el sastre digital de alta costura.</p>
-            <p>Fusionamos una estética cruda con una estrategia técnica impecable. Ayudamos a fundadores y marcas de élite a proyectar una imagen que justifica su valor.</p>
+            <p>Fusionamos una estética cruda con una estrategia técnica impecable para proyectar una imagen que justifica su valor real.</p>
         </div>
     </section>
+
     <section id="services" class="services">
         <div class="service-item" data-aos="fade-up"><h3>Diseño Web</h3><span>01 / Sitios de Autor</span></div>
         <div class="service-item" data-aos="fade-up"><h3>Identidad</h3><span>02 / Poder Visual</span></div>
         <div class="service-item" data-aos="fade-up"><h3>SEO Elite</h3><span>03 / Dominio Total</span></div>
     </section>
+
     <section id="contact" class="contact">
         <div class="contact-grid">
-            <div data-aos="fade-right"><h2>¿Listos para elevar el nivel?</h2><p>Tu transformación comienza con una conversación privada.</p></div>
+            <div data-aos="fade-right">
+                <h2>¿Listos para elevar el nivel?</h2>
+                <p>Tu transformación comienza con una conversación privada.</p>
+            </div>
             <div>
                 <form action="https://formspree.io/f/xvzbgbvk" method="POST">
                     <input type="hidden" name="_next" value="https://jcynay0206.github.io/mi_portfolio/success.html">
@@ -85,7 +116,9 @@
             </div>
         </div>
     </section>
+
     <footer>AZUREGOLD STUDIO &copy; 2026 — TODOS LOS DERECHOS RESERVADOS.</footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1200, once: true });</script>
 </body>
