@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jcynay0206.github.io/mi_portfolio/sitemap.xml
