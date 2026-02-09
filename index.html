@@ -62,7 +62,7 @@
             text-decoration: none;
         }
 
-        .logo img { height: 40px; border-radius: 4px; }
+        .logo img { height: 35px; border-radius: 4px; object-fit: contain; }
         .logo span { color: var(--dorado); }
 
         .nav-links {
@@ -99,8 +99,7 @@
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s forwards;
+            color: var(--azul-profundo);
         }
 
         .hero h1 span { color: var(--dorado); }
@@ -110,13 +109,6 @@
             color: var(--gris-suave);
             max-width: 650px;
             margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s 0.3s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-gold {
@@ -130,6 +122,7 @@
             box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
             transition: 0.4s;
             cursor: pointer;
+            display: inline-block;
         }
 
         .btn-gold:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5); }
@@ -174,10 +167,11 @@
             width: 100%;
             padding: 1.2rem;
             border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             background: rgba(255,255,255,0.05);
-            color: white;
+            color: white; /* Texto escrito en blanco */
             font-family: 'Inter', sans-serif;
+            font-size: 1rem;
         }
 
         .contacto-form input::placeholder, .contacto-form textarea::placeholder { color: #94a3b8; }
@@ -196,7 +190,7 @@
 
     <nav>
         <a href="#" class="logo">
-            <img src="favicon.png" alt="A"> 
+            <img src="favicon.png" alt="A" onerror="this.style.display='none'"> 
             Azure<span>Gold</span>
         </a>
         <ul class="nav-links">
@@ -208,7 +202,7 @@
 
     <header id="inicio" class="hero">
         <h1 data-aos="fade-down">Diseño Web <span>Elite</span> en Tiempo Récord</h1>
-        <p>Creamos experiencias digitales minimalistas y de lujo. Tu presencia online, optimizada y lista para vender.</p>
+        <p>Convertimos tu visión en una experiencia digital de lujo. Minimalismo, velocidad y optimización SEO en un solo lugar.</p>
         <a href="#contacto" class="btn-gold" data-aos="zoom-in">Empezar Proyecto</a>
     </header>
 
@@ -218,17 +212,17 @@
             <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <span>✨</span>
                 <h3>Diseño Web</h3>
-                <p>Estética minimalista que proyecta autoridad y elegancia.</p>
+                <p>Estética minimalista que proyecta autoridad y elegancia inmediata.</p>
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <span>🚀</span>
                 <h3>Entrega Express</h3>
-                <p>Tu sitio web listo y funcional en tiempo récord.</p>
+                <p>Tu sitio web listo y funcional en tiempo récord para que no pierdas clientes.</p>
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <span>📈</span>
                 <h3>SEO & Rediseño</h3>
-                <p>Modernizamos tu marca y te posicionamos en Google.</p>
+                <p>Modernizamos tu marca y te posicionamos donde tus clientes buscan.</p>
             </div>
         </div>
     </section>
