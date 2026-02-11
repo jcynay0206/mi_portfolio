@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-
+Disallow: /private/
 Sitemap: https://jcynay0206.github.io/mi_portfolio/sitemap.xml
