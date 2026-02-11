@@ -3,77 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Gold Studio | Digital Architecture</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>AZURE GOLD | Digital Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&family=Montserrat:wght@100;300;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --dark: #02060d; --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); --gold-solid: #d4af37; --white: #fdfdfd; }
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; overflow-x: hidden; background-image: radial-gradient(circle at 50% -20%, #1a2a44 0%, #02060d 80%); }
+        :root { --gold: #d4af37; --dark: #050505; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        nav { padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(2, 6, 13, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-        .logo-text { font-family: 'Cinzel'; font-weight: 700; letter-spacing: 5px; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.2rem; text-decoration: none; }
-        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-left: 30px; transition: 0.3s; }
-        .btn-nav { border: 1px solid var(--gold-solid); padding: 12px 25px !important; color: var(--gold-solid) !important; font-weight: 600; }
+        body { 
+            background: var(--dark); 
+            color: #fff; 
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
 
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
-        .hero span { font-family: 'Cinzel'; color: var(--gold-solid); letter-spacing: 8px; font-size: 0.8rem; margin-bottom: 20px; text-transform: uppercase; }
-        .hero h1 { font-family: 'Playfair Display'; font-size: clamp(3rem, 8vw, 6rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 30px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .hero p { font-family: 'Cinzel'; font-size: 1rem; letter-spacing: 4px; color: var(--gold-solid); text-transform: uppercase; margin-bottom: 40px; }
+        /* Navegación Minimalista */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 40px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
 
-        .about { padding: 120px 15%; text-align: center; background: rgba(255,255,255,0.02); }
-        .about h2 { font-family: 'Playfair Display'; font-size: 3rem; font-style: italic; margin-bottom: 30px; }
-        .about p { color: #a0a0a0; line-height: 2; font-size: 1.1rem; max-width: 800px; margin: 0 auto; font-weight: 200; }
+        .logo {
+            font-family: 'Cinzel';
+            font-size: 1.2rem;
+            letter-spacing: 8px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
 
-        .portfolio { padding: 120px 8%; }
-        .mockup-frame { background: #111; padding: 15px; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.7); transition: 0.5s; }
-        .mockup-frame:hover { transform: translateY(-15px); border-color: var(--gold-solid); }
-        
-        .btn-gold { display: inline-block; padding: 20px 50px; border: 1px solid var(--gold-solid); color: white; text-decoration: none; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; transition: 0.5s; }
-        .btn-gold:hover { background: var(--gold); color: black; border-color: transparent; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
+        /* HERO - IMPACTO TOTAL */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at 70% 30%, #101a2d 0%, #050505 70%);
+        }
 
-        footer { padding: 60px; text-align: center; font-size: 0.6rem; letter-spacing: 3px; color: #444; border-top: 1px solid rgba(212,175,55,0.1); }
+        .hero span {
+            font-family: 'Cinzel';
+            color: var(--gold);
+            letter-spacing: 10px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display';
+            font-size: clamp(3.5rem, 10vw, 9rem);
+            line-height: 0.9;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero h1 i {
+            font-weight: 400;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--gold);
+            font-style: italic;
+        }
+
+        /* SECCIÓN PORTFOLIO */
+        .work {
+            padding: 150px 10%;
+            background: #050505;
+        }
+
+        .work-label {
+            font-family: 'Cinzel';
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            color: var(--gold);
+            margin-bottom: 80px;
+            display: block;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* Contenedor del Mockup corregido */
+        .project-image {
+            position: relative;
+            padding: 15px;
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .project-image img {
+            width: 100%;
+            display: block;
+            filter: grayscale(1) contrast(1.2);
+            transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .project-card:hover img {
+            filter: grayscale(0) contrast(1);
+        }
+
+        .project-info h2 {
+            font-family: 'Playfair Display';
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project-info p {
+            font-weight: 100;
+            color: #888;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* BOTONES */
+        .cta-gold {
+            text-decoration: none;
+            color: var(--gold);
+            font-family: 'Cinzel';
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            padding: 18px 35px;
+            border: 1px solid var(--gold);
+            transition: 0.4s;
+        }
+
+        .cta-gold:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* APPOINTMENT FINAL */
+        .closing {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-family: 'Cinzel';
+            font-size: 0.6rem;
+            color: #444;
+            letter-spacing: 4px;
+        }
+
+        @media (max-width: 900px) {
+            .project-card { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 4rem; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="#" class="logo-text">AZURE GOLD</a>
-        <div class="nav-links">
-            <a href="es/index.html">ES</a>
-            <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-nav">BOOK A CALL</a>
-        </div>
+        <a href="#" class="logo">AZURE GOLD</a>
+        <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="cta-gold" style="padding: 10px 20px;">INQUIRY</a>
     </nav>
 
     <header class="hero">
-        <span data-aos="fade-down">Boutique Digital Agency</span>
-        <h1 data-aos="fade-up">Your Legacy, <br><i>Architected</i>.</h1>
-        <p data-aos="fade-up" data-aos-delay="200">The Digital Era for the 1%</p>
-        <a href="#portfolio" class="btn-gold" data-aos="zoom-in">View Collections</a>
+        <span data-aos="fade-right">NEW JERSEY / NEW YORK</span>
+        <h1 data-aos="fade-up">YOUR LEGACY <br> <i>ARCHITECTED</i></h1>
     </header>
 
-    <section class="about">
-        <div data-aos="fade-up">
-            <h2>Beyond Design.</h2>
-            <p>At Azure Gold Studio, we transform professional authority into visual estates. Based in NJ/NY, we architect digital presence for those who demand excellence and exclusivity.</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
-            <div class="mockup-frame" data-aos="fade-right">
-                <div style="display: flex; gap: 8px; margin-bottom: 12px;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #ff5f56;"></div><div style="width: 8px; height: 8px; border-radius: 50%; background: #ffbd2e;"></div><div style="width: 8px; height: 8px; border-radius: 50%; background: #27c93f;"></div></div>
-                <img src="img/jcnay-mockup.jpg" alt="JCNay" style="width: 100%; border-radius: 5px;">
+    <section class="work">
+        <span class="work-label" data-aos="fade-up">SELECTED WORK</span>
+        
+        <div class="project-card">
+            <div class="project-image" data-aos="zoom-out">
+                <img src="img/jcnay-mockup.jpg" alt="JCNay Financial" onerror="this.src='https://via.placeholder.com/800x500/0a0a0a/d4af37?text=JCNay+Mockup+Not+Found'">
             </div>
-            <div data-aos="fade-left">
-                <h3 style="font-family: 'Cinzel'; font-size: 2rem; margin-bottom: 20px;">JCNay Vida Team</h3>
-                <p style="color: #a0a0a0; margin-bottom: 30px;">Strategic overhaul for a leading financial firm. Authority and trust through high-end digital architecture.</p>
-                <a href="jcnay/index.html" class="btn-gold">Explore Case</a>
+            <div class="project-info" data-aos="fade-left">
+                <h2>JCNay <br>Vida Team</h2>
+                <p>Digital transformation for an elite financial group. We architected a presence that commands trust through high-end aesthetics.</p>
+                <a href="jcnay/index.html" class="cta-gold">VIEW PROJECT</a>
             </div>
         </div>
     </section>
 
-    <footer>AZURE GOLD STUDIO | NEW JERSEY | BY APPOINTMENT ONLY</footer>
+    <section class="closing">
+        <div data-aos="zoom-in">
+            <h2 style="font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 40px; font-style: italic;">Ready to Evolve?</h2>
+            <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="cta-gold" style="background: var(--gold); color: #000;">SCHEDULE PRIVATE SESSION</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 AZURE GOLD STUDIO — FOR THE 1%
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({duration: 1200});</script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
 </body>
 </html>
