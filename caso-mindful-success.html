@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Success Coaching - Caso de Estudio | Azure Gold Studio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F5E6C8;
+            --navy: #0A1628;
+            --navy-medium: #1A2942;
+            --cream: #FAF8F3;
+            --gray-light: #E8E6E1;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero .category {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+        
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .testimonial {
+            background: var(--navy);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            font-style: italic;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            line-height: 1.7;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--gold);
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            opacity: 0.3;
+        }
+        
+        .author {
+            margin-top: 1.5rem;
+            color: var(--gold);
+            font-size: 1rem;
+            font-style: normal;
+        }
+        
+        .btn-back {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-back:hover {
+            background: var(--navy);
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="category">Life Coach</div>
+        <h1>Mindful Success Coaching</h1>
+        <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
+            350% ROI en los primeros 6 meses con funnel automatizado
+        </p>
+    </div>
+
+    <div class="container">
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">350%</div>
+                <div class="stat-label">ROI en 6 Meses</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$120K</div>
+                <div class="stat-label">Revenue Generado</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2,400</div>
+                <div class="stat-label">Leads Capturados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">42%</div>
+                <div class="stat-label">Conversión Webinar</div>
+            </div>
+        </div>
+
+        <h2>El Desafío</h2>
+        <div class="section">
+            <p style="margin-bottom: 1.5rem;">
+                <strong>Mindful Success Coaching</strong> ofrecía programas de transformación personal de alto ticket ($3K-$12K) 
+                pero dependía 100% de referidos y redes sociales sin estrategia de escalabilidad.
+            </p>
+            
+            <h3 style="color: var(--navy); margin: 1.5rem 0 1rem;">Puntos Críticos:</h3>
+            <ul>
+                <li>Sin presencia web profesional (solo perfil en redes)</li>
+                <li>Dependencia total de referidos - ingreso impredecible</li>
+                <li>Sin sistema de captura ni nurturing de leads</li>
+                <li>Cursos en Kajabi sin integración con marketing</li>
+                <li>Imposibilidad de escalar más allá de 1-on-1 coaching</li>
+                <li>Sin autoridad digital demostrable</li>
+            </ul>
+        </div>
+
+        <h2>Nuestra Solución</h2>
+        <div class="section">
+            <h3 style="color: var(--navy); margin-bottom: 1rem;">Ecosistema Digital Completo:</h3>
+            <ul>
+                <li><strong>Sitio web premium</strong> con brand storytelling e identidad sólida</li>
+                <li><strong>Integración total con Kajabi</strong> para cursos y membresías</li>
+                <li><strong>Funnel de alto ticket:</strong> Lead Magnet → Email Sequence → Webinar → Oferta</li>
+                <li><strong>Webinars automatizados</strong> 3x por semana con conversión optimizada</li>
+                <li><strong>Quiz interactivo</strong> "Descubre tu Arquetipo de Éxito" (viral en redes)</li>
+                <li><strong>Blog SEO</strong> posicionado en "mindfulness + success"</li>
+                <li><strong>Email automation</strong> con 12 secuencias segmentadas</li>
+                <li><strong>Social proof strategy</strong> con video testimonials integrados</li>
+            </ul>
+        </div>
+
+        <h2>Resultados</h2>
+        <div class="section">
+            <h3 style="color: var(--gold); margin-bottom: 1rem;">Transformación del Negocio:</h3>
+            <ul>
+                <li><strong>350% ROI</strong> en primeros 6 meses</li>
+                <li><strong>$120K en revenue</strong> directamente atribuible al nuevo sistema</li>
+                <li><strong>2,400 leads capturados</strong> (lista de email creció de 0 a 2,400)</li>
+                <li><strong>42% conversión en webinars</strong> (inscritos → calls agendadas)</li>
+                <li><strong>18% conversión final</strong> a programas de alto ticket</li>
+                <li><strong>85% ingreso recurrente</strong> vs. 15% antes del proyecto</li>
+                <li><strong>3 lanzamientos exitosos</strong> de programas grupales ($12K cada uno)</li>
+                <li><strong>Tráfico orgánico 10x</strong> en 4 meses</li>
+            </ul>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                Azure Gold Studio transformó mi negocio de coaching inestable en una máquina predecible de generación de ingresos. 
+                El funnel automatizado trabaja para mí 24/7. Pasé de perseguir clientes a tener lista de espera. 
+                Por primera vez en 5 años de coaching, tengo un negocio escalable.
+            </p>
+            <div class="author">— Dr. Sarah Martinez, Founder Mindful Success Coaching</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="portfolio-NO-HOVER.html" class="btn-back">← Volver al Portfolio</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
