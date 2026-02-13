@@ -6,14 +6,13 @@
     <title>Azure Gold Studio — Diseño Web de Lujo para Coaches & Inmobiliarias</title>
     <meta name="description" content="Estudio boutique especializado en sitios web premium que convierten para coaches e inmobiliarias de élite. NJ/NY.">
     
-    <!-- Google Fonts - Distinctive Typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* Color Palette - Sophisticated Gold & Navy */
             --gold-primary: #D4AF37;
             --gold-light: #F5E6C8;
             --gold-dark: #B8941F;
@@ -25,18 +24,9 @@
             --gray-light: #E8E6E1;
             --gray-medium: #A8A6A1;
             
-            /* Typography */
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'Montserrat', sans-serif;
             
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            
-            /* Transitions */
             --transition-fast: 0.2s ease;
             --transition-medium: 0.4s ease;
             --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,7 +50,6 @@
             overflow-x: hidden;
         }
         
-        /* Typography Styles */
         h1, h2, h3, h4 {
             font-family: var(--font-display);
             font-weight: 700;
@@ -377,7 +366,7 @@
         
         /* Section Styles */
         section {
-            padding: var(--spacing-xl) 2rem;
+            padding: 6rem 2rem;
         }
         
         .container {
@@ -387,7 +376,7 @@
         
         .section-header {
             text-align: center;
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: 4rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -404,176 +393,7 @@
             line-height: 1.8;
         }
         
-        /* Niches Section */
-        .niches {
-            background: var(--navy-dark);
-            color: var(--white);
-        }
-        
-        .niches-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .niche-card {
-            background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-light) 100%);
-            padding: 3rem;
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-            transition: all var(--transition-slow);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        
-        .niche-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform var(--transition-slow);
-        }
-        
-        .niche-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .niche-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-        
-        .niche-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-        
-        .niche-card h3 {
-            color: var(--gold-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .niche-card p {
-            color: var(--gray-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .niche-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .niche-features li {
-            color: var(--cream);
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .niche-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--gold-primary);
-            font-weight: 700;
-        }
-        
-        .niche-price {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-top: 1.5rem;
-        }
-        
-        /* Process Section */
-        .process {
-            background: var(--white);
-        }
-        
-        .process-timeline {
-            position: relative;
-            margin-top: 4rem;
-        }
-        
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--gold-primary), var(--gold-light));
-            transform: translateX(-50%);
-        }
-        
-        .process-step {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-        
-        .process-step:nth-child(even) .step-content {
-            order: 2;
-        }
-        
-        .process-step:nth-child(even) .step-visual {
-            order: 1;
-        }
-        
-        .step-content {
-            background: var(--cream);
-            padding: 3rem;
-            border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all var(--transition-medium);
-        }
-        
-        .step-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-        }
-        
-        .step-number {
-            font-family: var(--font-display);
-            font-size: 5rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            opacity: 0.2;
-            line-height: 1;
-            margin-bottom: -1.5rem;
-        }
-        
-        .step-title {
-            color: var(--navy-dark);
-            margin-bottom: 1rem;
-        }
-        
-        .step-description {
-            color: var(--gray-medium);
-            line-height: 1.8;
-        }
-        
-        .step-visual {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            font-size: 8rem;
-        }
-        
-        /* Portfolio Section */
+        /* Portfolio Section - MEJORADO */
         .portfolio {
             background: var(--cream);
         }
@@ -581,35 +401,44 @@
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 3rem;
         }
         
         .portfolio-item {
             position: relative;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 8px;
             aspect-ratio: 16/10;
             background: var(--navy-medium);
             cursor: pointer;
             transition: all var(--transition-slow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         .portfolio-item:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         
-        .portfolio-image {
+        /* Placeholder de imagen con gradiente */
+        .portfolio-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background: linear-gradient(135deg, var(--navy-medium), var(--navy-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
             transition: all var(--transition-slow);
         }
         
-        .portfolio-item:hover .portfolio-image {
-            transform: scale(1.1);
+        .portfolio-item:hover .portfolio-placeholder {
             opacity: 0.3;
+            transform: scale(1.1);
         }
         
         .portfolio-overlay {
@@ -618,14 +447,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.9), rgba(44, 62, 92, 0.9));
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.95), rgba(44, 62, 92, 0.95));
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 2.5rem;
             opacity: 0;
             transition: all var(--transition-medium);
+            text-align: center;
         }
         
         .portfolio-item:hover .portfolio-overlay {
@@ -636,22 +466,22 @@
             color: var(--gold-primary);
             font-size: 0.9rem;
             font-weight: 600;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .portfolio-title {
             color: var(--white);
             font-size: 2rem;
             margin-bottom: 1rem;
-            text-align: center;
+            font-family: var(--font-display);
         }
         
         .portfolio-description {
             color: var(--gray-light);
-            text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
         
         .portfolio-link {
@@ -659,217 +489,22 @@
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.05em;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border: 2px solid var(--gold-primary);
             border-radius: 2px;
             transition: all var(--transition-fast);
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
         
         .portfolio-link:hover {
             background: var(--gold-primary);
             color: var(--navy-dark);
+            transform: translateY(-2px);
         }
         
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--navy-dark);
-            color: var(--white);
-        }
-        
-        .testimonials-slider {
-            max-width: 900px;
-            margin: 3rem auto 0;
-        }
-        
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 3rem;
-            border-radius: 4px;
-            text-align: center;
-        }
-        
-        .testimonial-quote {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--cream);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-        
-        .testimonial-quote::before {
-            content: '"';
-            color: var(--gold-primary);
-            font-size: 3rem;
-            line-height: 0;
-            vertical-align: -0.4em;
-        }
-        
-        .testimonial-quote::after {
-            content: '"';
-            color: var(--gold-primary);
-            font-size: 3rem;
-            line-height: 0;
-            vertical-align: -0.4em;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid var(--gold-primary);
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            color: var(--gold-primary);
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-        }
-        
-        .author-info p {
-            color: var(--gray-light);
-            font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-            color: var(--navy-dark);
-            text-align: center;
-            padding: var(--spacing-xl) 2rem;
-        }
-        
-        .cta-section h2 {
-            color: var(--navy-dark);
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .btn-cta-dark {
-            padding: 1.2rem 3rem;
-            background: var(--navy-dark);
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            transition: all var(--transition-medium);
-            border: 2px solid var(--navy-dark);
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 0.95rem;
-        }
-        
-        .btn-cta-dark:hover {
-            background: transparent;
-            color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(10, 22, 40, 0.3);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--navy-dark);
-            color: var(--gray-light);
-            padding: 3rem 2rem 2rem;
-        }
-        
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-brand h3 {
-            color: var(--gold-primary);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-brand p {
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            text-decoration: none;
-            transition: all var(--transition-fast);
-        }
-        
-        .social-links a:hover {
-            background: var(--gold-primary);
-            color: var(--navy-dark);
-            transform: translateY(-3px);
-        }
-        
-        .footer-links h4 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: var(--gray-light);
-            text-decoration: none;
-            transition: all var(--transition-fast);
-        }
-        
-        .footer-links a:hover {
-            color: var(--gold-primary);
-            padding-left: 5px;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            padding-top: 2rem;
-            text-align: center;
-            color: var(--gray-medium);
-        }
-        
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr;
@@ -880,21 +515,8 @@
                 justify-content: center;
             }
             
-            .process-step {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .process-step:nth-child(even) .step-content,
-            .process-step:nth-child(even) .step-visual {
-                order: unset;
-            }
-            
-            .process-timeline::before {
-                display: none;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
             }
         }
         
@@ -915,15 +537,6 @@
                 flex-direction: column;
             }
             
-            .niches-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-            
             h1 {
                 font-size: 2.5rem;
             }
@@ -931,18 +544,6 @@
             h2 {
                 font-size: 2rem;
             }
-        }
-        
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -976,8 +577,8 @@
                     Diseñamos sitios web de lujo que proyectan autoridad, generan confianza absoluta y multiplican tus conversiones. Especializados en coaches de élite e inmobiliarias premium que exigen resultados excepcionales.
                 </p>
                 <div class="hero-cta-group">
-                    <a href="#servicios" class="btn-primary">Ver Servicios</a>
-                    <a href="#portfolio" class="btn-secondary">Portfolio</a>
+                    <a href="#portfolio" class="btn-primary">Ver Portfolio</a>
+                    <a href="#contacto" class="btn-secondary">Agendar Consulta</a>
                 </div>
             </div>
             
@@ -989,7 +590,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">$50K+</div>
-                        <div class="stat-label">Revenue Extra Generado para Clientes</div>
+                        <div class="stat-label">Revenue Extra Generado</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">4-6</div>
@@ -1004,130 +605,7 @@
         </div>
     </section>
 
-    <!-- Niches Section -->
-    <section class="niches" id="servicios">
-        <div class="container">
-            <div class="section-header">
-                <p class="subtitle section-subtitle">Especialización Premium</p>
-                <h2>Dominamos Los Nichos Que Generan Resultados</h2>
-                <p class="section-description">
-                    No trabajamos con cualquiera. Nos especializamos en profesionales de élite que entienden el valor de una presencia digital excepcional.
-                </p>
-            </div>
-            
-            <div class="niches-grid">
-                <!-- Coaches -->
-                <div class="niche-card fade-in">
-                    <span class="niche-icon">🎯</span>
-                    <h3>Coaches de Alto Rendimiento</h3>
-                    <p>Tu expertise merece un sitio que venda tu transformación antes de la primera llamada. Creamos embudos optimizados que convierten visitantes en clientes premium.</p>
-                    <ul class="niche-features">
-                        <li>Landing pages de conversión ultra-alta</li>
-                        <li>Integración con plataformas de cursos (Kajabi, Teachable)</li>
-                        <li>Sistemas de captura y nurturing de leads</li>
-                        <li>Testimonios y social proof estratégicos</li>
-                        <li>Blog optimizado para autoridad</li>
-                    </ul>
-                    <div class="niche-price">$6,000 - $15,000</div>
-                </div>
-                
-                <!-- Real Estate -->
-                <div class="niche-card fade-in">
-                    <span class="niche-icon">🏡</span>
-                    <h3>Inmobiliarias & Agentes Elite</h3>
-                    <p>Destaca en un mercado saturado con una presencia digital que proyecta exclusividad y genera leads calificados 24/7.</p>
-                    <ul class="niche-features">
-                        <li>Búsqueda avanzada de propiedades (IDX)</li>
-                        <li>Tours virtuales inmersivos</li>
-                        <li>Galerías fotográficas premium</li>
-                        <li>SEO local dominante</li>
-                        <li>Gestión automatizada de listings</li>
-                    </ul>
-                    <div class="niche-price">$5,000 - $12,000</div>
-                </div>
-                
-                <!-- Insurance (Optional) -->
-                <div class="niche-card fade-in">
-                    <span class="niche-icon">🛡️</span>
-                    <h3>Agentes de Seguros Premium</h3>
-                    <p>Posiciónate como el experto confiable con un sitio que educa, convierte y automatiza tu generación de leads.</p>
-                    <ul class="niche-features">
-                        <li>Calculadoras y herramientas interactivas</li>
-                        <li>Content marketing educativo</li>
-                        <li>Sistema de cotizaciones online</li>
-                        <li>Compliance total con regulaciones</li>
-                        <li>Estrategia de captación automatizada</li>
-                    </ul>
-                    <div class="niche-price">$4,000 - $8,000</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process" id="proceso">
-        <div class="container">
-            <div class="section-header">
-                <p class="subtitle section-subtitle">Metodología Probada</p>
-                <h2>Nuestro Proceso de Arquitectura Digital</h2>
-                <p class="section-description">
-                    Un enfoque sistemático que garantiza resultados excepcionales en cada proyecto.
-                </p>
-            </div>
-            
-            <div class="process-timeline">
-                <!-- Step 1 -->
-                <div class="process-step fade-in">
-                    <div class="step-content">
-                        <div class="step-number">01</div>
-                        <h3 class="step-title">Discovery & Estrategia</h3>
-                        <p class="step-description">
-                            Análisis profundo de tu negocio, competencia y audiencia. Definimos objetivos claros, KPIs y la estrategia de conversión que multiplicará tus resultados.
-                        </p>
-                    </div>
-                    <div class="step-visual">📊</div>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="process-step fade-in">
-                    <div class="step-content">
-                        <div class="step-number">02</div>
-                        <h3 class="step-title">Diseño Premium</h3>
-                        <p class="step-description">
-                            Creamos wireframes, arquitectura de información y diseños visuales que proyectan tu autoridad. Todo optimizado para conversión y experiencia de usuario excepcional.
-                        </p>
-                    </div>
-                    <div class="step-visual">✨</div>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="process-step fade-in">
-                    <div class="step-content">
-                        <div class="step-number">03</div>
-                        <h3 class="step-title">Desarrollo & Optimización</h3>
-                        <p class="step-description">
-                            Construcción técnica impecable con las mejores tecnologías. Velocidad lightning-fast, SEO optimizado y adaptación perfecta a todos los dispositivos.
-                        </p>
-                    </div>
-                    <div class="step-visual">⚡</div>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="process-step fade-in">
-                    <div class="step-content">
-                        <div class="step-number">04</div>
-                        <h3 class="step-title">Lanzamiento & Soporte</h3>
-                        <p class="step-description">
-                            Lanzamiento estratégico con training completo. Monitoreo post-lanzamiento y soporte dedicado para garantizar resultados sostenidos.
-                        </p>
-                    </div>
-                    <div class="step-visual">🚀</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section - MEJORADO -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -1140,71 +618,46 @@
             
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 - Business Coach -->
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&auto=format&q=80" alt="Transform Leadership Academy Website" class="portfolio-image">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">💼</div>
                     <div class="portfolio-overlay">
                         <span class="portfolio-category">Coach de Negocios</span>
                         <h3 class="portfolio-title">Transform Leadership Academy</h3>
-                        <p class="portfolio-description">Aumento de 450% en leads calificados en 3 meses</p>
-                        <a href="#" class="portfolio-link">Ver Caso</a>
+                        <p class="portfolio-description">Aumento de 450% en leads calificados en 3 meses. Rediseño completo con estrategia de conversión optimizada.</p>
+                        <a href="#" class="portfolio-link">Ver Caso Completo</a>
                     </div>
                 </div>
                 
                 <!-- Portfolio Item 2 - Real Estate -->
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format&q=80" alt="Elite Properties NJ Website" class="portfolio-image">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🏡</div>
                     <div class="portfolio-overlay">
                         <span class="portfolio-category">Inmobiliaria Premium</span>
                         <h3 class="portfolio-title">Elite Properties NJ</h3>
-                        <p class="portfolio-description">$2.3M en ventas generadas desde el sitio web</p>
-                        <a href="#" class="portfolio-link">Ver Caso</a>
+                        <p class="portfolio-description">$2.3M en ventas generadas desde el sitio web. Integración IDX completa con tours virtuales.</p>
+                        <a href="#" class="portfolio-link">Ver Caso Completo</a>
                     </div>
                 </div>
                 
                 <!-- Portfolio Item 3 - Life Coach -->
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop&auto=format&q=80" alt="Mindful Success Coaching Website" class="portfolio-image">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">✨</div>
                     <div class="portfolio-overlay">
                         <span class="portfolio-category">Life Coach</span>
                         <h3 class="portfolio-title">Mindful Success Coaching</h3>
-                        <p class="portfolio-description">350% ROI en primeros 6 meses</p>
-                        <a href="#" class="portfolio-link">Ver Caso</a>
+                        <p class="portfolio-description">350% ROI en primeros 6 meses. Funnel de ventas con integración Kajabi completa.</p>
+                        <a href="#" class="portfolio-link">Ver Caso Completo</a>
                     </div>
                 </div>
                 
                 <!-- Portfolio Item 4 - Insurance -->
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop&auto=format&q=80" alt="SecureLife Insurance Website" class="portfolio-image">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🛡️</div>
                     <div class="portfolio-overlay">
                         <span class="portfolio-category">Agente de Seguros</span>
                         <h3 class="portfolio-title">SecureLife Insurance</h3>
-                        <p class="portfolio-description">200+ cotizaciones mensuales automatizadas</p>
-                        <a href="#" class="portfolio-link">Ver Caso</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <p class="subtitle section-subtitle">Lo Que Dicen Nuestros Clientes</p>
-                <h2>Resultados Reales, Testimonios Reales</h2>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-quote">
-                        Azure Gold no solo creó un sitio hermoso, crearon una máquina de conversión. Mis leads se triplicaron y la calidad es incomparable. Mejor inversión que he hecho en mi negocio.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format&q=80" alt="Sarah Mitchell" class="author-image">
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <p>Business Coach | $500K+ Revenue Anual</p>
-                        </div>
+                        <p class="portfolio-description">200+ cotizaciones mensuales automatizadas. Sistema de captura y nurturing de leads.</p>
+                        <a href="#" class="portfolio-link">Ver Caso Completo</a>
                     </div>
                 </div>
             </div>
@@ -1212,66 +665,18 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="contacto">
+    <section style="background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%); color: var(--navy-dark); text-align: center; padding: 5rem 2rem;" id="contacto">
         <div class="container">
-            <h2>¿Listo Para Dominar Tu Mercado?</h2>
-            <p>
+            <h2 style="color: var(--navy-dark); margin-bottom: 1.5rem;">¿Listo Para Dominar Tu Mercado?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
                 Aceptamos máximo 3 proyectos por mes para garantizar calidad excepcional. 
                 Agenda tu consulta estratégica gratuita ahora.
             </p>
-            <a href="https://calendly.com/azuregoldstudio/30min" class="btn-cta-dark" target="_blank">
+            <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" style="padding: 1.5rem 4rem; background: var(--navy-dark); color: var(--gold-primary); text-decoration: none; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; border: 2px solid var(--navy-dark); display: inline-block; text-transform: uppercase; font-size: 1.1rem; transition: all var(--transition-medium);">
                 Agendar Consulta Gratuita
             </a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>AZURE GOLD STUDIO</h3>
-                <p>Estudio boutique especializado en arquitectura digital premium para coaches e inmobiliarias de élite.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram">📷</a>
-                    <a href="#" aria-label="LinkedIn">💼</a>
-                    <a href="#" aria-label="Twitter">🐦</a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Servicios</h4>
-                <ul>
-                    <li><a href="#servicios">Coaches</a></li>
-                    <li><a href="#servicios">Inmobiliarias</a></li>
-                    <li><a href="#servicios">Seguros</a></li>
-                    <li><a href="#proceso">Proceso</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Empresa</h4>
-                <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Casos de Estudio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>NJ / NY Metro Area</li>
-                    <li><a href="mailto:hello@azuregold.studio">hello@azuregold.studio</a></li>
-                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Azure Gold Studio. Todos los derechos reservados. | <a href="#" style="color: var(--gold-primary);">Privacidad</a> | <a href="#" style="color: var(--gold-primary);">Términos</a></p>
-        </div>
-    </footer>
 
     <!-- JavaScript -->
     <script>
@@ -1297,31 +702,6 @@
                     });
                 }
             });
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Mobile menu toggle (placeholder - implement full mobile menu as needed)
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        mobileMenuBtn.addEventListener('click', () => {
-            // Add mobile menu toggle logic here
-            console.log('Mobile menu clicked');
         });
     </script>
 </body>
