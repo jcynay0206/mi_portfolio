@@ -3,76 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Gold Studio — Portfolio (Sin Hover)</title>
+    <title>Azure Gold Studio | Diseño Web Premium para Coaches & Inmobiliarias</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --gold-primary: #D4AF37;
+            --gold: #D4AF37;
             --gold-light: #F5E6C8;
-            --navy-dark: #0A1628;
+            --navy: #0A1628;
             --navy-medium: #1A2942;
-            --white: #FFFFFF;
             --cream: #FAF8F3;
             --gray-light: #E8E6E1;
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'Montserrat', sans-serif;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         
         body {
             font-family: var(--font-body);
             background: var(--cream);
-            color: var(--navy-dark);
-            padding: 2rem;
+            color: var(--navy);
             line-height: 1.6;
         }
         
-        h1 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            text-align: center;
-            color: var(--navy-dark);
-            margin-bottom: 0.5rem;
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
         
-        .subtitle {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .nav-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        
+        /* Sections Visibility Control */
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        /* Hero Portfolio */
+        .hero-portfolio {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+            color: white;
             text-align: center;
-            color: var(--gold-primary);
+        }
+        
+        .hero-portfolio h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .hero-portfolio .subtitle {
+            color: var(--gold);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
         
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+        .hero-portfolio p {
+            color: var(--gray-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        /* Card style - TODO VISIBLE SIEMPRE */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
         .portfolio-card {
-            background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
+            cursor: pointer;
         }
         
         .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
         }
         
         .card-icon {
@@ -89,7 +156,7 @@
         }
         
         .card-category {
-            color: var(--gold-primary);
+            color: var(--gold);
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -100,9 +167,7 @@
         .card-title {
             font-family: var(--font-display);
             font-size: 1.8rem;
-            color: white;
             margin-bottom: 1rem;
-            line-height: 1.3;
         }
         
         .card-description {
@@ -116,24 +181,22 @@
             display: inline-block;
             padding: 0.9rem 2rem;
             background: transparent;
-            color: var(--gold-primary);
+            color: var(--gold);
             text-decoration: none;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             font-size: 0.8rem;
-            border: 2px solid var(--gold-primary);
+            border: 2px solid var(--gold);
             border-radius: 4px;
             transition: all 0.3s ease;
         }
         
         .card-button:hover {
-            background: var(--gold-primary);
-            color: var(--navy-dark);
-            transform: scale(1.05);
+            background: var(--gold);
+            color: var(--navy);
         }
         
-        /* Badge especial para proyecto real */
         .badge-live {
             display: inline-block;
             background: #4CAF50;
@@ -145,78 +208,678 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Case Study Styling */
+        .case-hero {
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .case-hero h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .case-hero .category {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+        }
+        
+        .case-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+        
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .content-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .testimonial {
+            background: var(--navy);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            font-style: italic;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            line-height: 1.7;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--gold);
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            opacity: 0.3;
+        }
+        
+        .author {
+            margin-top: 1.5rem;
+            color: var(--gold);
+            font-size: 1rem;
+            font-style: normal;
+        }
+        
+        .btn-back {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-back:hover {
+            background: var(--navy);
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-family: var(--font-display);
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: none;
+            padding: 0;
+        }
+        
+        .footer-section p {
+            color: var(--gray-light);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gray-light);
+        }
+        
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            width: 25px;
+        }
+        
+        .contact-item a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--gray-light);
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
             
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
             h1 {
-                font-size: 2rem;
+                font-size: 2rem !important;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <h1>Portfolio Azure Gold Studio</h1>
-    <p class="subtitle">Casos de Éxito Recientes</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a class="logo" onclick="showSection('portfolio')">AZURE GOLD STUDIO</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+    </nav>
 
-    <div class="portfolio-grid">
-        
-        <!-- Card 1: Business Coach -->
-        <div class="portfolio-card">
-            <div class="card-icon">💼</div>
-            <div class="card-content">
-                <div class="card-category">Coach de Negocios</div>
-                <h3 class="card-title">Transform Leadership Academy</h3>
-                <p class="card-description">
-                    Aumento de 450% en leads calificados en 3 meses. Rediseño completo con estrategia de conversión optimizada y funnel automatizado.
-                </p>
-                <a href="caso-transform-leadership.html" class="card-button">Ver Caso Completo</a>
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio" class="section active">
+        <div class="hero-portfolio">
+            <p class="subtitle">Estudio Boutique • NJ/NY</p>
+            <h1>Diseño Web Premium<br>para Coaches & Inmobiliarias</h1>
+            <p style="margin-top: 1.5rem;">
+                Sitios web de lujo que proyectan autoridad y multiplican conversiones.<br>
+                Especializados en clientes que exigen resultados excepcionales.
+            </p>
+        </div>
+
+        <div class="portfolio-section">
+            <h2 style="text-align: center; color: var(--navy);">Portfolio Selecto</h2>
+            
+            <div class="portfolio-grid">
+                <!-- Card 1: Transform Leadership -->
+                <div class="portfolio-card" onclick="showSection('case1')">
+                    <div class="card-icon">💼</div>
+                    <div class="card-content">
+                        <div class="card-category">Coach de Negocios</div>
+                        <h3 class="card-title">Transform Leadership Academy</h3>
+                        <p class="card-description">
+                            Aumento de 450% en leads calificados en 3 meses. Rediseño completo con estrategia de conversión optimizada.
+                        </p>
+                        <span class="card-button">Ver Caso Completo</span>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Elite Properties -->
+                <div class="portfolio-card" onclick="showSection('case2')">
+                    <div class="card-icon">🏡</div>
+                    <div class="card-content">
+                        <div class="card-category">Inmobiliaria Premium</div>
+                        <h3 class="card-title">Elite Properties NJ</h3>
+                        <p class="card-description">
+                            $2.3M en ventas generadas desde el sitio web. Integración IDX completa con tours virtuales inmersivos.
+                        </p>
+                        <span class="card-button">Ver Caso Completo</span>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Mindful Success -->
+                <div class="portfolio-card" onclick="showSection('case3')">
+                    <div class="card-icon">✨</div>
+                    <div class="card-content">
+                        <div class="card-category">Life Coach</div>
+                        <h3 class="card-title">Mindful Success Coaching</h3>
+                        <p class="card-description">
+                            350% ROI en primeros 6 meses. Funnel de ventas con integración Kajabi completa y automatización.
+                        </p>
+                        <span class="card-button">Ver Caso Completo</span>
+                    </div>
+                </div>
+                
+                <!-- Card 4: JCNay (REAL) -->
+                <div class="portfolio-card">
+                    <div class="card-icon">💎</div>
+                    <div class="card-content">
+                        <span class="badge-live">● EN VIVO</span>
+                        <div class="card-category">Agente de Seguros Premium</div>
+                        <h3 class="card-title">JCNay Vida Team</h3>
+                        <p class="card-description">
+                            Rediseño completo de 6.5/10 a 9.5/10. Arquitectura de Legados con Nexo Infinito. Google Sheets CRM + Bot IA integrados.
+                        </p>
+                        <a href="https://jcynay0206.github.io/jcnay-vida-team/" target="_blank" class="card-button">Ver Sitio en Vivo →</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Card 2: Real Estate -->
-        <div class="portfolio-card">
-            <div class="card-icon">🏡</div>
-            <div class="card-content">
-                <div class="card-category">Inmobiliaria Premium</div>
-                <h3 class="card-title">Elite Properties NJ</h3>
-                <p class="card-description">
-                    $2.3M en ventas generadas desde el sitio web. Integración IDX completa con tours virtuales inmersivos y lead capture system.
-                </p>
-                <a href="caso-elite-properties.html" class="card-button">Ver Caso Completo</a>
-            </div>
-        </div>
-        
-        <!-- Card 3: Life Coach -->
-        <div class="portfolio-card">
-            <div class="card-icon">✨</div>
-            <div class="card-content">
-                <div class="card-category">Life Coach</div>
-                <h3 class="card-title">Mindful Success Coaching</h3>
-                <p class="card-description">
-                    350% ROI en primeros 6 meses. Funnel de ventas con integración Kajabi completa, automatización de email marketing y webinars.
-                </p>
-                <a href="caso-mindful-success.html" class="card-button">Ver Caso Completo</a>
-            </div>
-        </div>
-        
-        <!-- Card 4: JCNay (PROYECTO REAL) -->
-        <div class="portfolio-card">
-            <div class="card-icon">💎</div>
-            <div class="card-content">
-                <span class="badge-live">● EN VIVO</span>
-                <div class="card-category">Agente de Seguros Premium</div>
-                <h3 class="card-title">JCNay Vida Team</h3>
-                <p class="card-description">
-                    Rediseño completo de 6.5/10 a 9.5/10. Arquitectura de Legados con concepto Nexo Infinito. Google Sheets CRM + Bot IA integrados. Conversión estimada 3-4x.
-                </p>
-                <a href="https://jcynay0206.github.io/jcnay-vida-team/" target="_blank" class="card-button">Ver Sitio en Vivo →</a>
-            </div>
-        </div>
-        
     </div>
+
+    <!-- CASE 1: Transform Leadership -->
+    <div id="case1" class="section">
+        <div class="case-hero">
+            <div class="category">Coach de Negocios</div>
+            <h1>Transform Leadership Academy</h1>
+            <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
+                Cómo multiplicamos por 4.5 los leads calificados en solo 3 meses
+            </p>
+        </div>
+
+        <div class="case-container">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">450%</div>
+                    <div class="stat-label">Aumento en Leads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$75K</div>
+                    <div class="stat-label">Revenue Generado</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5 sem</div>
+                    <div class="stat-label">Tiempo de Proyecto</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">28%</div>
+                    <div class="stat-label">Tasa de Conversión</div>
+                </div>
+            </div>
+
+            <h2>El Desafío</h2>
+            <div class="content-section">
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Transform Leadership Academy</strong> era una firma de coaching ejecutivo con excelente reputación pero presencia digital mediocre.
+                </p>
+                
+                <h3 style="color: var(--navy); margin: 1.5rem 0 1rem;">Problemas Identificados:</h3>
+                <ul>
+                    <li>Sitio web genérico que no proyectaba autoridad</li>
+                    <li>Sin estrategia de captura de leads</li>
+                    <li>Conversión de visitantes a consultas: solo 4%</li>
+                    <li>Sin integración con plataforma de cursos</li>
+                    <li>Tráfico desperdiciado sin nurturing</li>
+                </ul>
+            </div>
+
+            <h2>Nuestra Solución</h2>
+            <div class="content-section">
+                <h3 style="color: var(--navy); margin-bottom: 1rem;">Estrategia Implementada:</h3>
+                <ul>
+                    <li><strong>Rediseño completo</strong> con identidad premium y profesional</li>
+                    <li><strong>Landing pages optimizadas</strong> para cada servicio de coaching</li>
+                    <li><strong>Lead magnet estratégico:</strong> "Guía de Liderazgo Transformacional" (PDF premium)</li>
+                    <li><strong>Integración con Kajabi</strong> para cursos online y email automation</li>
+                    <li><strong>Funnel de conversión</strong> con 5 touchpoints estratégicos</li>
+                    <li><strong>Sistema de testimonios</strong> con video y social proof prominente</li>
+                </ul>
+            </div>
+
+            <h2>Resultados</h2>
+            <div class="content-section">
+                <h3 style="color: var(--gold); margin-bottom: 1rem;">Métricas Alcanzadas:</h3>
+                <ul>
+                    <li><strong>450% aumento en leads calificados</strong> (de 20 a 110 mensuales)</li>
+                    <li><strong>28% de conversión</strong> de visitantes a leads (vs. 4% anterior)</li>
+                    <li><strong>$75K en revenue</strong> generado directamente desde el sitio</li>
+                    <li><strong>1,200+ suscriptores</strong> al lead magnet en primer mes</li>
+                    <li><strong>85% reducción</strong> en costo de adquisición por cliente</li>
+                </ul>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    Azure Gold Studio no solo creó un sitio hermoso - crearon una máquina de generación de leads. 
+                    En 3 meses pasamos de perseguir clientes a tener lista de espera. El ROI ha sido extraordinario.
+                </p>
+                <div class="author">— Michael Chen, CEO Transform Leadership Academy</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <span class="btn-back" onclick="showSection('portfolio')">← Volver al Portfolio</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE 2: Elite Properties -->
+    <div id="case2" class="section">
+        <div class="case-hero">
+            <div class="category">Inmobiliaria Premium</div>
+            <h1>Elite Properties NJ</h1>
+            <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
+                $2.3M en ventas generadas directamente desde el sitio web
+            </p>
+        </div>
+
+        <div class="case-container">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">$2.3M</div>
+                    <div class="stat-label">En Ventas Generadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">180%</div>
+                    <div class="stat-label">ROI en 6 Meses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 sem</div>
+                    <div class="stat-label">Tiempo de Proyecto</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">450+</div>
+                    <div class="stat-label">Leads Mensuales</div>
+                </div>
+            </div>
+
+            <h2>El Desafío</h2>
+            <div class="content-section">
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Elite Properties</strong> es una boutique inmobiliaria especializada en propiedades de lujo en NJ. 
+                    A pesar de tener listings premium, su sitio web no generaba leads cualificados.
+                </p>
+                
+                <h3 style="color: var(--navy); margin: 1.5rem 0 1rem;">Problemas Críticos:</h3>
+                <ul>
+                    <li>Sitio obsoleto sin integración IDX (búsqueda de propiedades)</li>
+                    <li>Fotos de baja calidad sin tours virtuales</li>
+                    <li>SEO local inexistente - invisible en Google Maps</li>
+                    <li>Sin sistema de captura de leads</li>
+                    <li>Conversión móvil: solo 1.2%</li>
+                </ul>
+            </div>
+
+            <h2>Nuestra Solución</h2>
+            <div class="content-section">
+                <h3 style="color: var(--navy); margin-bottom: 1rem;">Estrategia Implementada:</h3>
+                <ul>
+                    <li><strong>Integración IDX completa</strong> con búsqueda avanzada de propiedades</li>
+                    <li><strong>Tours virtuales 360°</strong> para cada listing premium</li>
+                    <li><strong>Galerías fotográficas profesionales</strong> con lazy loading optimizado</li>
+                    <li><strong>SEO local dominante:</strong> optimización para "luxury homes NJ"</li>
+                    <li><strong>Sistema de valuación online</strong> como lead magnet</li>
+                    <li><strong>Mobile-first design</strong> con performance de 95+ en PageSpeed</li>
+                </ul>
+            </div>
+
+            <h2>Resultados</h2>
+            <div class="content-section">
+                <h3 style="color: var(--gold); margin-bottom: 1rem;">Impacto Medible:</h3>
+                <ul>
+                    <li><strong>$2.3M en ventas</strong> generadas directamente desde contactos del sitio</li>
+                    <li><strong>450+ leads mensuales</strong> (vs. 45 antes del rediseño)</li>
+                    <li><strong>180% ROI</strong> en primeros 6 meses</li>
+                    <li><strong>#1 en Google</strong> para "luxury homes Bergen County NJ"</li>
+                    <li><strong>32% conversión móvil</strong> (vs. 1.2% anterior)</li>
+                </ul>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    Nuestro sitio pasó de ser un brochure digital a nuestra mejor herramienta de ventas. 
+                    Los tours virtuales han sido un game-changer - cerramos 3 propiedades de $800K+ con 
+                    clientes que nos encontraron online. La inversión se pagó en el primer mes.
+                </p>
+                <div class="author">— Alexandra Russo, Owner Elite Properties NJ</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <span class="btn-back" onclick="showSection('portfolio')">← Volver al Portfolio</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE 3: Mindful Success -->
+    <div id="case3" class="section">
+        <div class="case-hero">
+            <div class="category">Life Coach</div>
+            <h1>Mindful Success Coaching</h1>
+            <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
+                350% ROI en los primeros 6 meses con funnel automatizado
+            </p>
+        </div>
+
+        <div class="case-container">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">350%</div>
+                    <div class="stat-label">ROI en 6 Meses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$120K</div>
+                    <div class="stat-label">Revenue Generado</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2,400</div>
+                    <div class="stat-label">Leads Capturados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">42%</div>
+                    <div class="stat-label">Conversión Webinar</div>
+                </div>
+            </div>
+
+            <h2>El Desafío</h2>
+            <div class="content-section">
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Mindful Success Coaching</strong> ofrecía programas de transformación personal de alto ticket ($3K-$12K) 
+                    pero dependía 100% de referidos y redes sociales sin estrategia de escalabilidad.
+                </p>
+                
+                <h3 style="color: var(--navy); margin: 1.5rem 0 1rem;">Puntos Críticos:</h3>
+                <ul>
+                    <li>Sin presencia web profesional (solo perfil en redes)</li>
+                    <li>Dependencia total de referidos - ingreso impredecible</li>
+                    <li>Sin sistema de captura ni nurturing de leads</li>
+                    <li>Imposibilidad de escalar más allá de 1-on-1 coaching</li>
+                    <li>Sin autoridad digital demostrable</li>
+                </ul>
+            </div>
+
+            <h2>Nuestra Solución</h2>
+            <div class="content-section">
+                <h3 style="color: var(--navy); margin-bottom: 1rem;">Ecosistema Digital Completo:</h3>
+                <ul>
+                    <li><strong>Sitio web premium</strong> con brand storytelling e identidad sólida</li>
+                    <li><strong>Integración total con Kajabi</strong> para cursos y membresías</li>
+                    <li><strong>Funnel de alto ticket:</strong> Lead Magnet → Email Sequence → Webinar → Oferta</li>
+                    <li><strong>Webinars automatizados</strong> 3x por semana con conversión optimizada</li>
+                    <li><strong>Quiz interactivo</strong> "Descubre tu Arquetipo de Éxito" (viral en redes)</li>
+                    <li><strong>Email automation</strong> con 12 secuencias segmentadas</li>
+                </ul>
+            </div>
+
+            <h2>Resultados</h2>
+            <div class="content-section">
+                <h3 style="color: var(--gold); margin-bottom: 1rem;">Transformación del Negocio:</h3>
+                <ul>
+                    <li><strong>350% ROI</strong> en primeros 6 meses</li>
+                    <li><strong>$120K en revenue</strong> directamente atribuible al nuevo sistema</li>
+                    <li><strong>2,400 leads capturados</strong> (lista de email creció de 0 a 2,400)</li>
+                    <li><strong>42% conversión en webinars</strong> (inscritos → calls agendadas)</li>
+                    <li><strong>18% conversión final</strong> a programas de alto ticket</li>
+                    <li><strong>Tráfico orgánico 10x</strong> en 4 meses</li>
+                </ul>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    Azure Gold Studio transformó mi negocio de coaching inestable en una máquina predecible de generación de ingresos. 
+                    El funnel automatizado trabaja para mí 24/7. Pasé de perseguir clientes a tener lista de espera. 
+                    Por primera vez en 5 años de coaching, tengo un negocio escalable.
+                </p>
+                <div class="author">— Dr. Sarah Martinez, Founder Mindful Success Coaching</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <span class="btn-back" onclick="showSection('portfolio')">← Volver al Portfolio</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER CON CONTACTO -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <!-- Sobre Azure Gold -->
+            <div class="footer-section">
+                <h3>Azure Gold Studio</h3>
+                <p>
+                    Estudio boutique especializado en sitios web premium que convierten para coaches e inmobiliarias de élite.
+                </p>
+                <p style="color: var(--gold); margin-top: 1rem;">
+                    <strong>Solo 3 clientes por mes.</strong><br>
+                    Resultados excepcionales garantizados.
+                </p>
+            </div>
+            
+            <!-- Contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/19086774196" target="_blank">+1 (908) 677-4196</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>New Jersey / New York</span>
+                </div>
+            </div>
+            
+            <!-- Redes Sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/azuregoldstudio" target="_blank" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/azuregold" target="_blank" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/19086774196" target="_blank" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:azuregoldstudio@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                    <strong>@azuregoldstudio</strong><br>
+                    Instagram | Facebook
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Azure Gold Studio. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseño Web Premium • NJ/NY</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para navegación -->
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        // Mostrar portfolio por defecto al cargar
+        window.onload = function() {
+            showSection('portfolio');
+        };
+    </script>
 
 </body>
 </html>
