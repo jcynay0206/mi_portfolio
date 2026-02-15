@@ -1107,7 +1107,6 @@
             transform: translateY(0);
         }
     
-        /* Blog Section */
         .blog-section {
             padding: 6rem 2rem; background: var(--white);
         }
@@ -1217,9 +1216,7 @@
             <a onclick="showHome()" class="logo">AZURE GOLD</a>
             <ul class="nav-links">
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proceso">Proceso</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a onclick="showBlog()">Blog</a></li>
                 <li><a onclick="showBlog()">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -1494,7 +1491,8 @@
             </div>
         </section>
 
-        <!-- BLOG LIST PAGE -->
+        
+    <!-- BLOG LIST PAGE -->
     <div id="blog-list" class="page-section">
         <section class="blog-section">
             <div class="container">
@@ -2823,7 +2821,7 @@
                         <a href="https://instagram.com/azuregoldstudio" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://facebook.com/azuregold" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://wa.me/19086774196" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="/cdn-cgi/l/email-protection#e28398979087858d8e86919697868b8da2858f838b8ecc818d8f" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#9afbe0efe8fffdf5f6fee9eeeffef3f5dafdf7fbf3f6b4f9f5f7" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
@@ -2842,8 +2840,7 @@
                     <ul>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a onclick="showBlog()">Blog</a></li>
-                        <li><a onclick="showBlog()">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                         <li><a onclick="showCase('case1')">Casos de Estudio</a></li>
                     </ul>
                 </div>
@@ -2856,7 +2853,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="/cdn-cgi/l/email-protection#2f4e555a5d4a4840434b5c5b5a4b46406f48424e4643014c4042"><span class="__cf_email__" data-cfemail="85e4fff0f7e0e2eae9e1f6f1f0e1eceac5e2e8e4ece9abe6eae8">[email&#160;protected]</span></a>
+                        <a href="/cdn-cgi/l/email-protection#25445f505740424a4941565150414c4a654248444c490b464a48"><span class="__cf_email__" data-cfemail="16776c63647371797a72656263727f7956717b777f7a3875797b">[email&#160;protected]</span></a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
@@ -3135,20 +3132,28 @@
     </div>
 
     <!-- JavaScript -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Page navigation functions
         function showBlog() {
+            // Ocultar casos
+            // Ocultar todas las page-sections (casos y blog)
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            // Mostrar blog list
             document.getElementById('blog-list').classList.add('active');
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
         function showPost(postId) {
+            // Ocultar todo
+            // Ocultar todas las page-sections (casos y blog)
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            // Mostrar post específico
             document.getElementById(postId).classList.add('active');
-            window.scrollTo({top: 0, behavior: 'smooth'}
-        </script><script>
-        // Page navigation functions
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
         function showHome() {
+            // Ocultar todas las page-sections (casos y blog)
             document.querySelectorAll('.page-section').forEach(section => {
                 section.classList.remove('active');
             });
@@ -3157,6 +3162,7 @@
         }
 
         function showCase(caseId) {
+            // Ocultar todas las page-sections (casos y blog)
             document.querySelectorAll('.page-section').forEach(section => {
                 section.classList.remove('active');
             });
