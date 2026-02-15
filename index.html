@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Gold Studio — Diseño Web de Lujo para Coaches & Inmobiliarias</title>
-    <meta name="description" content="Estudio boutique especializado en sitios web premium que convierten para coaches e inmobiliarias de élite. NJ/NY.">
+    <title>Azure Gold Studio | Diseño Web Premium + Blog de Marketing</title>
+    <meta name="description" content="Diseño web premium para coaches e inmobiliarias. Blog con estrategias de marketing digital para multiplicar tus leads.">
+    <meta name="keywords" content="diseño web, marketing digital, leads para coaches, sitios web inmobiliarias, blog marketing">
     
-    <!-- Google Fonts - Distinctive Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            /* Color Palette - Sophisticated Gold & Navy */
             --gold-primary: #D4AF37;
             --gold-light: #F5E6C8;
             --gold-dark: #B8941F;
@@ -25,1112 +22,298 @@
             --cream: #FAF8F3;
             --gray-light: #E8E6E1;
             --gray-medium: #A8A6A1;
-            
-            /* Typography */
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'Montserrat', sans-serif;
-            
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            
-            /* Transitions */
-            --transition-fast: 0.2s ease;
             --transition-medium: 0.4s ease;
-            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--cream); color: var(--navy-dark); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
+        h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.01em; }
+        h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
         
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            background: var(--cream);
-            color: var(--navy-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Section Visibility Control */
-        .page-section {
-            display: none;
-        }
-        
-        .page-section.active {
-            display: block;
-        }
-        
-        /* Typography Styles */
-        h1, h2, h3, h4 {
-            font-family: var(--font-display);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
-            letter-spacing: -0.02em;
-        }
-        
-        h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            letter-spacing: -0.01em;
-        }
-        
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
-        }
-        
-        .subtitle {
-            font-family: var(--font-body);
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--gold-primary);
-        }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
         
         /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 1.5rem 0;
-            transition: all var(--transition-medium);
+            padding: 1.5rem 0; transition: all var(--transition-medium);
         }
-        
-        nav.scrolled {
-            padding: 1rem 0;
-            background: rgba(10, 22, 40, 0.98);
-        }
-        
+        nav.scrolled { padding: 1rem 0; background: rgba(10, 22, 40, 0.98); }
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1400px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        
         .logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            text-decoration: none;
-            letter-spacing: 0.05em;
-            transition: all var(--transition-fast);
-            cursor: pointer;
+            font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+            color: var(--gold-primary); text-decoration: none; letter-spacing: 0.05em;
+            transition: all 0.2s ease; cursor: pointer;
         }
-        
-        .logo:hover {
-            color: var(--gold-light);
-            transform: translateY(-2px);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-        
+        .logo:hover { color: var(--gold-light); transform: translateY(-2px); }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
         .nav-links a {
-            color: var(--cream);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-            transition: all var(--transition-fast);
-            position: relative;
+            color: var(--cream); text-decoration: none; font-weight: 500;
+            font-size: 0.95rem; letter-spacing: 0.05em; transition: color 0.3s;
         }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold-primary);
-            transition: width var(--transition-medium);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
+        .nav-links a:hover { color: var(--gold-primary); }
         .cta-button {
-            padding: 0.8rem 2rem;
-            background: var(--gold-primary);
-            color: var(--navy-dark);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            transition: all var(--transition-medium);
+            padding: 0.8rem 2rem; background: var(--gold-primary);
+            color: var(--navy-dark); text-decoration: none; font-weight: 600;
+            letter-spacing: 0.05em; border-radius: 2px; transition: all var(--transition-medium);
             border: 2px solid var(--gold-primary);
         }
-        
         .cta-button:hover {
-            background: transparent;
-            color: var(--gold-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            background: transparent; color: var(--gold-primary);
+            transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
         }
         
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 2px;
-            background: var(--gold-primary);
-            transition: all var(--transition-fast);
-        }
-        
-        /* Hero Section */
+        /* Hero */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            min-height: 100vh; display: flex; align-items: center;
             background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 8rem 2rem 4rem;
+            position: relative; overflow: hidden; padding: 8rem 2rem 4rem;
         }
-        
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
             animation: pulseGlow 8s ease-in-out infinite;
         }
-        
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-        
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
         .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+            max-width: 1400px; margin: 0 auto; display: grid;
+            grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;
+            position: relative; z-index: 1;
         }
-        
-        .hero-content {
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero h1 {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-        
-        .hero h1 .highlight {
-            color: var(--gold-primary);
-            font-style: italic;
-        }
-        
-        .hero .subtitle {
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            color: var(--gray-light);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .hero-cta-group {
-            display: flex;
-            gap: 1.5rem;
-            animation: fadeInUp 1s ease-out 0.8s both;
-        }
-        
+        .hero h1 { color: var(--white); margin-bottom: 1.5rem; }
+        .hero h1 .highlight { color: var(--gold-primary); font-style: italic; }
+        .subtitle { color: var(--gold-primary); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.2em; }
+        .hero-description { font-size: 1.2rem; color: var(--gray-light); line-height: 1.8; margin-bottom: 3rem; }
+        .hero-cta-group { display: flex; gap: 1.5rem; }
         .btn-primary {
-            padding: 1.2rem 3rem;
-            background: var(--gold-primary);
-            color: var(--navy-dark);
-            text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            transition: all var(--transition-medium);
-            border: 2px solid var(--gold-primary);
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 0.95rem;
+            padding: 1.2rem 3rem; background: var(--gold-primary);
+            color: var(--navy-dark); text-decoration: none; font-weight: 700;
+            letter-spacing: 0.05em; border-radius: 2px; transition: all var(--transition-medium);
+            border: 2px solid var(--gold-primary); display: inline-block;
+            text-transform: uppercase; font-size: 0.95rem;
         }
-        
         .btn-primary:hover {
-            background: transparent;
-            color: var(--gold-primary);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+            background: transparent; color: var(--gold-primary);
+            transform: translateY(-3px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
         }
-        
         .btn-secondary {
-            padding: 1.2rem 3rem;
-            background: transparent;
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            transition: all var(--transition-medium);
-            border: 2px solid var(--gray-light);
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 0.95rem;
+            padding: 1.2rem 3rem; background: transparent; color: var(--white);
+            text-decoration: none; font-weight: 600; letter-spacing: 0.05em;
+            border-radius: 2px; transition: all var(--transition-medium);
+            border: 2px solid var(--gray-light); display: inline-block;
+            text-transform: uppercase; font-size: 0.95rem;
         }
-        
         .btn-secondary:hover {
-            background: var(--white);
-            color: var(--navy-dark);
-            border-color: var(--white);
-            transform: translateY(-3px);
+            background: var(--white); color: var(--navy-dark);
+            border-color: var(--white); transform: translateY(-3px);
         }
-        
-        .hero-visual {
-            position: relative;
-            animation: fadeIn 1.2s ease-out 0.5s both;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
         .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
         }
-        
         .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 2rem;
-            border-radius: 4px;
-            transition: all var(--transition-medium);
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2); padding: 2rem;
+            border-radius: 4px; transition: all var(--transition-medium);
         }
-        
         .stat-card:hover {
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(212, 175, 55, 0.4);
-            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.4); transform: translateY(-5px);
         }
-        
         .stat-number {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            line-height: 1;
-            margin-bottom: 0.5rem;
+            font-family: var(--font-display); font-size: 3rem; font-weight: 700;
+            color: var(--gold-primary); line-height: 1; margin-bottom: 0.5rem;
         }
+        .stat-label { color: var(--gray-light); font-size: 0.95rem; letter-spacing: 0.05em; }
         
-        .stat-label {
-            color: var(--gray-light);
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
+        /* Blog Section */
+        .blog-section {
+            padding: 6rem 2rem; background: var(--white);
         }
-        
-        /* Section Styles */
-        section {
-            padding: var(--spacing-xl) 2rem;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
+        .container { max-width: 1200px; margin: 0 auto; }
         .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: center; margin-bottom: 4rem;
+            max-width: 800px; margin-left: auto; margin-right: auto;
         }
-        
-        .section-subtitle {
-            color: var(--gold-primary);
-            margin-bottom: 1rem;
-        }
-        
+        .section-subtitle { color: var(--gold-primary); margin-bottom: 1rem; }
         .section-description {
-            font-size: 1.1rem;
-            color: var(--gray-medium);
-            line-height: 1.8;
+            font-size: 1.1rem; color: var(--gray-medium); line-height: 1.8;
         }
         
-        /* Niches Section */
-        .niches {
-            background: var(--navy-dark);
-            color: var(--white);
+        .blog-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem; margin-top: 3rem;
         }
-        
-        .niches-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .niche-card {
-            background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-light) 100%);
-            padding: 3rem;
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-            transition: all var(--transition-slow);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        
-        .niche-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform var(--transition-slow);
-        }
-        
-        .niche-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .niche-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-        
-        .niche-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-        
-        .niche-card h3 {
-            color: var(--gold-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .niche-card p {
-            color: var(--gray-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .niche-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .niche-features li {
-            color: var(--cream);
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .niche-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--gold-primary);
-            font-weight: 700;
-        }
-        
-        .niche-price {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-top: 1.5rem;
-        }
-        
-        /* Process Section */
-        .process {
-            background: var(--white);
-        }
-        
-        .process-timeline {
-            position: relative;
-            margin-top: 4rem;
-        }
-        
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--gold-primary), var(--gold-light));
-            transform: translateX(-50%);
-        }
-        
-        .process-step {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-        
-        .process-step:nth-child(even) .step-content {
-            order: 2;
-        }
-        
-        .process-step:nth-child(even) .step-visual {
-            order: 1;
-        }
-        
-        .step-content {
-            background: var(--cream);
-            padding: 3rem;
-            border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all var(--transition-medium);
-        }
-        
-        .step-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-        }
-        
-        .step-number {
-            font-family: var(--font-display);
-            font-size: 5rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            opacity: 0.2;
-            line-height: 1;
-            margin-bottom: -1.5rem;
-        }
-        
-        .step-title {
-            color: var(--navy-dark);
-            margin-bottom: 1rem;
-        }
-        
-        .step-description {
-            color: var(--gray-medium);
-            line-height: 1.8;
-        }
-        
-        .step-visual {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            font-size: 8rem;
-        }
-        
-        /* Portfolio Section */
-        .portfolio {
-            background: var(--cream);
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-            aspect-ratio: 16/10;
-            background: var(--navy-medium);
-            cursor: pointer;
-            transition: all var(--transition-slow);
-        }
-        
-        .portfolio-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        .portfolio-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            background: linear-gradient(135deg, var(--navy-medium), var(--navy-dark));
-            transition: all var(--transition-slow);
-        }
-        
-        .portfolio-item:hover .portfolio-placeholder {
-            opacity: 0.2;
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.95), rgba(44, 62, 92, 0.95));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            opacity: 0;
-            transition: all var(--transition-medium);
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-category {
-            color: var(--gold-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-        
-        .portfolio-title {
-            color: var(--white);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .portfolio-description {
-            color: var(--gray-light);
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .portfolio-link {
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            padding: 0.8rem 2rem;
-            border: 2px solid var(--gold-primary);
-            border-radius: 2px;
-            transition: all var(--transition-fast);
-        }
-        
-        .portfolio-link:hover {
-            background: var(--gold-primary);
-            color: var(--navy-dark);
-        }
-        
-        .badge-live {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            border-radius: 20px;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Case Study Sections */
-        .case-hero {
-            background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
-            color: white;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .case-hero-content h1 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        
-        .case-category {
-            color: var(--gold-primary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            margin-bottom: 2rem;
-        }
-        
-        .case-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .stat-card-case {
-            background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
-            color: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .content-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+        .blog-card {
+            background: var(--cream); border-radius: 8px; overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease; cursor: pointer;
         }
-        
-        .content-section ul {
-            list-style: none;
-            padding: 0;
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
-        
-        .content-section li {
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
+        .blog-image {
+            width: 100%; height: 250px; background: linear-gradient(135deg, var(--navy-medium), var(--navy-dark));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; color: var(--gold-primary);
         }
-        
-        .content-section li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--gold-primary);
-            font-weight: 700;
+        .blog-content { padding: 2rem; }
+        .blog-meta {
+            color: var(--gray-medium); font-size: 0.85rem;
+            margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em;
         }
-        
-        .testimonial-case {
-            background: var(--navy-dark);
-            color: white;
-            padding: 3rem;
-            border-radius: 8px;
-            margin: 3rem 0;
-            font-style: italic;
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            line-height: 1.7;
-            position: relative;
-        }
-        
-        .testimonial-case::before {
-            content: '"';
-            font-size: 5rem;
-            color: var(--gold-primary);
-            position: absolute;
-            top: 1rem;
-            left: 2rem;
-            opacity: 0.3;
-        }
-        
-        .author {
-            margin-top: 1.5rem;
-            color: var(--gold-primary);
-            font-size: 1rem;
-            font-style: normal;
-        }
-        
-        .btn-back {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--gold-primary);
+        .blog-title {
+            font-size: 1.6rem; margin-bottom: 1rem;
             color: var(--navy-dark);
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 4px;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
         }
-        
-        .btn-back:hover {
-            background: var(--navy-dark);
-            color: var(--gold-primary);
-            border: 2px solid var(--gold-primary);
+        .blog-excerpt {
+            color: var(--gray-medium); line-height: 1.7; margin-bottom: 1.5rem;
         }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--navy-dark);
-            color: var(--white);
+        .blog-link {
+            color: var(--gold-primary); font-weight: 600;
+            text-decoration: none; transition: color 0.3s;
         }
+        .blog-link:hover { color: var(--gold-dark); }
         
-        .testimonials-slider {
-            max-width: 900px;
-            margin: 3rem auto 0;
+        /* Blog Post Page */
+        .post-hero {
+            background: linear-gradient(135deg, var(--navy-dark), var(--navy-medium));
+            color: white; padding: 8rem 2rem 4rem; text-align: center;
         }
-        
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 3rem;
-            border-radius: 4px;
-            text-align: center;
+        .post-hero h1 { color: white; margin-bottom: 1rem; }
+        .post-meta {
+            color: var(--gray-light); margin-top: 1rem;
         }
-        
-        .testimonial-quote {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--cream);
-            line-height: 1.6;
-            margin-bottom: 2rem;
+        .post-container {
+            max-width: 800px; margin: 0 auto; padding: 4rem 2rem;
+            background: white;
         }
-        
-        .testimonial-quote::before {
-            content: '"';
-            color: var(--gold-primary);
-            font-size: 3rem;
-            line-height: 0;
-            vertical-align: -0.4em;
+        .post-content {
+            font-size: 1.1rem; line-height: 1.9; color: var(--navy-dark);
         }
-        
-        .testimonial-quote::after {
-            content: '"';
-            color: var(--gold-primary);
-            font-size: 3rem;
-            line-height: 0;
-            vertical-align: -0.4em;
+        .post-content h2 {
+            margin: 3rem 0 1.5rem; color: var(--navy-dark);
+            border-bottom: 2px solid var(--gold-primary); padding-bottom: 0.5rem;
         }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
+        .post-content h3 {
+            margin: 2rem 0 1rem; color: var(--navy-medium);
         }
-        
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid var(--gold-primary);
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            color: var(--gold-primary);
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-        }
-        
-        .author-info p {
-            color: var(--gray-light);
-            font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-            color: var(--navy-dark);
-            text-align: center;
-            padding: var(--spacing-xl) 2rem;
-        }
-        
-        .cta-section h2 {
-            color: var(--navy-dark);
+        .post-content p {
             margin-bottom: 1.5rem;
         }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .post-content ul, .post-content ol {
+            margin: 1.5rem 0; padding-left: 2rem;
         }
-        
-        .btn-cta-dark {
-            padding: 1.2rem 3rem;
-            background: var(--navy-dark);
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            transition: all var(--transition-medium);
-            border: 2px solid var(--navy-dark);
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 0.95rem;
+        .post-content li {
+            margin-bottom: 0.8rem;
         }
-        
-        .btn-cta-dark:hover {
-            background: transparent;
-            color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(10, 22, 40, 0.3);
+        .post-cta {
+            background: var(--gold-light); border-left: 4px solid var(--gold-primary);
+            padding: 2rem; margin: 3rem 0; border-radius: 4px;
+        }
+        .post-cta h3 {
+            color: var(--navy-dark); margin-bottom: 1rem;
+        }
+        .btn-back {
+            display: inline-block; padding: 1rem 2.5rem;
+            background: var(--gold-primary); color: var(--navy-dark);
+            text-decoration: none; font-weight: 700; border-radius: 4px;
+            margin-top: 2rem; transition: all 0.3s ease; cursor: pointer;
+        }
+        .btn-back:hover {
+            background: var(--navy-dark); color: var(--gold-primary);
+            border: 2px solid var(--gold-primary);
         }
         
         /* Footer */
         footer {
-            background: var(--navy-dark);
-            color: var(--gray-light);
+            background: var(--navy-dark); color: var(--gray-light);
             padding: 4rem 2rem 2rem;
         }
-        
         .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            max-width: 1400px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem; margin-bottom: 3rem;
         }
-        
         .footer-brand h3 {
-            color: var(--gold-primary);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            color: var(--gold-primary); font-size: 1.8rem; margin-bottom: 1rem;
         }
-        
-        .footer-brand p {
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
+        .footer-brand p { line-height: 1.8; margin-bottom: 1.5rem; }
+        .social-links { display: flex; gap: 1rem; }
         .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 2px solid var(--gold-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: all var(--transition-fast);
+            width: 45px; height: 45px; background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--gold-primary); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold-primary); text-decoration: none;
+            font-size: 1.2rem; transition: all 0.2s ease;
         }
-        
         .social-links a:hover {
-            background: var(--gold-primary);
-            color: var(--navy-dark);
+            background: var(--gold-primary); color: var(--navy-dark);
             transform: translateY(-3px);
         }
-        
         .footer-links h4 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            color: var(--white); font-size: 1.1rem; margin-bottom: 1rem;
         }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; }
         .footer-links a {
-            color: var(--gray-light);
-            text-decoration: none;
-            transition: all var(--transition-fast);
+            color: var(--gray-light); text-decoration: none;
+            transition: all 0.2s ease;
         }
-        
-        .footer-links a:hover {
-            color: var(--gold-primary);
-            padding-left: 5px;
-        }
-        
+        .footer-links a:hover { color: var(--gold-primary); padding-left: 5px; }
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 0.8rem;
-            color: var(--gray-light);
+            display: flex; align-items: center; gap: 0.8rem;
+            margin-bottom: 0.8rem; color: var(--gray-light);
         }
-        
-        .contact-item i {
-            color: var(--gold-primary);
-            width: 20px;
-        }
-        
+        .contact-item i { color: var(--gold-primary); width: 20px; }
         .footer-bottom {
             border-top: 1px solid rgba(212, 175, 55, 0.2);
-            padding-top: 2rem;
-            text-align: center;
-            color: var(--gray-medium);
+            padding-top: 2rem; text-align: center; color: var(--gray-medium);
         }
         
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-cta-group {
-                justify-content: center;
-            }
-            
-            .process-step {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-step:nth-child(even) .step-content,
-            .process-step:nth-child(even) .step-visual {
-                order: unset;
-            }
-            
-            .process-timeline::before {
-                display: none;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
-            }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-cta-group { justify-content: center; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
         }
-        
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-            }
-            
-            .hero {
-                padding: 6rem 1.5rem 3rem;
-            }
-            
-            .hero-cta-group {
-                flex-direction: column;
-            }
-            
-            .niches-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .nav-links { display: none; }
+            .hero { padding: 6rem 1.5rem 3rem; }
+            .hero-cta-group { flex-direction: column; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <a onclick="showHome()" class="logo">AZURE GOLD</a>
             <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a onclick="showHome()">Inicio</a></li>
+                <li><a onclick="showBlog()">Blog</a></li>
+                <li><a href="https://calendly.com/azuregoldstudio/30min" target="_blank">Contacto</a></li>
             </ul>
             <a href="https://calendly.com/azuregoldstudio/30min" class="cta-button" target="_blank">Agendar Consulta</a>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 
-    <!-- MAIN HOMEPAGE -->
+    <!-- HOMEPAGE -->
     <div id="homepage" class="page-section active">
-        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-content">
@@ -1140,8 +323,8 @@
                         Diseñamos sitios web de lujo que proyectan autoridad, generan confianza absoluta y multiplican tus conversiones. Especializados en coaches de élite e inmobiliarias premium que exigen resultados excepcionales.
                     </p>
                     <div class="hero-cta-group">
-                        <a href="#servicios" class="btn-primary">Ver Servicios</a>
-                        <a href="#portfolio" class="btn-secondary">Portfolio</a>
+                        <a onclick="showBlog()" class="btn-primary">Ver Blog</a>
+                        <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-secondary">Agendar Consulta</a>
                     </div>
                 </div>
                 
@@ -1167,569 +350,1398 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Niches Section -->
-        <section class="niches" id="servicios">
+    <!-- BLOG LIST PAGE -->
+    <div id="blog-list" class="page-section">
+        <section class="blog-section">
             <div class="container">
                 <div class="section-header">
-                    <p class="subtitle section-subtitle">Especialización Premium</p>
-                    <h2>Dominamos Los Nichos Que Generan Resultados</h2>
+                    <p class="subtitle section-subtitle">Blog de Marketing Digital</p>
+                    <h2>Estrategias Para Multiplicar Tus Leads</h2>
                     <p class="section-description">
-                        No trabajamos con cualquiera. Nos especializamos en profesionales de élite que entienden el valor de una presencia digital excepcional.
+                        Artículos prácticos sobre diseño web, marketing digital, y cómo hacer crecer tu negocio online. Todo basado en resultados reales.
                     </p>
                 </div>
                 
-                <div class="niches-grid">
-                    <!-- Coaches -->
-                    <div class="niche-card fade-in">
-                        <span class="niche-icon">🎯</span>
-                        <h3>Coaches de Alto Rendimiento</h3>
-                        <p>Tu expertise merece un sitio que venda tu transformación antes de la primera llamada. Creamos embudos optimizados que convierten visitantes en clientes premium.</p>
-                        <ul class="niche-features">
-                            <li>Landing pages de conversión ultra-alta</li>
-                            <li>Integración con plataformas de cursos (Kajabi, Teachable)</li>
-                            <li>Sistemas de captura y nurturing de leads</li>
-                            <li>Testimonios y social proof estratégicos</li>
-                            <li>Blog optimizado para autoridad</li>
-                        </ul>
-                        <div class="niche-price">$6,000 - $15,000</div>
-                    </div>
-                    
-                    <!-- Real Estate -->
-                    <div class="niche-card fade-in">
-                        <span class="niche-icon">🏡</span>
-                        <h3>Inmobiliarias & Agentes Elite</h3>
-                        <p>Destaca en un mercado saturado con una presencia digital que proyecta exclusividad y genera leads calificados 24/7.</p>
-                        <ul class="niche-features">
-                            <li>Búsqueda avanzada de propiedades (IDX)</li>
-                            <li>Tours virtuales inmersivos</li>
-                            <li>Galerías fotográficas premium</li>
-                            <li>SEO local dominante</li>
-                            <li>Gestión automatizada de listings</li>
-                        </ul>
-                        <div class="niche-price">$5,000 - $12,000</div>
-                    </div>
-                    
-                    <!-- Insurance -->
-                    <div class="niche-card fade-in">
-                        <span class="niche-icon">🛡️</span>
-                        <h3>Agentes de Seguros Premium</h3>
-                        <p>Posiciónate como el experto confiable con un sitio que educa, convierte y automatiza tu generación de leads.</p>
-                        <ul class="niche-features">
-                            <li>Calculadoras y herramientas interactivas</li>
-                            <li>Content marketing educativo</li>
-                            <li>Sistema de cotizaciones online</li>
-                            <li>Compliance total con regulaciones</li>
-                            <li>Estrategia de captación automatizada</li>
-                        </ul>
-                        <div class="niche-price">$4,000 - $8,000</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="process" id="proceso">
-            <div class="container">
-                <div class="section-header">
-                    <p class="subtitle section-subtitle">Metodología Probada</p>
-                    <h2>Nuestro Proceso de Arquitectura Digital</h2>
-                    <p class="section-description">
-                        Un enfoque sistemático que garantiza resultados excepcionales en cada proyecto.
-                    </p>
-                </div>
-                
-                <div class="process-timeline">
-                    <!-- Step 1 -->
-                    <div class="process-step fade-in">
-                        <div class="step-content">
-                            <div class="step-number">01</div>
-                            <h3 class="step-title">Discovery & Estrategia</h3>
-                            <p class="step-description">
-                                Análisis profundo de tu negocio, competencia y audiencia. Definimos objetivos claros, KPIs y la estrategia de conversión que multiplicará tus resultados.
+                <div class="blog-grid">
+                    <!-- Post 1 -->
+                    <div class="blog-card" onclick="showPost('post1')">
+                        <div class="blog-image">📊</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">Marketing Digital • 5 min lectura</div>
+                            <h3 class="blog-title">5 Errores Que Matan Tu Tasa de Conversión (Y Cómo Arreglarlos)</h3>
+                            <p class="blog-excerpt">
+                                Tu sitio web recibe tráfico pero no genera leads. El problema no es el tráfico - son estos 5 errores críticos que la mayoría comete...
                             </p>
+                            <span class="blog-link">Leer más →</span>
                         </div>
-                        <div class="step-visual">📊</div>
                     </div>
                     
-                    <!-- Step 2 -->
-                    <div class="process-step fade-in">
-                        <div class="step-content">
-                            <div class="step-number">02</div>
-                            <h3 class="step-title">Diseño Premium</h3>
-                            <p class="step-description">
-                                Creamos wireframes, arquitectura de información y diseños visuales que proyectan tu autoridad. Todo optimizado para conversión y experiencia de usuario excepcional.
+                    <!-- Post 2 -->
+                    <div class="blog-card" onclick="showPost('post2')">
+                        <div class="blog-image">🎯</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">Coaches • 6 min lectura</div>
+                            <h3 class="blog-title">Por Qué Los Coaches Necesitan Un Sitio Web (Aunque Tengas 10K Followers)</h3>
+                            <p class="blog-excerpt">
+                                Instagram está genial, pero no controlas la plataforma. Tu sitio web es tu activo digital #1. Aquí está por qué...
                             </p>
+                            <span class="blog-link">Leer más →</span>
                         </div>
-                        <div class="step-visual">✨</div>
                     </div>
                     
-                    <!-- Step 3 -->
-                    <div class="process-step fade-in">
-                        <div class="step-content">
-                            <div class="step-number">03</div>
-                            <h3 class="step-title">Desarrollo & Optimización</h3>
-                            <p class="step-description">
-                                Construcción técnica impecable con las mejores tecnologías. Velocidad lightning-fast, SEO optimizado y adaptación perfecta a todos los dispositivos.
+                    <!-- Post 3 -->
+                    <div class="blog-card" onclick="showPost('post3')">
+                        <div class="blog-image">🏡</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">Inmobiliarias • 7 min lectura</div>
+                            <h3 class="blog-title">Cómo Los Mejores Agentes Inmobiliarios Generan Leads Mientras Duermen</h3>
+                            <p class="blog-excerpt">
+                                Los agentes top no persiguen clientes. Sus sitios web trabajan 24/7 generando leads calificados automáticamente. Aquí está cómo...
                             </p>
+                            <span class="blog-link">Leer más →</span>
                         </div>
-                        <div class="step-visual">⚡</div>
                     </div>
                     
-                    <!-- Step 4 -->
-                    <div class="process-step fade-in">
-                        <div class="step-content">
-                            <div class="step-number">04</div>
-                            <h3 class="step-title">Lanzamiento & Soporte</h3>
-                            <p class="step-description">
-                                Lanzamiento estratégico con training completo. Monitoreo post-lanzamiento y soporte dedicado para garantizar resultados sostenidos.
+                    <!-- Post 4 -->
+                    <div class="blog-card" onclick="showPost('post4')">
+                        <div class="blog-image">💰</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">Pricing • 5 min lectura</div>
+                            <h3 class="blog-title">$500 vs $10,000: Por Qué Los Sitios Baratos Te Cuestan Más</h3>
+                            <p class="blog-excerpt">
+                                Puedes comprar un sitio en Fiverr por $500. Pero esa "ganga" te costará $50,000+ en oportunidades perdidas. Aquí está la matemática real...
                             </p>
-                        </div>
-                        <div class="step-visual">🚀</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header">
-                    <p class="subtitle section-subtitle">Casos de Éxito</p>
-                    <h2>Portfolio Selecto</h2>
-                    <p class="section-description">
-                        Proyectos que han transformado negocios y multiplicado conversiones.
-                    </p>
-                </div>
-                
-                <div class="portfolio-grid">
-                    <!-- Portfolio Item 1 - Transform Leadership -->
-                    <div class="portfolio-item fade-in" onclick="showCase('case1')">
-                        <div class="portfolio-placeholder">💼</div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Coach de Negocios</span>
-                            <h3 class="portfolio-title">Transform Leadership Academy</h3>
-                            <p class="portfolio-description">Aumento de 450% en leads calificados en 3 meses</p>
-                            <span class="portfolio-link">Ver Caso Completo</span>
+                            <span class="blog-link">Leer más →</span>
                         </div>
                     </div>
                     
-                    <!-- Portfolio Item 2 - Elite Properties -->
-                    <div class="portfolio-item fade-in" onclick="showCase('case2')">
-                        <div class="portfolio-placeholder">🏡</div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Inmobiliaria Premium</span>
-                            <h3 class="portfolio-title">Elite Properties NJ</h3>
-                            <p class="portfolio-description">$2.3M en ventas generadas desde el sitio web</p>
-                            <span class="portfolio-link">Ver Caso Completo</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 3 - Mindful Success -->
-                    <div class="portfolio-item fade-in" onclick="showCase('case3')">
-                        <div class="portfolio-placeholder">✨</div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Life Coach</span>
-                            <h3 class="portfolio-title">Mindful Success Coaching</h3>
-                            <p class="portfolio-description">350% ROI en primeros 6 meses</p>
-                            <span class="portfolio-link">Ver Caso Completo</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 4 - JCNay (REAL) -->
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-placeholder">💎</div>
-                        <div class="portfolio-overlay">
-                            <span class="badge-live">● EN VIVO</span>
-                            <span class="portfolio-category">Agente de Seguros Premium</span>
-                            <h3 class="portfolio-title">JCNay Vida Team</h3>
-                            <p class="portfolio-description">Rediseño 6.5→9.5/10. CRM + Bot IA integrados</p>
-                            <a href="https://jcynay0206.github.io/jcnay-vida-team/" target="_blank" class="portfolio-link">Ver Sitio en Vivo →</a>
+                    <!-- Post 5 -->
+                    <div class="blog-card" onclick="showPost('post5')">
+                        <div class="blog-image">⚡</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">Performance • 6 min lectura</div>
+                            <h3 class="blog-title">Tu Sitio Lento Te Está Costando $10K/Mes (Y Cómo Arreglarlo)</h3>
+                            <p class="blog-excerpt">
+                                Cada segundo de carga cuesta 7% en conversiones. Si tu sitio tarda 5 segundos, estás perdiendo 35% de ventas. Aquí está la solución...
+                            </p>
+                            <span class="blog-link">Leer más →</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials">
+    <!-- BLOG POST 1 -->
+    <div id="post1" class="page-section">
+        <div class="post-hero">
             <div class="container">
-                <div class="section-header">
-                    <p class="subtitle section-subtitle">Lo Que Dicen Nuestros Clientes</p>
-                    <h2>Resultados Reales, Testimonios Reales</h2>
-                </div>
-                
-                <div class="testimonials-slider">
-                    <div class="testimonial-card fade-in">
-                        <p class="testimonial-quote">
-                            Azure Gold no solo creó un sitio hermoso, crearon una máquina de conversión. Mis leads se triplicaron y la calidad es incomparable. Mejor inversión que he hecho en mi negocio.
-                        </p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format&q=80" alt="Sarah Mitchell" class="author-image">
-                            <div class="author-info">
-                                <h4>Sarah Mitchell</h4>
-                                <p>Business Coach | $500K+ Revenue Anual</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h1>5 Errores Que Matan Tu Tasa de Conversión (Y Cómo Arreglarlos)</h1>
+                <div class="post-meta">Publicado el 15 de Febrero, 2026 • 5 min lectura</div>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" id="contacto">
-            <div class="container">
-                <h2>¿Listo Para Dominar Tu Mercado?</h2>
+        </div>
+        <div class="post-container">
+            <div class="post-content">
                 <p>
-                    Aceptamos máximo 3 proyectos por mes para garantizar calidad excepcional. 
-                    Agenda tu consulta estratégica gratuita ahora.
+                    Tu sitio web recibe 1,000 visitantes al mes. Solo 10 dejan su información. 
+                    Tasa de conversión: 1%. <strong>Eso es terrible.</strong>
                 </p>
-                <a href="https://calendly.com/azuregoldstudio/30min" class="btn-cta-dark" target="_blank">
-                    Agendar Consulta Gratuita
-                </a>
-            </div>
-        </section>
+                <p>
+                    El problema no es que necesites más tráfico. El problema es que tu sitio 
+                    está cometiendo errores críticos que hacen que el 99% de visitantes se vayan sin convertir.
+                </p>
+                <p>
+                    Aquí están los 5 errores más comunes (y más costosos) que veo cada semana:
+                </p>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <h3>AZURE GOLD STUDIO</h3>
-                    <p>Estudio boutique especializado en arquitectura digital premium para coaches e inmobiliarias de élite.</p>
-                    <p style="color: var(--gold-primary); font-weight: 600; margin-top: 1rem;">@azuregoldstudio</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/azuregoldstudio" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/azuregold" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/19086774196" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:azuregoldstudio@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
+                <h2>1. No Tienes Una Propuesta de Valor Clara en 3 Segundos</h2>
+                <p>
+                    Tienes 3 segundos para responder: <em>"¿Por qué debería quedarme en tu sitio?"</em>
+                </p>
+                <p>
+                    La mayoría de sitios web dicen cosas vagas como:
+                </p>
+                <ul>
+                    <li>"Soluciones innovadoras para tu negocio"</li>
+                    <li>"Tu socio de confianza"</li>
+                    <li>"Excelencia en servicio"</li>
+                </ul>
+                <p>
+                    <strong>Eso es basura genérica que no significa nada.</strong>
+                </p>
+                <p>
+                    <strong>Mejor:</strong> "Multiplico tus leads de coaching por 3x en 90 días o te devuelvo tu dinero."
+                </p>
+                <p>
+                    Específico. Medible. Con garantía. Eso convierte.
+                </p>
+
+                <h2>2. Formularios Demasiado Largos</h2>
+                <p>
+                    Cada campo extra en tu formulario reduce conversiones 10-20%.
+                </p>
+                <p>
+                    ¿Necesitas nombre, apellido, email, teléfono, empresa, posición, presupuesto, 
+                    industria, y "¿cómo nos encontraste?"?
+                </p>
+                <p>
+                    <strong>NO.</strong> Solo necesitas: Nombre + Email (o teléfono).
+                </p>
+                <p>
+                    Puedes hacer las otras preguntas después, EN LA LLAMADA. Primero captura el lead.
+                </p>
+
+                <h3>Ejemplo Real:</h3>
+                <p>
+                    Cliente tenía formulario de 8 campos. Conversión: 2%.
+                    Reduje a 2 campos (nombre + email). Conversión subió a 8%.
+                    <strong>4x más leads con el mismo tráfico.</strong>
+                </p>
+
+                <h2>3. No Hay Urgencia Ni Escasez</h2>
+                <p>
+                    Sin urgencia = "Lo veo después" = Nunca vuelven.
+                </p>
+                <p>
+                    Agrega urgencia legítima:
+                </p>
+                <ul>
+                    <li>"Solo acepto 3 clientes nuevos este mes (2 spots quedan)"</li>
+                    <li>"Oferta expira en 72 horas"</li>
+                    <li>"Próximo disponibilidad: Abril 2026"</li>
+                </ul>
+                <p>
+                    <strong>IMPORTANTE:</strong> Debe ser real. No mientas. Si dices "solo 3 spots" 
+                    pero aceptas a cualquiera, pierdes credibilidad.
+                </p>
+
+                <h2>4. Tu CTA (Call-To-Action) Es Débil</h2>
+                <p>
+                    "Enviar" "Submit" "Más información" son CTAs horribles.
+                </p>
+                <p>
+                    <strong>Buenos CTAs:</strong>
+                </p>
+                <ul>
+                    <li>"Agendar Mi Consulta Gratuita" (específico + beneficio)</li>
+                    <li>"Descargar Guía de 10 Páginas" (específico + valor)</li>
+                    <li>"Ver Mi ROI Estimado" (beneficio inmediato)</li>
+                </ul>
+                <p>
+                    Siempre responde: ¿Qué obtengo AL hacer click?
+                </p>
+
+                <h2>5. No Tienes Social Proof Visible</h2>
+                <p>
+                    "Confía en mí" no funciona. "Mira lo que dicen mis clientes" sí funciona.
+                </p>
+                <p>
+                    <strong>Social proof que convierte:</strong>
+                </p>
+                <ul>
+                    <li>Testimonials con foto + nombre real + empresa</li>
+                    <li>Casos de estudio con números reales ("450% aumento en leads")</li>
+                    <li>Logos de clientes (si tienes clientes conocidos)</li>
+                    <li>Reviews de Google/Trustpilot integradas</li>
+                    <li>Video testimonials (10x más poderosos que texto)</li>
+                </ul>
+                <p>
+                    Sin prueba social, eres un desconocido pidiendo confianza. Con prueba social, 
+                    tienes terceros validando tu trabajo.
+                </p>
+
+                <h2>El Costo Real de Estos Errores</h2>
+                <p>
+                    Hagamos la matemática:
+                </p>
+                <ul>
+                    <li>1,000 visitantes/mes</li>
+                    <li>Conversión actual: 1% = 10 leads</li>
+                    <li>Conversión optimizada: 5% = 50 leads</li>
+                    <li><strong>40 leads extra/mes</strong></li>
+                </ul>
+                <p>
+                    Si tu tasa de cierre es 10% y valor de cliente es $5,000:
+                </p>
+                <ul>
+                    <li>40 leads × 10% = 4 clientes extra</li>
+                    <li>4 clientes × $5,000 = <strong>$20,000/mes adicionales</strong></li>
+                    <li><strong>$240,000/año</strong> que estás dejando en la mesa</li>
+                </ul>
+                <p>
+                    Por no arreglar estos 5 errores.
+                </p>
+
+                <div class="post-cta">
+                    <h3>¿Quieres Que Revise Tu Sitio?</h3>
+                    <p>
+                        Te hago un audit gratuito de 15 minutos. Te muestro exactamente qué está 
+                        matando tus conversiones y cómo arreglarlo.
+                    </p>
+                    <p>
+                        <strong>Sin costo. Sin compromiso. Solo valor.</strong>
+                    </p>
+                    <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-primary">
+                        Agendar Mi Audit Gratuito
+                    </a>
                 </div>
-                
-                <div class="footer-links">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#servicios">Coaches</a></li>
-                        <li><a href="#servicios">Inmobiliarias</a></li>
-                        <li><a href="#servicios">Seguros</a></li>
-                        <li><a href="#proceso">Proceso</a></li>
-                    </ul>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <span class="btn-back" onclick="showBlog()">← Volver al Blog</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST 2 -->
+    <div id="post2" class="page-section">
+        <div class="post-hero">
+            <div class="container">
+                <h1>Por Qué Los Coaches Necesitan Un Sitio Web (Aunque Tengas 10K Followers)</h1>
+                <div class="post-meta">Publicado el 13 de Febrero, 2026 • 6 min lectura</div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+                <p>
+                    "No necesito sitio web. Tengo 10K followers en Instagram y cierro clientes 
+                    por DM todo el tiempo."
+                </p>
+                <p>
+                    Escucho esto cada semana de coaches que facturan $100K-300K/año.
+                </p>
+                <p>
+                    <strong>Y están dejando $200K+ anuales en la mesa.</strong>
+                </p>
+                <p>
+                    Aquí está por qué SIEMPRE necesitas un sitio web, incluso si las redes sociales 
+                    te funcionan:
+                </p>
+
+                <h2>1. No Controlas Instagram</h2>
+                <p>
+                    Instagram puede:
+                </p>
+                <ul>
+                    <li>Shadowban tu cuenta mañana (pasa TODO el tiempo)</li>
+                    <li>Cambiar el algoritmo y destruir tu reach (ya pasó 5 veces)</li>
+                    <li>Suspender tu cuenta sin explicación (pasa a 1000+ coaches/año)</li>
+                    <li>Cerrar mañana (poco probable pero posible)</li>
+                </ul>
+                <p>
+                    <strong>Tu sitio web es TUYO.</strong> Nadie te lo puede quitar. 
+                    No hay algoritmo. No hay shadowban.
+                </p>
+
+                <h3>Historia Real:</h3>
+                <p>
+                    Coach con 15K followers perdió su cuenta de Instagram en Diciembre 2025. 
+                    Motivo: "Violación de términos" (nunca explicaron qué).
+                </p>
+                <p>
+                    No tenía sitio web. No tenía email list. Perdió contacto con 15,000 personas. 
+                    Revenue cayó 70% en 2 meses.
+                </p>
+                <p>
+                    <strong>Con sitio web + email list, hubiera mantenido el negocio.</strong>
+                </p>
+
+                <h2>2. Instagram Es Terrible Para Conversión de Alto Ticket</h2>
+                <p>
+                    Vendes programa de $5,000-15,000. ¿De verdad crees que alguien va a comprarlo 
+                    porque vio tu Reel?
+                </p>
+                <p>
+                    <strong>NO.</strong>
+                </p>
+                <p>
+                    El buyer journey para alto ticket es:
+                </p>
+                <ol>
+                    <li>Te ven en Instagram/LinkedIn</li>
+                    <li><strong>Van a tu sitio web</strong> para validarte</li>
+                    <li>Leen tus casos de éxito</li>
+                    <li>Ven tus testimonials</li>
+                    <li>Entienden tu metodología</li>
+                    <li>SE CONVENCEN de que eres legit</li>
+                    <li>Recién ahí agendan call</li>
+                </ol>
+                <p>
+                    <strong>Sin sitio web profesional, pierdes el paso #2-6.</strong>
+                </p>
+                <p>
+                    Tu DM de Instagram no puede comunicar:
+                </p>
+                <ul>
+                    <li>5 casos de estudio detallados con métricas</li>
+                    <li>10 testimonials en video</li>
+                    <li>Tu metodología completa</li>
+                    <li>Garantías, términos, proceso</li>
+                </ul>
+                <p>
+                    Necesitas sitio web para eso.
+                </p>
+
+                <h2>3. No Capturas Emails = No Tienes Audiencia Real</h2>
+                <p>
+                    Tienes 10K followers. ¿Cuántos emails tienes? Probablemente 0-200.
+                </p>
+                <p>
+                    <strong>Problema:</strong> Solo ves el 3-10% de tus followers organically. 
+                    Instagram decide quién ve tu contenido.
+                </p>
+                <p>
+                    <strong>Con email list:</strong> Envías email → 100% de tu lista lo ve (bueno, 
+                    40% abre pero punto es que TÚ controlas).
+                </p>
+                <p>
+                    <strong>Tu sitio web captura emails.</strong> Lead magnet → Signup form → 
+                    Email automation → Conversión.
+                </p>
+
+                <h3>Matemática Real:</h3>
+                <p>
+                    Coach A: 10K followers Instagram, 0 emails<br>
+                    Coach B: 10K followers Instagram, 2,000 emails
+                </p>
+                <p>
+                    Coach A lanza programa $5K:<br>
+                    Post en Instagram → 800 personas lo ven → 8 ventas = $40K
+                </p>
+                <p>
+                    Coach B lanza programa $5K:<br>
+                    Post en Instagram → 800 lo ven → 8 ventas = $40K<br>
+                    Email a 2,000 → 800 abren → 12 ventas adicionales = $60K<br>
+                    <strong>Total: $100K</strong>
+                </p>
+                <p>
+                    <strong>2.5x más revenue por tener email list.</strong>
+                </p>
+
+                <h2>4. No Puedes Ranquear en Google</h2>
+                <p>
+                    Alguien busca en Google:
+                </p>
+                <ul>
+                    <li>"Business coach para emprendedores [tu ciudad]"</li>
+                    <li>"Executive coach [tu ciudad]"</li>
+                    <li>"Cómo escalar mi negocio de coaching"</li>
+                </ul>
+                <p>
+                    <strong>Tu Instagram no aparece.</strong> Tu sitio web sí.
+                </p>
+                <p>
+                    SEO trae leads pasivos. Personas que te buscan ACTIVAMENTE (= alta intención).
+                </p>
+                <p>
+                    Sin sitio web = $0 de tráfico orgánico de Google.
+                </p>
+
+                <h2>5. Proyectas "Amateur" vs "Professional"</h2>
+                <p>
+                    Programa de $10,000. Prospecto te encuentra. Googlea tu nombre.
+                </p>
+                <p>
+                    <strong>Opción A:</strong> Solo encuentra tu Instagram con 15 fotos random<br>
+                    <strong>Opción B:</strong> Encuentra sitio web profesional con casos de estudio, 
+                    testimonials, metodología clara, garantía
+                </p>
+                <p>
+                    ¿Cuál proyecta más autoridad y profesionalismo?
+                </p>
+                <p>
+                    <strong>Sitio web = Tabla de stakes.</strong> Es la diferencia entre "side hustle" 
+                    y "negocio serio".
+                </p>
+
+                <h2>Pero... "Es Caro"</h2>
+                <p>
+                    "Un sitio web bueno cuesta $5K-15K. No tengo ese presupuesto."
+                </p>
+                <p>
+                    <strong>Respuesta:</strong> Si estás generando $100K+/año sin sitio web, 
+                    estás dejando $50K-200K en la mesa POR NO TENERLO.
+                </p>
+                <p>
+                    ROI de sitio web para coach:
+                </p>
+                <ul>
+                    <li>Inversión: $10K</li>
+                    <li>Genera: 20 leads extra/mes (conservador)</li>
+                    <li>Conversión 10% = 2 clientes extra/mes</li>
+                    <li>Valor cliente: $5K promedio</li>
+                    <li>Revenue extra: $10K/mes = <strong>$120K/año</strong></li>
+                </ul>
+                <p>
+                    <strong>Se paga solo en 1 mes. Después son $110K de ganancia pura.</strong>
+                </p>
+                <p>
+                    Pregunta no es "¿puedo pagar un sitio web?" sino "¿puedo darme el lujo de NO tenerlo?"
+                </p>
+
+                <div class="post-cta">
+                    <h3>¿Listo Para Tu Sitio Web de Coach?</h3>
+                    <p>
+                        Especializado en coaches que facturan $100K+ y quieren escalar a $500K-$1M.
+                    </p>
+                    <p>
+                        Sitios que capturan leads, proyectan autoridad, y se pagan solos en 30-60 días.
+                    </p>
+                    <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-primary">
+                        Agendar Consulta Estratégica
+                    </a>
                 </div>
-                
-                <div class="footer-links">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <li><a onclick="showCase('case1')">Casos de Estudio</a></li>
-                    </ul>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <span class="btn-back" onclick="showBlog()">← Volver al Blog</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST 3 -->
+    <div id="post3" class="page-section">
+        <div class="post-hero">
+            <div class="container">
+                <h1>Cómo Los Mejores Agentes Inmobiliarios Generan Leads Mientras Duermen</h1>
+                <div class="post-meta">Publicado el 11 de Febrero, 2026 • 7 min lectura</div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+                <p>
+                    Son las 2am. Tu competencia duerme. Pero su sitio web acaba de capturar 3 leads 
+                    calificados que están listos para comprar en los próximos 30 días.
+                </p>
+                <p>
+                    Tú también duermes. Pero tu sitio... es una brochure digital que solo dice 
+                    "Contáctame para más info."
+                </p>
+                <p>
+                    <strong>Resultado:</strong> Tu competencia despierta con 3 leads. Tú despiertas con 0.
+                </p>
+                <p>
+                    Aquí está la diferencia entre agentes que persiguen clientes vs. agentes que 
+                    los atraen automáticamente:
+                </p>
+
+                <h2>1. No Dependen de Zillow/Realtor.com</h2>
+                <p>
+                    Zillow cobra $20-60 POR LEAD. Y son leads compartidos con 3-5 agentes más. 
+                    Conversión: 5-10%.
+                </p>
+                <p>
+                    <strong>Matemática de Zillow:</strong>
+                </p>
+                <ul>
+                    <li>$40/lead × 100 leads/mes = $4,000</li>
+                    <li>Conversión 8% = 8 clientes</li>
+                    <li>Costo por cliente: $500</li>
+                </ul>
+                <p>
+                    <strong>Con sitio web optimizado:</strong>
+                </p>
+                <ul>
+                    <li>SEO local + Google Ads = 100 leads/mes</li>
+                    <li>Costo: $1,500/mes (Ads) + $750 (mantenimiento) = $2,250</li>
+                    <li>Son TUS leads (no compartidos)</li>
+                    <li>Conversión 15% = 15 clientes</li>
+                    <li>Costo por cliente: $150</li>
+                </ul>
+                <p>
+                    <strong>3.3x más barato. 2x más conversión.</strong>
+                </p>
+
+                <h2>2. Tienen Sistema de Valuación Automático</h2>
+                <p>
+                    Persona quiere saber: "¿Cuánto vale mi casa?"
+                </p>
+                <p>
+                    <strong>Agente tradicional:</strong> "Contáctame y programamos cita"<br>
+                    <strong>Resultado:</strong> 90% se va sin dejar info
+                </p>
+                <p>
+                    <strong>Agente top:</strong> "Ingresa tu dirección para ver valuación instantánea"<br>
+                    <strong>Resultado:</strong>
+                </p>
+                <ol>
+                    <li>Ingresan dirección + email</li>
+                    <li>Ven estimado (usando API de Zillow/Redfin)</li>
+                    <li>Para ver comparables detallados → Agendan call</li>
+                    <li>Lead capturado + pre-calificado</li>
+                </ol>
+                <p>
+                    <strong>Conversión: 40-60%</strong> vs 10% del método tradicional
+                </p>
+
+                <h3>Bonus:</h3>
+                <p>
+                    Email automation envía secuencia:
+                </p>
+                <ul>
+                    <li>Día 1: "Aquí están los comparables"</li>
+                    <li>Día 3: "Cómo preparar tu casa para vender"</li>
+                    <li>Día 7: "3 errores que cuestan $50K al vender"</li>
+                    <li>Día 14: "¿Listo para listar? Agendemos call"</li>
+                </ul>
+                <p>
+                    <strong>Nurturing automático. Sin perseguir nadie.</strong>
+                </p>
+
+                <h2>3. Tours Virtuales 360° = Menos Showings Perdidos</h2>
+                <p>
+                    Mostrar casa = 1 hora de tu tiempo. Incluye:
+                </p>
+                <ul>
+                    <li>Manejar 20 min</li>
+                    <li>Mostrar 30 min</li>
+                    <li>Manejar de regreso 20 min</li>
+                </ul>
+                <p>
+                    Haces 5 showings/día. <strong>Solo 1-2 están realmente interesados.</strong> 
+                    Las otras 3-4 son tire-kickers.
+                </p>
+                <p>
+                    <strong>Solución: Tours virtuales 360° en tu sitio web.</strong>
+                </p>
+                <p>
+                    Prospectos exploran casa online. Los que NO están interesados se filtran solos. 
+                    Solo agendas showing con los QUE SÍ están interesados.
+                </p>
+                <p>
+                    <strong>Resultado:</strong>
+                </p>
+                <ul>
+                    <li>50% menos showings</li>
+                    <li>2x mejor conversión en showings que haces</li>
+                    <li>15+ horas/semana recuperadas</li>
+                </ul>
+
+                <h2>4. SEO Local Dominante</h2>
+                <p>
+                    90% de compradores buscan en Google:
+                </p>
+                <ul>
+                    <li>"Casas en venta [ciudad]"</li>
+                    <li>"Agente inmobiliario [ciudad]"</li>
+                    <li>"Mejor agente para comprar casa [ciudad]"</li>
+                </ul>
+                <p>
+                    <strong>¿Apareces en primera página?</strong>
+                </p>
+                <p>
+                    Si NO → Pierdes 70% de tráfico orgánico local.
+                </p>
+                <p>
+                    <strong>Agentes top tienen SEO local DOMINANTE:</strong>
+                </p>
+                <ul>
+                    <li>Google My Business optimizado (#1 en mapa)</li>
+                    <li>Website con keywords locales</li>
+                    <li>Blog con contenido local ("Guía para comprar en [barrio]")</li>
+                    <li>Reviews 4.8+ estrellas</li>
+                    <li>Schema markup para real estate</li>
+                </ul>
+                <p>
+                    <strong>Resultado:</strong> 200-500 visitantes orgánicos/mes = 20-50 leads/mes 
+                    GRATIS (sin Ads)
+                </p>
+
+                <h2>5. Integración IDX Completa</h2>
+                <p>
+                    IDX = Internet Data Exchange (muestra listings de MLS en tu sitio)
+                </p>
+                <p>
+                    <strong>Sin IDX:</strong> "Visita Zillow para ver mis listings" → Los pierdes
+                </p>
+                <p>
+                    <strong>Con IDX:</strong> Todo en TU sitio. Búsqueda avanzada, filtros, favoritos, 
+                    alertas. Visitantes se quedan en TU ecosistema.
+                </p>
+                <p>
+                    <strong>Bonus features top agents tienen:</strong>
+                </p>
+                <ul>
+                    <li>Map search (buscar por área en mapa)</li>
+                    <li>Guardar búsquedas</li>
+                    <li>Email alerts automáticos ("nueva casa que cumple tus criterios")</li>
+                    <li>Comparador de propiedades lado-a-lado</li>
+                    <li>Calculadora de mortgage integrada</li>
+                </ul>
+
+                <h2>6. CRM Integrado (Captura Todo)</h2>
+                <p>
+                    Lead llega a tu sitio. ¿Qué pasa?
+                </p>
+                <p>
+                    <strong>Agente promedio:</strong> Nada. No sabe quién visitó. No sabe qué vio. 
+                    No puede follow up.
+                </p>
+                <p>
+                    <strong>Agente top:</strong>
+                </p>
+                <ol>
+                    <li>Visitante ve 5 propiedades</li>
+                    <li>Guarda 2 como favoritas</li>
+                    <li>Completa formulario "Schedule Showing"</li>
+                    <li>CRM captura TODO: nombre, email, teléfono, propiedades de interés, 
+                        presupuesto estimado</li>
+                    <li>Email automático: "Gracias, aquí está info de esas 2 propiedades"</li>
+                    <li>Notificación a agente: "Nuevo lead calificado - llamar HOY"</li>
+                    <li>Follow-up emails automáticos si no responde</li>
+                </ol>
+                <p>
+                    <strong>0 leads perdidos. 0 follow-ups olvidados.</strong>
+                </p>
+
+                <h2>7. Social Proof MASIVO</h2>
+                <p>
+                    Comprar casa = decisión de $300K-$1M+. Necesitan CONFIAR en ti.
+                </p>
+                <p>
+                    <strong>Sitio promedio:</strong> "Soy agente desde 2020. Contáctame."
+                </p>
+                <p>
+                    <strong>Sitio que convierte:</strong>
+                </p>
+                <ul>
+                    <li>50+ testimonials con foto + nombre real</li>
+                    <li>10 video testimonials</li>
+                    <li>$127M en ventas completadas (suma total visible)</li>
+                    <li>"Vendí casa de Johnson family en 7 días, $50K sobre asking price"</li>
+                    <li>Google Reviews 4.9/5 (200+ reviews) integradas</li>
+                    <li>Awards: "Top 1% Agent Bergen County 2025"</li>
+                </ul>
+                <p>
+                    <strong>Proyectas autoridad inmediata. Confianza inmediata.</strong>
+                </p>
+
+                <h2>El Sistema Completo: Ejemplo Real</h2>
+                <p>
+                    <strong>Agente Sarah, Bergen County NJ:</strong>
+                </p>
+                <p>
+                    <strong>ANTES del sitio optimizado:</strong>
+                </p>
+                <ul>
+                    <li>Dependía 100% de Zillow ($4K/mes)</li>
+                    <li>40 leads/mes, conversión 8% = 3 cierres/mes</li>
+                    <li>Revenue: $18K/mes comisiones</li>
+                    <li>Trabajaba 60 hrs/semana persiguiendo leads</li>
+                </ul>
+                <p>
+                    <strong>DESPUÉS de sitio optimizado ($12K inversión):</strong>
+                </p>
+                <ul>
+                    <li>SEO local: 30 leads orgánicos/mes (gratis)</li>
+                    <li>Google Ads: 25 leads/mes ($1,500)</li>
+                    <li>Valuación tool: 20 leads/mes</li>
+                    <li>Total: 75 leads/mes</li>
+                    <li>Conversión mejorada: 12% (CRM + nurturing) = 9 cierres/mes</li>
+                    <li>Revenue: $54K/mes</li>
+                    <li>Trabaja 35 hrs/semana (automation maneja resto)</li>
+                </ul>
+                <p>
+                    <strong>3x revenue. Mitad del tiempo. $12K se pagó solo en 3 semanas.</strong>
+                </p>
+
+                <div class="post-cta">
+                    <h3>¿Quieres Este Sistema Para Tu Agencia?</h3>
+                    <p>
+                        Especializado en agentes inmobiliarios que hacen $500K-$2M+ en volumen 
+                        y quieren escalar a $5M-$10M.
+                    </p>
+                    <p>
+                        Sitios con IDX, tours 360°, valuación automática, CRM integrado, y SEO local dominante.
+                    </p>
+                    <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-primary">
+                        Agendar Consulta Estratégica
+                    </a>
                 </div>
-                
-                <div class="footer-links">
-                    <h4>Contacto</h4>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>New Jersey / New York</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/19086774196" target="_blank">+1 (908) 677-4196</a>
-                    </div>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <span class="btn-back" onclick="showBlog()">← Volver al Blog</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST 4 -->
+    <div id="post4" class="page-section">
+        <div class="post-hero">
+            <div class="container">
+                <h1>$500 vs $10,000: Por Qué Los Sitios Baratos Te Cuestan Más</h1>
+                <div class="post-meta">Publicado el 9 de Febrero, 2026 • 5 min lectura</div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+                <p>
+                    "¿Por qué tu sitio web cuesta $10,000 cuando puedo conseguir uno en Fiverr por $500?"
+                </p>
+                <p>
+                    Escucho esta pregunta 5 veces por semana.
+                </p>
+                <p>
+                    Aquí está la respuesta honesta: <strong>Puedes.</strong> Ve a Fiverr. 
+                    Paga $500. Tendrás un sitio web en 7 días.
+                </p>
+                <p>
+                    <strong>Pero ese sitio de $500 te costará $50,000+ en oportunidades perdidas.</strong>
+                </p>
+                <p>
+                    Aquí está por qué:
+                </p>
+
+                <h2>1. Template Genérico vs. Arquitectura de Conversión</h2>
+                <p>
+                    <strong>Sitio de $500:</strong>
+                </p>
+                <ul>
+                    <li>Template de $30 de ThemeForest</li>
+                    <li>Tu foto + tu bio</li>
+                    <li>"Contáctame" button</li>
+                    <li>Hecho en 5 horas</li>
+                </ul>
+                <p>
+                    <strong>Se ve "bonito" pero no convierte.</strong>
+                </p>
+                <p>
+                    <strong>Sitio de $10,000:</strong>
+                </p>
+                <ul>
+                    <li>Análisis de tu competencia (qué funciona)</li>
+                    <li>Análisis de tu audiencia (qué buscan)</li>
+                    <li>Wireframes optimizados para conversion</li>
+                    <li>Copywriting persuasivo (no "Sobre mí", sino "Por qué me debes elegir")</li>
+                    <li>CTAs estratégicos en cada sección</li>
+                    <li>Trust indicators (testimonials, casos, garantías)</li>
+                    <li>Lead magnets que capturan emails</li>
+                </ul>
+                <p>
+                    <strong>Se ve bonito Y convierte.</strong>
+                </p>
+
+                <h3>La Matemática:</h3>
+                <p>
+                    Sitio $500:
+                </p>
+                <ul>
+                    <li>1,000 visitantes/mes</li>
+                    <li>Conversión 0.5% = 5 leads</li>
+                    <li>Cierre 20% = 1 cliente/mes</li>
+                    <li>Valor cliente $5,000</li>
+                    <li><strong>Revenue: $5,000/mes</strong></li>
+                </ul>
+                <p>
+                    Sitio $10,000:
+                </p>
+                <ul>
+                    <li>1,000 visitantes/mes (mismo tráfico)</li>
+                    <li>Conversión 5% = 50 leads</li>
+                    <li>Cierre 20% = 10 clientes/mes</li>
+                    <li>Valor cliente $5,000</li>
+                    <li><strong>Revenue: $50,000/mes</strong></li>
+                </ul>
+                <p>
+                    <strong>Diferencia: $45,000/mes = $540,000/año</strong>
+                </p>
+                <p>
+                    Entonces la pregunta real no es "$500 vs $10,000" sino 
+                    "$5K/mes vs $50K/mes en revenue."
+                </p>
+
+                <h2>2. DIY vs. Profesional de Conversion</h2>
+                <p>
+                    Freelancer en Fiverr sabe:
+                </p>
+                <ul>
+                    <li>Instalar WordPress</li>
+                    <li>Customizar template</li>
+                    <li>Subir fotos</li>
+                </ul>
+                <p>
+                    <strong>No sabe:</strong>
+                </p>
+                <ul>
+                    <li>Psicología de conversión</li>
+                    <li>Copywriting persuasivo</li>
+                    <li>Arquitectura de información</li>
+                    <li>A/B testing</li>
+                    <li>Analytics e interpretación</li>
+                    <li>Tu industria específica</li>
+                </ul>
+                <p>
+                    <strong>Yo construyo máquinas de ventas, no brochures digitales.</strong>
+                </p>
+
+                <h2>3. "One and Done" vs. Optimización Continua</h2>
+                <p>
+                    <strong>Sitio de $500:</strong>
+                </p>
+                <ul>
+                    <li>Te lo entregan</li>
+                    <li>"Gracias, bye"</li>
+                    <li>Nunca más hablas con ellos</li>
+                    <li>Sitio queda igual por 3 años</li>
+                </ul>
+                <p>
+                    <strong>Sitio de $10,000:</strong>
+                </p>
+                <ul>
+                    <li>Te lo entregan</li>
+                    <li>60 días de soporte incluido</li>
+                    <li>Opción de mantenimiento mensual ($750/mes)</li>
+                    <li>A/B testing trimestral</li>
+                    <li>Optimización basada en datos</li>
+                    <li>Conversión mejora 20-30% en 6 meses</li>
+                </ul>
+                <p>
+                    <strong>Tu sitio MEJORA con el tiempo, no se estanca.</strong>
+                </p>
+
+                <h2>4. Móvil Roto vs. Mobile-First</h2>
+                <p>
+                    60-70% de tráfico es móvil.
+                </p>
+                <p>
+                    <strong>Sitio de $500:</strong>
+                </p>
+                <ul>
+                    <li>Template "mobile responsive"</li>
+                    <li>Sí carga en móvil</li>
+                    <li>Pero experiencia es HORRIBLE</li>
+                    <li>Botones muy pequeños</li>
+                    <li>Texto ilegible</li>
+                    <li>Formularios rotos</li>
+                    <li>5 segundos de carga</li>
+                </ul>
+                <p>
+                    <strong>Conversión móvil: 0.2%</strong>
+                </p>
+                <p>
+                    <strong>Sitio de $10,000:</strong>
+                </p>
+                <ul>
+                    <li>Diseñado mobile-first</li>
+                    <li>Testeado en 10+ dispositivos</li>
+                    <li>Botones grandes, fácil click</li>
+                    <li>Texto legible sin zoom</li>
+                    <li>Formularios optimizados (autofill, validación)</li>
+                    <li><1 segundo de carga (CDN, optimización)</li>
+                </ul>
+                <p>
+                    <strong>Conversión móvil: 4%</strong>
+                </p>
+                <p>
+                    20x mejor conversión móvil = 20x más leads de ese 60% de tráfico.
+                </p>
+
+                <h2>5. Sin Soporte vs. Partnership</h2>
+                <p>
+                    Mes 3. Tu sitio de $500 se rompió. No sabes por qué. Contactas al freelancer.
+                </p>
+                <p>
+                    <strong>Opciones:</strong>
+                </p>
+                <ol>
+                    <li>Ya no responde (común)</li>
+                    <li>Responde en 5 días "sorry been busy"</li>
+                    <li>Cobra $200 extra para arreglarlo</li>
+                </ol>
+                <p>
+                    Tu sitio está caído. Pierdes $5,000-10,000 en ventas mientras esperas.
+                </p>
+                <p>
+                    <strong>Con sitio de $10,000:</strong>
+                </p>
+                <ul>
+                    <li>WhatsApp directo: "Site down, fixing now"</li>
+                    <li>Arreglado en 2 horas</li>
+                    <li>Incluido en mantenimiento</li>
+                    <li>$0 adicional</li>
+                </ul>
+
+                <h2>6. Comparación Real de Features</h2>
+                <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
+                    <tr style="background: var(--navy-dark); color: white;">
+                        <th style="padding: 1rem; text-align: left; border: 1px solid var(--gray-light);">Feature</th>
+                        <th style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">Sitio $500</th>
+                        <th style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">Sitio $10,000</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Diseño custom</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Optimizado conversión</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Copywriting profesional</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">SEO optimizado</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Mobile perfecto</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Speed optimizado</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Analytics setup</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Lead capture forms</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">Básico</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Email automation</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">✅</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);">Soporte ongoing</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">❌</td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);">60 días</td>
+                    </tr>
+                    <tr style="background: var(--gold-light);">
+                        <td style="padding: 1rem; border: 1px solid var(--gray-light);"><strong>Conversión típica</strong></td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);"><strong>0.5-1%</strong></td>
+                        <td style="padding: 1rem; text-align: center; border: 1px solid var(--gray-light);"><strong>4-6%</strong></td>
+                    </tr>
+                </table>
+
+                <h2>La Verdad Incómoda</h2>
+                <p>
+                    <strong>$500 sitio NO es una "ganga".</strong>
+                </p>
+                <p>
+                    Es como comprar un carro de $500. Sí, tienes carro. Pero:
+                </p>
+                <ul>
+                    <li>Se rompe cada mes</li>
+                    <li>Consume gasolina</li>
+                    <li>No puedes manejarlo en highway</li>
+                    <li>Terminas gastando $5,000 en reparaciones en 2 años</li>
+                </ul>
+                <p>
+                    <strong>Mejor comprar carro de $10,000 desde el inicio.</strong>
+                </p>
+                <p>
+                    Mismo concepto con sitios web.
+                </p>
+
+                <h2>Entonces, ¿Cuándo Tiene Sentido Un Sitio Barato?</h2>
+                <p>
+                    <strong>Sitio de $500 está bien si:</strong>
+                </p>
+                <ul>
+                    <li>Estás testeando idea de negocio (validación MVP)</li>
+                    <li>Facturación <$50K/año (todavía no puedes invertir)</li>
+                    <li>Solo necesitas presencia online básica</li>
+                    <li>NO dependes del sitio para generar leads</li>
+                </ul>
+                <p>
+                    <strong>Sitio de $10,000 es necesario si:</strong>
+                </p>
+                <ul>
+                    <li>Facturación >$100K/año</li>
+                    <li>Tu sitio debe GENERAR leads (no solo "estar ahí")</li>
+                    <li>Vendes servicios >$3K</li>
+                    <li>Compites contra otros profesionales con sitios buenos</li>
+                    <li>Quieres escalar a $500K-$1M+</li>
+                </ul>
+
+                <div class="post-cta">
+                    <h3>¿Listo Para Un Sitio Que Se Paga Solo?</h3>
+                    <p>
+                        Inversión: $10,000<br>
+                        ROI típico: 3-6 meses<br>
+                        Revenue adicional año 1: $50K-200K
+                    </p>
+                    <p>
+                        <strong>No es un gasto. Es una inversión con ROI medible.</strong>
+                    </p>
+                    <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-primary">
+                        Agendar Consulta Estratégica
+                    </a>
+                </div>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <span class="btn-back" onclick="showBlog()">← Volver al Blog</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST 5 -->
+    <div id="post5" class="page-section">
+        <div class="post-hero">
+            <div class="container">
+                <h1>Tu Sitio Lento Te Está Costando $10K/Mes (Y Cómo Arreglarlo)</h1>
+                <div class="post-meta">Publicado el 7 de Febrero, 2026 • 6 min lectura</div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+                <p>
+                    Google hizo un estudio en 2024 con 11 millones de páginas web.
+                </p>
+                <p>
+                    <strong>Resultado brutal:</strong>
+                </p>
+                <ul>
+                    <li>1 segundo de carga = 7% menos conversiones</li>
+                    <li>2 segundos = 14% menos conversiones</li>
+                    <li>3 segundos = 21% menos conversiones</li>
+                    <li>5 segundos = 35% menos conversiones</li>
+                </ul>
+                <p>
+                    <strong>Tu sitio tarda 5 segundos en cargar?</strong> Estás perdiendo 
+                    1 de cada 3 ventas antes de que vean tu contenido.
+                </p>
+                <p>
+                    Aquí está la matemática REAL de cuánto te cuesta:
+                </p>
+
+                <h2>El Costo Real de 1 Segundo Extra</h2>
+                <p>
+                    <strong>Escenario:</strong>
+                </p>
+                <ul>
+                    <li>2,000 visitantes/mes</li>
+                    <li>Conversión actual: 3% = 60 leads</li>
+                    <li>Cierre: 15% = 9 clientes</li>
+                    <li>Valor cliente: $5,000</li>
+                    <li><strong>Revenue actual: $45,000/mes</strong></li>
+                </ul>
+                <p>
+                    <strong>Si mejoras speed de 5s a 2s:</strong>
+                </p>
+                <ul>
+                    <li>Recuperas 21% de conversiones perdidas</li>
+                    <li>Nueva conversión: 3.6%</li>
+                    <li>72 leads (12 extra)</li>
+                    <li>11 clientes (2 extra)</li>
+                    <li><strong>Nuevo revenue: $55,000/mes</strong></li>
+                </ul>
+                <p>
+                    <strong>Diferencia: $10,000/mes = $120,000/año</strong>
+                </p>
+                <p>
+                    Por arreglar velocidad de carga.
+                </p>
+
+                <h2>Por Qué Tu Sitio Es Lento (5 Culpables)</h2>
+
+                <h3>1. Imágenes Sin Optimizar</h3>
+                <p>
+                    <strong>Culpable #1 en 80% de sitios lentos.</strong>
+                </p>
+                <p>
+                    Foto de iPhone: 4MB<br>
+                    Mismo foto optimizada: 200KB<br>
+                    <strong>20x más liviana, cero diferencia visible</strong>
+                </p>
+                <p>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>Comprimir TODAS las imágenes (TinyPNG, ShortPixel)</li>
+                    <li>Formato WebP (50% más liviano que JPG)</li>
+                    <li>Lazy loading (imagen carga solo cuando usuario scrollea ahí)</li>
+                </ul>
+
+                <h3>2. Hosting Barato</h3>
+                <p>
+                    <strong>Hosting compartido de $3/mes?</strong> Compartes servidor con 200 otros sitios.
+                </p>
+                <p>
+                    Si uno de esos 200 tiene traffic spike → TU sitio se pone lento también.
+                </p>
+                <p>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>VPS o Cloud hosting ($20-40/mes)</li>
+                    <li>Dedicated resources</li>
+                    <li>O Cloudflare CDN (distribuye contenido globalmente)</li>
+                </ul>
+
+                <h3>3. Sin Cache</h3>
+                <p>
+                    Cache = Versión "pre-cocinada" de tu sitio.
+                </p>
+                <p>
+                    <strong>Sin cache:</strong> Cada visitante → servidor genera página → 2-5 segundos<br>
+                    <strong>Con cache:</strong> Página ya está lista → 0.2 segundos
+                </p>
+                <p>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>WordPress: WP Rocket plugin ($49/año) o W3 Total Cache (gratis)</li>
+                    <li>Cloudflare page rules</li>
+                </ul>
+
+                <h3>4. Demasiados Plugins (WordPress)</h3>
+                <p>
+                    Cada plugin = código extra = peso extra = lentitud
+                </p>
+                <p>
+                    <strong>Plugins promedio por sitio lento:</strong> 30+<br>
+                    <strong>Plugins necesarios realmente:</strong> 8-12
+                </p>
+                <p>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>Auditar plugins (delete los que no usas)</li>
+                    <li>Reemplazar 3-4 plugins con 1 que haga todo (ejemplo: Jetpack)</li>
+                </ul>
+
+                <h3>5. Videos/Iframes Pesados</h3>
+                <p>
+                    Video de background que autoplay → 20MB → 8 segundos carga
+                </p>
+                <p>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>NO hospedes video en tu servidor</li>
+                    <li>Usa YouTube/Vimeo embed (ellos manejan el streaming)</li>
+                    <li>Lazy load videos</li>
+                </ul>
+
+                <h2>Test de Velocidad: ¿Cuál Es Tu Score?</h2>
+                <p>
+                    Ve a <strong>pagespeed.web.dev</strong> e ingresa tu URL.
+                </p>
+                <p>
+                    <strong>Scores:</strong>
+                </p>
+                <ul>
+                    <li>90-100: Excelente ✅</li>
+                    <li>70-89: Bueno ⚠️ (puede mejorar)</li>
+                    <li>50-69: Malo ❌ (perdiendo conversiones)</li>
+                    <li>0-49: Horrible 🔥 (perdiendo MUCHAS conversiones)</li>
+                </ul>
+                <p>
+                    <strong>Google te dice exactamente qué arreglar.</strong> Las 3 cosas más comunes:
+                </p>
+                <ol>
+                    <li>Optimize images</li>
+                    <li>Eliminate render-blocking resources</li>
+                    <li>Reduce unused JavaScript</li>
+                </ol>
+
+                <h2>Caso Real: Cliente Antes/Después</h2>
+                <p>
+                    <strong>Cliente: Coach de negocios, NY</strong>
+                </p>
+                <p>
+                    <strong>ANTES de optimización:</strong>
+                </p>
+                <ul>
+                    <li>PageSpeed score: 32/100 (horrible)</li>
+                    <li>Tiempo de carga: 7.2 segundos</li>
+                    <li>1,500 visitantes/mes</li>
+                    <li>Conversión: 1.8% = 27 leads</li>
+                    <li>Cierre: 15% = 4 clientes/mes</li>
+                    <li>Revenue: $20K/mes</li>
+                </ul>
+                <p>
+                    <strong>QUÉ HICIMOS (en 1 día):</strong>
+                </p>
+                <ol>
+                    <li>Optimizamos todas las imágenes (4MB → 200KB cada una)</li>
+                    <li>Instalamos WP Rocket (cache)</li>
+                    <li>Eliminamos 15 plugins innecesarios</li>
+                    <li>Agregamos Cloudflare CDN</li>
+                    <li>Lazy loading en todo</li>
+                    <li>Costo: $300 (+ $49 WP Rocket)</li>
+                </ol>
+                <p>
+                    <strong>DESPUÉS de optimización:</strong>
+                </p>
+                <ul>
+                    <li>PageSpeed score: 94/100 ✅</li>
+                    <li>Tiempo de carga: 1.1 segundos</li>
+                    <li>1,500 visitantes/mes (mismo tráfico)</li>
+                    <li>Conversión: 3.2% = 48 leads</li>
+                    <li>Cierre: 15% = 7 clientes/mes</li>
+                    <li>Revenue: $35K/mes</li>
+                </ul>
+                <p>
+                    <strong>Resultado:</strong>
+                </p>
+                <ul>
+                    <li>Conversión subió 78%</li>
+                    <li>3 clientes extra/mes</li>
+                    <li>$15K/mes adicionales</li>
+                    <li>ROI: $15,000 / $350 = 4,286% en primer mes</li>
+                    <li>$180K extra en año 1</li>
+                </ul>
+
+                <h2>Speed = Más Que Conversiones</h2>
+                <p>
+                    Velocidad no solo afecta conversiones. También afecta:
+                </p>
+
+                <h3>1. SEO (Ranking en Google)</h3>
+                <p>
+                    Google usa speed como ranking factor desde 2018. Sitio lento = ranking más bajo = menos tráfico.
+                </p>
+
+                <h3>2. Bounce Rate</h3>
+                <p>
+                    53% de usuarios móviles abandonan si tarda >3 segundos. Bounce rate alto → Google piensa 
+                    tu sitio es malo → ranking baja más.
+                </p>
+
+                <h3>3. Percepción de Marca</h3>
+                <p>
+                    Sitio lento = empresa no profesional. Sitio rápido = empresa seria.
+                </p>
+
+                <h2>Cuánto Cuesta Arreglarlo</h2>
+                <p>
+                    <strong>DIY (hazlo tú mismo):</strong>
+                </p>
+                <ul>
+                    <li>TinyPNG/ShortPixel: Gratis</li>
+                    <li>WP Rocket: $49/año</li>
+                    <li>Cloudflare: Gratis</li>
+                    <li>Tiempo: 4-6 horas</li>
+                    <li><strong>Total: $50 + tu tiempo</strong></li>
+                </ul>
+                <p>
+                    <strong>Contratar profesional:</strong>
+                </p>
+                <ul>
+                    <li>Speed optimization: $500-1,000</li>
+                    <li>Tiempo: 1-2 días</li>
+                    <li>Incluye: Optimización images, cache, CDN, database cleanup, 
+                        code optimization</li>
+                </ul>
+                <p>
+                    <strong>ROI:</strong> Si genera 2 clientes extra/mes × $5K = $10K/mes extra. 
+                    Se paga en 3 días.
+                </p>
+
+                <div class="post-cta">
+                    <h3>¿Quieres Que Optimice Tu Sitio?</h3>
+                    <p>
+                        Speed optimization completa: $800<br>
+                        Incluye: Imágenes, cache, CDN, plugins, database<br>
+                        Garantía: Score 85+ en PageSpeed o no cobro
+                    </p>
+                    <p>
+                        <strong>Timeline: 1-2 días</strong>
+                    </p>
+                    <a href="https://calendly.com/azuregoldstudio/30min" target="_blank" class="btn-primary">
+                        Agendar Speed Audit Gratuito
+                    </a>
+                </div>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <span class="btn-back" onclick="showBlog()">← Volver al Blog</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AZURE GOLD STUDIO</h3>
+                <p>Estudio boutique especializado en arquitectura digital premium para coaches e inmobiliarias de élite.</p>
+                <p style="color: var(--gold-primary); font-weight: 600; margin-top: 1rem;">@azuregoldstudio</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/azuregoldstudio" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/azuregold" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/19086774196" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:azuregoldstudio@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2026 Azure Gold Studio. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- CASE STUDY 1: Transform Leadership -->
-    <div id="case1" class="page-section">
-        <section class="case-hero">
-            <div class="case-hero-content">
-                <div class="case-category">Coach de Negocios</div>
-                <h1>Transform Leadership Academy</h1>
-                <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
-                    Cómo multiplicamos por 4.5 los leads calificados en solo 3 meses
-                </p>
-            </div>
-        </section>
-
-        <div class="case-container">
-            <div class="stats-grid">
-                <div class="stat-card-case">
-                    <div class="stat-number">450%</div>
-                    <div class="stat-label">Aumento en Leads</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">$75K</div>
-                    <div class="stat-label">Revenue Generado</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">5 sem</div>
-                    <div class="stat-label">Tiempo de Proyecto</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">28%</div>
-                    <div class="stat-label">Tasa de Conversión</div>
-                </div>
-            </div>
-
-            <h2>El Desafío</h2>
-            <div class="content-section">
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Transform Leadership Academy</strong> era una firma de coaching ejecutivo con excelente reputación pero presencia digital mediocre.
-                </p>
-                <h3 style="color: var(--navy-dark); margin: 1.5rem 0 1rem;">Problemas Identificados:</h3>
+            <div class="footer-links">
+                <h4>Navegación</h4>
                 <ul>
-                    <li>Sitio web genérico que no proyectaba autoridad</li>
-                    <li>Sin estrategia de captura de leads</li>
-                    <li>Conversión de visitantes a consultas: solo 4%</li>
-                    <li>Sin integración con plataforma de cursos</li>
-                    <li>Tráfico desperdiciado sin nurturing</li>
+                    <li><a onclick="showHome()">Inicio</a></li>
+                    <li><a onclick="showBlog()">Blog</a></li>
+                    <li><a href="https://calendly.com/azuregoldstudio/30min" target="_blank">Consulta</a></li>
                 </ul>
             </div>
-
-            <h2>Nuestra Solución</h2>
-            <div class="content-section">
-                <h3 style="color: var(--navy-dark); margin-bottom: 1rem;">Estrategia Implementada:</h3>
+            
+            <div class="footer-links">
+                <h4>Servicios</h4>
                 <ul>
-                    <li><strong>Rediseño completo</strong> con identidad premium y profesional</li>
-                    <li><strong>Landing pages optimizadas</strong> para cada servicio de coaching</li>
-                    <li><strong>Lead magnet estratégico:</strong> "Guía de Liderazgo Transformacional"</li>
-                    <li><strong>Integración con Kajabi</strong> para cursos online y email automation</li>
-                    <li><strong>Funnel de conversión</strong> con 5 touchpoints estratégicos</li>
-                    <li><strong>Sistema de testimonios</strong> con video y social proof prominente</li>
+                    <li><a onclick="showBlog()">Coaches</a></li>
+                    <li><a onclick="showBlog()">Inmobiliarias</a></li>
+                    <li><a onclick="showBlog()">Blog Marketing</a></li>
                 </ul>
             </div>
-
-            <h2>Resultados</h2>
-            <div class="content-section">
-                <h3 style="color: var(--gold-primary); margin-bottom: 1rem;">Métricas Alcanzadas:</h3>
-                <ul>
-                    <li><strong>450% aumento en leads calificados</strong> (de 20 a 110 mensuales)</li>
-                    <li><strong>28% de conversión</strong> de visitantes a leads (vs. 4% anterior)</li>
-                    <li><strong>$75K en revenue</strong> generado directamente desde el sitio</li>
-                    <li><strong>1,200+ suscriptores</strong> al lead magnet en primer mes</li>
-                    <li><strong>85% reducción</strong> en costo de adquisición por cliente</li>
-                </ul>
-            </div>
-
-            <div class="testimonial-case">
-                <p>
-                    Azure Gold Studio no solo creó un sitio hermoso - crearon una máquina de generación de leads. 
-                    En 3 meses pasamos de perseguir clientes a tener lista de espera. El ROI ha sido extraordinario.
-                </p>
-                <div class="author">— Michael Chen, CEO Transform Leadership Academy</div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;">
-                <span class="btn-back" onclick="showHome()">← Volver al Portfolio</span>
+            
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>New Jersey / New York</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/19086774196" target="_blank">+1 (908) 677-4196</a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- CASE STUDY 2: Elite Properties -->
-    <div id="case2" class="page-section">
-        <section class="case-hero">
-            <div class="case-hero-content">
-                <div class="case-category">Inmobiliaria Premium</div>
-                <h1>Elite Properties NJ</h1>
-                <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
-                    $2.3M en ventas generadas directamente desde el sitio web
-                </p>
-            </div>
-        </section>
-
-        <div class="case-container">
-            <div class="stats-grid">
-                <div class="stat-card-case">
-                    <div class="stat-number">$2.3M</div>
-                    <div class="stat-label">En Ventas Generadas</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">180%</div>
-                    <div class="stat-label">ROI en 6 Meses</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">6 sem</div>
-                    <div class="stat-label">Tiempo de Proyecto</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">450+</div>
-                    <div class="stat-label">Leads Mensuales</div>
-                </div>
-            </div>
-
-            <h2>El Desafío</h2>
-            <div class="content-section">
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Elite Properties</strong> es una boutique inmobiliaria especializada en propiedades de lujo en NJ. 
-                    A pesar de tener listings premium, su sitio web no generaba leads cualificados.
-                </p>
-                <h3 style="color: var(--navy-dark); margin: 1.5rem 0 1rem;">Problemas Críticos:</h3>
-                <ul>
-                    <li>Sitio obsoleto sin integración IDX (búsqueda de propiedades)</li>
-                    <li>Fotos de baja calidad sin tours virtuales</li>
-                    <li>SEO local inexistente - invisible en Google Maps</li>
-                    <li>Sin sistema de captura de leads</li>
-                    <li>Conversión móvil: solo 1.2%</li>
-                </ul>
-            </div>
-
-            <h2>Nuestra Solución</h2>
-            <div class="content-section">
-                <h3 style="color: var(--navy-dark); margin-bottom: 1rem;">Estrategia Implementada:</h3>
-                <ul>
-                    <li><strong>Integración IDX completa</strong> con búsqueda avanzada de propiedades</li>
-                    <li><strong>Tours virtuales 360°</strong> para cada listing premium</li>
-                    <li><strong>Galerías fotográficas profesionales</strong> con lazy loading optimizado</li>
-                    <li><strong>SEO local dominante:</strong> optimización para "luxury homes NJ"</li>
-                    <li><strong>Sistema de valuación online</strong> como lead magnet</li>
-                    <li><strong>Mobile-first design</strong> con performance de 95+ en PageSpeed</li>
-                </ul>
-            </div>
-
-            <h2>Resultados</h2>
-            <div class="content-section">
-                <h3 style="color: var(--gold-primary); margin-bottom: 1rem;">Impacto Medible:</h3>
-                <ul>
-                    <li><strong>$2.3M en ventas</strong> generadas directamente desde contactos del sitio</li>
-                    <li><strong>450+ leads mensuales</strong> (vs. 45 antes del rediseño)</li>
-                    <li><strong>180% ROI</strong> en primeros 6 meses</li>
-                    <li><strong>#1 en Google</strong> para "luxury homes Bergen County NJ"</li>
-                    <li><strong>32% conversión móvil</strong> (vs. 1.2% anterior)</li>
-                </ul>
-            </div>
-
-            <div class="testimonial-case">
-                <p>
-                    Nuestro sitio pasó de ser un brochure digital a nuestra mejor herramienta de ventas. 
-                    Los tours virtuales han sido un game-changer - cerramos 3 propiedades de $800K+ con 
-                    clientes que nos encontraron online. La inversión se pagó en el primer mes.
-                </p>
-                <div class="author">— Alexandra Russo, Owner Elite Properties NJ</div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;">
-                <span class="btn-back" onclick="showHome()">← Volver al Portfolio</span>
-            </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Azure Gold Studio. Todos los derechos reservados.</p>
         </div>
-    </div>
+    </footer>
 
-    <!-- CASE STUDY 3: Mindful Success -->
-    <div id="case3" class="page-section">
-        <section class="case-hero">
-            <div class="case-hero-content">
-                <div class="case-category">Life Coach</div>
-                <h1>Mindful Success Coaching</h1>
-                <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--gray-light);">
-                    350% ROI en los primeros 6 meses con funnel automatizado
-                </p>
-            </div>
-        </section>
-
-        <div class="case-container">
-            <div class="stats-grid">
-                <div class="stat-card-case">
-                    <div class="stat-number">350%</div>
-                    <div class="stat-label">ROI en 6 Meses</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">$120K</div>
-                    <div class="stat-label">Revenue Generado</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">2,400</div>
-                    <div class="stat-label">Leads Capturados</div>
-                </div>
-                <div class="stat-card-case">
-                    <div class="stat-number">42%</div>
-                    <div class="stat-label">Conversión Webinar</div>
-                </div>
-            </div>
-
-            <h2>El Desafío</h2>
-            <div class="content-section">
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Mindful Success Coaching</strong> ofrecía programas de transformación personal de alto ticket ($3K-$12K) 
-                    pero dependía 100% de referidos y redes sociales sin estrategia de escalabilidad.
-                </p>
-                <h3 style="color: var(--navy-dark); margin: 1.5rem 0 1rem;">Puntos Críticos:</h3>
-                <ul>
-                    <li>Sin presencia web profesional (solo perfil en redes)</li>
-                    <li>Dependencia total de referidos - ingreso impredecible</li>
-                    <li>Sin sistema de captura ni nurturing de leads</li>
-                    <li>Imposibilidad de escalar más allá de 1-on-1 coaching</li>
-                    <li>Sin autoridad digital demostrable</li>
-                </ul>
-            </div>
-
-            <h2>Nuestra Solución</h2>
-            <div class="content-section">
-                <h3 style="color: var(--navy-dark); margin-bottom: 1rem;">Ecosistema Digital Completo:</h3>
-                <ul>
-                    <li><strong>Sitio web premium</strong> con brand storytelling e identidad sólida</li>
-                    <li><strong>Integración total con Kajabi</strong> para cursos y membresías</li>
-                    <li><strong>Funnel de alto ticket:</strong> Lead Magnet → Email Sequence → Webinar → Oferta</li>
-                    <li><strong>Webinars automatizados</strong> 3x por semana con conversión optimizada</li>
-                    <li><strong>Quiz interactivo</strong> "Descubre tu Arquetipo de Éxito"</li>
-                    <li><strong>Email automation</strong> con 12 secuencias segmentadas</li>
-                </ul>
-            </div>
-
-            <h2>Resultados</h2>
-            <div class="content-section">
-                <h3 style="color: var(--gold-primary); margin-bottom: 1rem;">Transformación del Negocio:</h3>
-                <ul>
-                    <li><strong>350% ROI</strong> en primeros 6 meses</li>
-                    <li><strong>$120K en revenue</strong> directamente atribuible al nuevo sistema</li>
-                    <li><strong>2,400 leads capturados</strong> (lista de email creció de 0 a 2,400)</li>
-                    <li><strong>42% conversión en webinars</strong> (inscritos → calls agendadas)</li>
-                    <li><strong>18% conversión final</strong> a programas de alto ticket</li>
-                    <li><strong>Tráfico orgánico 10x</strong> en 4 meses</li>
-                </ul>
-            </div>
-
-            <div class="testimonial-case">
-                <p>
-                    Azure Gold Studio transformó mi negocio de coaching inestable en una máquina predecible de generación de ingresos. 
-                    El funnel automatizado trabaja para mí 24/7. Pasé de perseguir clientes a tener lista de espera. 
-                    Por primera vez en 5 años de coaching, tengo un negocio escalable.
-                </p>
-                <div class="author">— Dr. Sarah Martinez, Founder Mindful Success Coaching</div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;">
-                <span class="btn-back" onclick="showHome()">← Volver al Portfolio</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
     <script>
-        // Page navigation functions
         function showHome() {
-            document.querySelectorAll('.page-section').forEach(section => {
-                section.classList.remove('active');
-            });
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
             document.getElementById('homepage').classList.add('active');
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
-
-        function showCase(caseId) {
-            document.querySelectorAll('.page-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(caseId).classList.add('active');
+        
+        function showBlog() {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('blog-list').classList.add('active');
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
-
-        // Navbar scroll effect
+        
+        function showPost(postId) {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            document.getElementById(postId).classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -1738,44 +1750,7 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        mobileMenuBtn.addEventListener('click', () => {
-            console.log('Mobile menu clicked');
-        });
     </script>
+
 </body>
 </html>
