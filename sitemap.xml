@@ -1,26 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://jcnay8705.github.io/</loc>
-    <lastmod>2026-02-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jcnay8705.github.io/es/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jcnay8705.github.io/"/>
-  </url>
-
-  <url>
-    <loc>https://jcnay8705.github.io/es/</loc>
-    <lastmod>2026-02-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jcnay8705.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jcnay8705.github.io/es/"/>
-  </url>
-
-  <url>
-    <loc>https://jcnay8705.github.io/jcnay/</loc>
-    <lastmod>2026-02-11</lastmod>
-    <priority>0.7</priority>
-  </url>
-</urlset>
+/                           → Home (esta página)
+/casos/                     → Índice de casos de estudio (opcional, tipo grid)
+/casos/beacons-marketing.html
+/casos/inmobiliaria-lujo.html
+/casos/servicios-profesionales.html
+/sobre-nosotras.html        → Página sobre el estudio (opcional)
+/contacto.html              → Página de contacto dedicada (opcional)
