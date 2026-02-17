@@ -1,0 +1,14 @@
+title: Mi Sitio Web
+description: Blog personal
+url: "https://tu-usuario.github.io"
+baseurl: ""
+
+# Configuración de Jekyll
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Excluir archivos
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
