@@ -1,14 +1,6 @@
-title: Mi Sitio Web
-description: Blog personal
-url: "https://tu-usuario.github.io"
-baseurl: ""
-
-# Configuración de Jekyll
+title: "Blog — Azure Gold Studio"
+description: "Estrategia, diseño editorial y arquitectura digital."
+theme: minima
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
-
-# Excluir archivos
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
+paginate: 6
+paginate_path: "/blog/page:num/"
