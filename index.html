@@ -1,54 +1,532 @@
----
-layout: default
-title: "Azure Gold Studio"
----
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title }} | Estudio boutique</title>
-  <meta name="description" content="Azure Gold Studio — diseño editorial y arquitectura web para coaches, inmobiliarias y servicios premium." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <!-- Calendly widget CSS (se puede dejar aquí) -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Estudio Boutique de Diseño Web | Yunersy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Estudio boutique de diseño y rediseño web para coaches, inmobiliarias y marcas de servicios premium. Arquitectura digital estratégica para convertir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --bg-alt: #ffffff;
+      --text: #1b1b1b;
+      --muted: #7b6f63;
+      --accent: #c9a27b;
+      --border: #e0d6c9;
+      --max-width: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 243, 238, 0.96);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .logo span {
+      font-weight: 600;
+    }
+    .nav-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      font-size: 0.9rem;
+    }
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      background: #b48c63;
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    main {
+      padding-bottom: 4rem;
+    }
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .section-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+    /* Hero */
+    .hero {
+      padding: 4rem 0 3rem;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.6rem;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .hero-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .hero-card {
+      background: var(--bg-alt);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      display: grid;
+      gap: 1.25rem;
+    }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .metric {
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+    }
+    .metric-value {
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.15rem;
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .hero-mockup {
+      border-radius: 1.25rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      background: linear-gradient(135deg, #fdfaf6, #f3e7da);
+    }
+    .hero-mockup-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .hero-mockup-window {
+      border-radius: 1rem;
+      background: #fff;
+      padding: 1.25rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+    }
+    .hero-mockup-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+    .hero-mockup-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+    .hero-mockup-bars {
+      display: grid;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+    .bar {
+      height: 6px;
+      border-radius: 999px;
+      background: #f0e3d4;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--accent);
+      width: 72%;
+    }
+    .hero-mockup-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    /* Para quién */
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--bg-alt);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      display: grid;
+      gap: 0.6rem;
+    }
+    .card-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .card-list {
+      font-size: 0.85rem;
+      color: var(--muted);
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+    .card-list li::before {
+      content: "— ";
+    }
+    /* Resultados */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .metric-block {
+      border-radius: 1.25rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      background: var(--bg-alt);
+    }
+    .metric-block-value {
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      margin-bottom: 0.2rem;
+    }
+    .metric-block-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .metric-block-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    /* Proceso */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .process-step {
+      background: var(--bg-alt);
+      border-radius: 1.25rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+    }
+    .process-step-number {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .process-step-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .process-step-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .portfolio-card {
+      background: var(--bg-alt);
+      border-radius: 1.25rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    .portfolio-body {
+      padding: 1.25rem 1.25rem 1.4rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .portfolio-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    .portfolio-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+    }
+    .portfolio-result {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .portfolio-link {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+    /* Testimonio */
+    .testimonial {
+      background: var(--bg-alt);
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      padding: 2rem;
+      margin-top: 2rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+    .testimonial-quote {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+    }
+    .testimonial-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    /* CTA final */
+    .cta-final {
+      text-align: center;
+      padding: 3rem 0 1rem;
+    }
+    .cta-final h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .cta-final p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    /* Footer */
+    footer {
+      padding: 2.5rem 0 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1.5fr;
+      gap: 2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    .footer-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.75rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.3rem;
+    }
+    .footer-bottom {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-top: 3rem;
+      }
+      .cards-3,
+      .metrics-row,
+      .process-grid,
+      .portfolio-grid,
+      .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      section {
+        padding: 3rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="wrapper nav">
       <div>
-        <div class="logo"><span>AZURE GOLD</span> STUDIO</div>
+        <div class="logo"><span>YUNERSY</span> STUDIO</div>
         <div class="nav-meta">Estudio boutique • NJ / NY</div>
       </div>
-
       <nav class="nav-links">
         <a href="#servicios">Servicios</a>
-        <a href="#portfolio">Casos</a>
-        <a href="/blog">Blog</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#portfolio">Casos de estudio</a>
         <a href="#contacto">Contacto</a>
       </nav>
-
-      <!-- Botón que abre Calendly en popup -->
-      <a href="#" onclick="Calendly.showPopupWidget('https://calendly.com/azuregoldstudio/30min');return false;" class="btn btn-outline">Agendar consulta</a>
+      <a href="https://calendly.com" class="btn btn-outline">Agendar consulta</a>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="wrapper hero-grid">
         <div>
           <div class="hero-eyebrow">Diseño y rediseño web estratégico</div>
-          <h1 class="hero-title">Azure Gold Studio — Arquitectura Web Premium</h1>
-          <p class="hero-subtitle">Ecosistemas digitales que elevan tu autoridad y convierten visitantes en clientes.</p>
-
+          <h1 class="hero-title">Arquitectura Web Premium para Marcas que Quieren Escalar en Serio</h1>
+          <p class="hero-subtitle">
+            Creamos ecosistemas digitales que elevan tu autoridad, conectan emocionalmente y convierten visitantes en clientes reales.
+            Especializadas en coaches, inmobiliarias y marcas de servicios premium.
+          </p>
           <div class="hero-cta-row">
-            <a href="#" onclick="Calendly.showPopupWidget('https://calendly.com/azuregoldstudio/30min');return false;" class="btn">Agendar consulta</a>
-            <a href="/blog" class="btn btn-outline">Leer el blog</a>
+            <a href="https://calendly.com" class="btn">Agendar consulta estratégica</a>
+            <a href="#portfolio" class="btn btn-outline">Ver casos de estudio</a>
           </div>
-
-          <p class="hero-meta">Estudio boutique • 4–6 semanas por proyecto</p>
+          <p class="hero-meta">Estudio boutique • Máx. 3 proyectos al mes • 4–6 semanas por proyecto</p>
         </div>
 
         <div class="hero-card">
@@ -56,87 +534,247 @@ title: "Azure Gold Studio"
             <div class="metric">
               <div class="metric-value">300%</div>
               <div class="metric-label">Aumento en conversiones</div>
+              <p class="hero-note">Sitios rediseñados con foco en claridad, confianza y acción.</p>
             </div>
             <div class="metric">
               <div class="metric-value">$50K+</div>
               <div class="metric-label">Ingresos generados</div>
+              <p class="hero-note">Ecosistemas digitales que venden servicios, guías y programas de alto valor.</p>
+            </div>
+          </div>
+          <div class="hero-mockup">
+            <div class="hero-mockup-tag">Vista previa de ecosistema digital</div>
+            <div class="hero-mockup-window">
+              <div class="hero-mockup-title">Dashboard de resultados</div>
+              <div class="hero-mockup-sub">Tráfico cualificado, leads consistentes y ventas automatizadas.</div>
+              <div class="hero-mockup-bars">
+                <div class="bar"><span style="width: 82%;"></span></div>
+                <div class="bar"><span style="width: 64%;"></span></div>
+                <div class="bar"><span style="width: 91%;"></span></div>
+              </div>
+              <div class="hero-mockup-footer">
+                <span>Coaches • Inmobiliarias • Servicios</span>
+                <span>Diseño editorial & estrategia</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PARA QUIÉN -->
+    <section id="servicios">
+      <div class="wrapper">
+        <div class="section-label">Para quién es</div>
+        <h2 class="section-title">Trabajamos con marcas que valoran la excelencia y los resultados medibles</h2>
+        <p class="section-subtitle">
+          Si tu negocio ya tiene tracción y quieres que tu presencia digital refleje el nivel de tu trabajo,
+          diseñamos y rediseñamos tu ecosistema para que venda con claridad y confianza.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-label">01 • Coaches & educadores digitales</div>
+            <h3 class="card-title">Coaches, mentoras y creadoras que venden transformación</h3>
+            <p class="card-text">
+              Desde una página caótica con mil links hasta un ecosistema claro que guía a tu audiencia a la acción correcta.
+            </p>
+            <ul class="card-list">
+              <li>Beacons, páginas de venta y funnels optimizados</li>
+              <li>Integración con email marketing y automatizaciones</li>
+              <li>Venta de guías, workshops y programas online</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-label">02 • Inmobiliarias & agentes de lujo</div>
+            <h3 class="card-title">Propiedades de alto valor, presencia digital a la altura</h3>
+            <p class="card-text">
+              Webs que inspiran confianza, muestran tu portafolio con claridad y capturan leads cualificados todos los días.
+            </p>
+            <ul class="card-list">
+              <li>Integración IDX y tours 360</li>
+              <li>Formularios de leads y seguimiento automatizado</li>
+              <li>Branding editorial para listings de lujo</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-label">03 • Seguros & servicios profesionales</div>
+            <h3 class="card-title">Autoridad, claridad y confianza en cada interacción</h3>
+            <p class="card-text">
+              Sitios que explican lo complejo de forma simple, elevan tu reputación y facilitan el contacto directo.
+            </p>
+            <ul class="card-list">
+              <li>Arquitectura de contenido estratégica</li>
+              <li>Posicionamiento local y captación de leads</li>
+              <li>Integración con CRM y herramientas internas</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="resultados">
+      <div class="wrapper">
+        <div class="section-label">Resultados</div>
+        <h2 class="section-title">Diseño bonito no es suficiente. Medimos impacto.</h2>
+        <p class="section-subtitle">
+          Cada proyecto se diseña con KPIs claros: más leads, más ventas, más claridad. Menos fricción, menos dudas,
+          menos “luego lo veo”.
+        </p>
+
+        <div class="metrics-row">
+          <div class="metric-block">
+            <div class="metric-block-value">300%</div>
+            <div class="metric-block-label">Más conversiones</div>
+            <p class="metric-block-text">
+              Rediseños que convierten webs estáticas en máquinas de captación de clientes.
+            </p>
+          </div>
+          <div class="metric-block">
+            <div class="metric-block-value">$50K+</div>
+            <div class="metric-block-label">Ingresos generados</div>
+            <p class="metric-block-text">
+              Ecosistemas digitales que venden servicios, guías y programas de alto valor.
+            </p>
+          </div>
+          <div class="metric-block">
+            <div class="metric-block-value">4–6</div>
+            <div class="metric-block-label">Semanas por proyecto</div>
+            <p class="metric-block-text">
+              Procesos claros, sin caos, con entregas y revisiones bien definidas.
+            </p>
+          </div>
+          <div class="metric-block">
+            <div class="metric-block-value">100%</div>
+            <div class="metric-block-label">Clientes satisfechos</div>
+            <p class="metric-block-text">
+              Comunicación transparente, acompañamiento y soporte post-lanzamiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso">
+      <div class="wrapper">
+        <div class="section-label">Nuestro proceso</div>
+        <h2 class="section-title">Un proceso diseñado para eliminar fricción y maximizar impacto</h2>
+        <p class="section-subtitle">
+          No solo diseñamos pantallas. Diseñamos decisiones. Cada etapa está pensada para que tu web trabaje a favor
+          de tu negocio, no al revés.
+        </p>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="process-step-number">01 • Discovery estratégico</div>
+            <h3 class="process-step-title">Claridad radical antes de diseñar</h3>
+            <p class="process-step-text">
+              Definimos objetivos, KPIs, audiencia y propuesta de valor. Auditamos tu presencia actual y trazamos el mapa
+              de tu nuevo ecosistema digital.
+            </p>
+          </article>
+          <article class="process-step">
+            <div class="process-step-number">02 • Diseño editorial premium</div>
+            <h3 class="process-step-title">Experiencia visual que se siente “a tu nivel”</h3>
+            <p class="process-step-text">
+              Creamos una interfaz limpia, aspiracional y funcional. Cada sección tiene un propósito, cada palabra guía
+              a la acción.
+            </p>
+          </article>
+          <article class="process-step">
+            <div class="process-step-number">03 • Desarrollo & integraciones</div>
+            <h3 class="process-step-title">Tecnología al servicio de tu estrategia</h3>
+            <p class="process-step-text">
+              Implementamos tu web con foco en velocidad, SEO, responsive y conexiones clave: CRM, email marketing,
+              plataformas de cursos, Beacons, IDX y más.
+            </p>
+          </article>
+          <article class="process-step">
+            <div class="process-step-number">04 • Lanzamiento & optimización</div>
+            <h3 class="process-step-title">Listo para salir al mundo (y medir)</h3>
+            <p class="process-step-text">
+              Revisamos, probamos y lanzamos. Te entregamos guías de uso, analítica configurada y opciones de soporte
+              continuo si lo necesitas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SELECTO -->
     <section id="portfolio">
       <div class="wrapper">
-        <div class="section-label">Portfolio</div>
-        <h2 class="section-title">Casos de estudio</h2>
+        <div class="section-label">Portfolio selecto</div>
+        <h2 class="section-title">Casos de estudio que combinan diseño, estrategia y conversión</h2>
+        <p class="section-subtitle">
+          Una selección de proyectos donde el diseño editorial se encuentra con la estrategia de negocio. Cada caso
+          tiene un objetivo claro: convertir mejor.
+        </p>
+
         <div class="portfolio-grid">
           <article class="portfolio-card">
             <div style="background:#f3e7da;height:140px;"></div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Coaching</div>
+              <div class="portfolio-tag">Coaching & educación digital</div>
               <h3 class="portfolio-title">Escalando ventas de guías digitales con Beacons</h3>
-              <p class="portfolio-result">+220% en 30 días</p>
-              <a href="/casos/beacons-marketing.html" class="portfolio-link">Ver caso</a>
+              <p class="portfolio-result">+220% en ventas de guías en 30 días.</p>
+              <a href="/casos/beacons-marketing.html" class="portfolio-link">Ver caso completo</a>
             </div>
           </article>
 
           <article class="portfolio-card">
             <div style="background:#e6e0d7;height:140px;"></div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Inmobiliaria</div>
+              <div class="portfolio-tag">Inmobiliaria de lujo</div>
               <h3 class="portfolio-title">Web editorial para agentes con listings premium</h3>
-              <p class="portfolio-result">Más leads cualificados</p>
-              <a href="/casos/inmobiliaria-lujo.html" class="portfolio-link">Ver caso</a>
+              <p class="portfolio-result">Más leads cualificados y presencia a la altura de sus propiedades.</p>
+              <a href="/casos/inmobiliaria-lujo.html" class="portfolio-link">Ver caso completo</a>
             </div>
           </article>
 
           <article class="portfolio-card">
             <div style="background:#f0e3d4;height:140px;"></div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Servicios</div>
+              <div class="portfolio-tag">Servicios profesionales</div>
               <h3 class="portfolio-title">Posicionamiento digital para marca de servicios</h3>
-              <p class="portfolio-result">+260% en consultas</p>
-              <a href="/casos/servicios-profesionales.html" class="portfolio-link">Ver caso</a>
+              <p class="portfolio-result">Más consultas directas y percepción de autoridad.</p>
+              <a href="/casos/servicios-profesionales.html" class="portfolio-link">Ver caso completo</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- BLOG PREVIEW -->
-    <section id="blog-preview">
+    <!-- TESTIMONIO -->
+    <section>
       <div class="wrapper">
-        <div class="section-label">Blog</div>
-        <h2 class="section-title">Últimos artículos</h2>
-        <p class="section-subtitle">Ideas sobre diseño editorial, funnels y estrategia digital.</p>
-
-        <ul class="blog-list">
-          {% for post in site.posts limit:5 %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-              <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
-            </li>
-          {% endfor %}
-        </ul>
-
-        <p class="center"><a href="/blog" class="btn btn-outline">Ver todos los artículos</a></p>
+        <div class="section-label">Testimonio</div>
+        <div class="testimonial">
+          <p class="testimonial-quote">
+            “Pasé de tener una web que me daba vergüenza compartir a un ecosistema que vende por mí todos los días.
+            El proceso fue claro, cuidado y profundamente estratégico.”
+          </p>
+          <div class="testimonial-meta">
+            Nombre del cliente • Coach de bienestar y productividad<br />
+            Caso de estudio: Escalando ventas de guías digitales con Beacons
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACTO con widget inline y botón popup -->
+    <!-- CTA FINAL -->
     <section id="contacto">
       <div class="wrapper cta-final">
-        <h2>Contacto</h2>
-        <p>¿Listx para transformar tu presencia digital? Agenda una llamada o envía un mensaje.</p>
-
-        <div style="display:flex;flex-direction:column;gap:14px;align-items:center;">
-          <!-- Botón que abre Calendly en popup -->
-          <a href="#" onclick="Calendly.showPopupWidget('https://calendly.com/azuregoldstudio/30min');return false;" class="btn">Agendar llamada</a>
-
-          <!-- Inline Calendly widget -->
-          <div id="calendly-inline" style="width:100%;max-width:720px;height:630px;margin-top:12px;"></div>
-        </div>
+        <h2>Tu próxima versión digital empieza aquí.</h2>
+        <p>
+          Si tu marca ya está lista para jugar en otra liga, tu presencia digital también. Diseñemos juntas un ecosistema
+          que refleje el nivel de tu trabajo y convierta con intención.
+        </p>
+        <a href="https://calendly.com" class="btn">Agendar consulta estratégica</a>
       </div>
     </section>
   </main>
@@ -145,52 +783,39 @@ title: "Azure Gold Studio"
     <div class="wrapper">
       <div class="footer-grid">
         <div>
-          <div class="footer-title">Azure Gold Studio</div>
-          <p>Estudio boutique de diseño editorial y arquitectura web.</p>
+          <div class="footer-title">Estudio boutique</div>
+          <p>
+            Diseño y rediseño web editorial para marcas de servicios, coaches y negocios que quieren escalar con
+            claridad, confianza y conversión.
+          </p>
         </div>
-
         <div>
           <div class="footer-title">Navegación</div>
           <ul class="footer-links">
-            <li><a href="#portfolio">Casos</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#portfolio">Casos de estudio</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-
         <div>
           <div class="footer-title">Contacto</div>
           <ul class="footer-links">
             <li>Basada en NJ / NY</li>
-            <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
+            <li><a href="mailto:hello@yunersystudio.com">hello@yunersystudio.com</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Azure Gold Studio. Todos los derechos reservados.</span>
+        <span>© <span id="year"></span> Yunersy Studio. Todos los derechos reservados.</span>
         <span>Diseño editorial & estrategia digital.</span>
       </div>
     </div>
-
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-    <!-- Calendly widget JS -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-
-    <!-- Inicializa widget inline si existe el contenedor -->
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function(){
-        var el = document.getElementById('calendly-inline');
-        if(el){
-          Calendly.initInlineWidget({
-            url: 'https://calendly.com/azuregoldstudio/30min',
-            parentElement: el,
-            prefill: {},
-            utm: {}
-          });
-        }
-      });
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </footer>
 </body>
