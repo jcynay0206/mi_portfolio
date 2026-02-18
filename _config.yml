@@ -1,6 +1,21 @@
-title: "Blog — Azure Gold Studio"
+title: "Azure Gold Studio"
 description: "Estrategia, diseño editorial y arquitectura digital."
 theme: minima
 markdown: kramdown
+
+# Paginación
 paginate: 6
 paginate_path: "/blog/page:num/"
+
+# Opciones recomendadas
+baseurl: ""        # dejar vacío si publicas en dominio raíz
+url: ""            # opcional: https://tudominio.com
+
+# Si usas GitHub Pages, esto suele ser suficiente.
+# Si trabajas localmente con bundler, añade jekyll-paginate en tu Gemfile.
+plugins:
+  - jekyll-paginate
+
+# Si tus posts están en blog/_posts y no quieres moverlos, añade:
+# include:
+#   - blog/_posts
