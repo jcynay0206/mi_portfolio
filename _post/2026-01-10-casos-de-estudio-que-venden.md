@@ -27,4 +27,4 @@ Un buen caso de estudio cuenta problema, proceso y resultado con métricas clara
 - Añade un bloque de “qué aprendimos” para mostrar expertise.
 
 **CTA**  
-Si quieres que transformemos uno de tus proyectos en un caso que venda, te preparo el guion y la página lista para publicar.
+Si quieres que transformemos uno de tus proyectos en un caso que venda, te preparo el guion y la página lista para publicar
