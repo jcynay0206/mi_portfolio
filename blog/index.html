@@ -23,19 +23,28 @@ permalink: /blog/
     <p class="muted">Ideas, estrategia y diseño.</p>
 
     <ul class="blog-list">
-      {% for post in paginator.posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
-        </li>
-      {% endfor %}
+      {% if paginator %}
+        {% for post in paginator.posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
+          </li>
+        {% endfor %}
+      {% else %}
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
+          </li>
+        {% endfor %}
+      {% endif %}
     </ul>
 
     <nav class="pagination">
-      {% if paginator.previous_page %}
+      {% if paginator and paginator.previous_page %}
         <a href="{{ paginator.previous_page_path | relative_url }}">← Anterior</a>
       {% endif %}
-      {% if paginator.next_page %}
+      {% if paginator and paginator.next_page %}
         <a href="{{ paginator.next_page_path | relative_url }}">Siguiente →</a>
       {% endif %}
     </nav>
