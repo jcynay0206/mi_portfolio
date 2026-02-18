@@ -1,20 +1,49 @@
----
-layout: home
-title: "Blog — Azure Gold Studio"
-permalink: /blog/
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Blog — Yunersy Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#f7f3ee;--text:#1b1b1b;--muted:#7b6f63;--max-width:1120px}
+body{font-family:"Inter",system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0}
+.wrapper{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem}
+.section-title{font-family:"Playfair Display",serif;font-size:1.6rem;margin:1.25rem 0}
+.blog-list{list-style:none;padding-left:0}
+.blog-list li{padding:12px 0;border-bottom:1px solid #e0d6c9}
+.blog-list a{font-weight:600}
+.muted{color:var(--muted);font-size:0.9rem;margin-left:8px}
+</style>
+</head>
+<body>
+<header style="border-bottom:1px solid #e0d6c9;background:#f7f3ee">
+  <div class="wrapper" style="padding:1rem 0;display:flex;justify-content:space-between;align-items:center">
+    <div class="logo" style="font-family:Playfair Display,serif">YUNERSY STUDIO</div>
+    <div><a href="/" style="color:var(--muted)">Volver al sitio</a></div>
+  </div>
+</header>
 
-<div class="wrapper">
-  <div class="section-label">Blog</div>
-  <h1 class="section-title">Ideas, estrategia y diseño</h1>
-  <p class="section-subtitle">Artículos sobre diseño editorial, arquitectura web y casos de estudio.</p>
+<main>
+  <section style="padding:3rem 0">
+    <div class="wrapper">
+      <div class="section-label">Blog</div>
+      <h1 class="section-title">Ideas, estrategia y diseño</h1>
+      <p class="section-subtitle" style="color:var(--muted);max-width:720px">Artículos sobre diseño editorial, arquitectura web y casos de estudio.</p>
 
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span> — {{ post.date | date: "%d %b %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+      <ul class="blog-list" style="margin-top:1.25rem">
+        <li><a href="/blog/2026-02-17-como-disenar-una-web-que-convierta.html">Cómo diseñar una web que convierta</a><span class="muted"> — 17 Feb 2026</span></li>
+        <li><a href="/blog/2026-02-10-errores-que-matan-tus-conversiones.html">Errores que matan tus conversiones</a><span class="muted"> — 10 Feb 2026</span></li>
+        <li><a href="/blog/2026-01-25-arquitectura-editorial-para-coaches.html">Arquitectura editorial para coaches</a><span class="muted"> — 25 Jan 2026</span></li>
+        <li><a href="/blog/2026-01-10-casos-de-estudio-que-venden.html">Casos de estudio que venden</a><span class="muted"> — 10 Jan 2026</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer style="padding:2rem 0;text-align:center;color:var(--muted)">
+  <div class="wrapper">© <span id="year4"></span> Yunersy Studio</div>
+</footer>
+<script>document.getElementById("year4").textContent = new Date().getFullYear();</script>
+</body>
+</html>
