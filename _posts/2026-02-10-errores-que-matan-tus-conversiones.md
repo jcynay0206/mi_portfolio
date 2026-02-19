@@ -2,7 +2,7 @@
 layout: post
 title: "Errores que Matan tus Conversiones"
 date: 2026-02-10
-categories: [diseño, conversiones]
+categories: [diseño,conversiones]
 ---
 
 **Resumen**  
