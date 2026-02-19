@@ -23,9 +23,23 @@
         {{ content }}
       </section>
 
+      <section class="post-related reveal">
+        <h3>También te puede interesar</h3>
+        <ul class="post-related-list">
+          {% assign related = site.posts | where_exp: "p", "p.url != page.url" | limit:3 %}
+          {% for post in related %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <span>{{ post.date | date: "%d %b %Y" }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
       <footer class="post-footer reveal">
         <div class="post-cta">
           <h3>¿Quieres mejorar tu sitio o tu estrategia digital?</h3>
+          <p>Diseño editorial, arquitectura digital y conversión pensada para marcas de servicios.</p>
           <a class="btn" href="/calendly.html">Agendar consulta</a>
           <a class="btn btn-outline" href="/blog/">Volver al blog</a>
         </div>
@@ -37,7 +51,6 @@
   {% include footer.html %}
 
   <script>
-    // Animación reveal
     document.addEventListener('DOMContentLoaded', function(){
       var reveals = document.querySelectorAll('.reveal');
       if('IntersectionObserver' in window){
@@ -55,6 +68,5 @@
       }
     });
   </script>
-
 </body>
 </html>
