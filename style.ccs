@@ -376,4 +376,27 @@ footer{padding:2.5rem 0 2rem;font-size:.9rem;color:var(--muted);border-top:1px s
   background: var(--text);
   color: #fff;
 }
+/* Animación reveal suave */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s ease;
+}
 
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación hover elegante en links */
+a {
+  transition: opacity .2s ease;
+}
+a:hover {
+  opacity: .7;
+}
+
+/* Animación suave en botones */
+.btn, .btn-outline {
+  transition: all .25s ease;
+}
