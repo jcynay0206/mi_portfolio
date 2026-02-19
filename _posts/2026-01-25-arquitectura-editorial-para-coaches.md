@@ -2,7 +2,7 @@
 layout: post
 title: "Arquitectura Editorial para Coaches"
 date: 2026-01-25
-categories: [diseño, estrategia]
+categories: [diseño_estrategia]
 ---
 
 **Resumen**  
