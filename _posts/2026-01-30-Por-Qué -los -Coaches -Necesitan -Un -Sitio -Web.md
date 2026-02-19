@@ -1,7 +1,9 @@
- --- layout: 
- post title: " Por Qué Los Coaches Necesitan Un Sitio Web (Aunque Tengas 10K Followers)" 
- date: 2026-01-30
- categories: diseño estrategia ---
+---
+layout: post
+title: "Por Qué los Coaches Necesitan un Sitio Editorial"
+date: 2026-01-30
+categories: [coaching, diseño]
+---
 
                     "No necesito sitio web. Tengo 10K followers en Instagram y cierro clientes 
                     por DM todo el tiempo."

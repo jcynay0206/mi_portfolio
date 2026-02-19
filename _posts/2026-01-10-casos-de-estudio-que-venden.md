@@ -2,7 +2,7 @@
 layout: post
 title: "Casos de estudio que venden"
 date: 2026-01-10
-categories: casos estudio
+categories: [casos, estudio]
 ---
 
 **Resumen**  

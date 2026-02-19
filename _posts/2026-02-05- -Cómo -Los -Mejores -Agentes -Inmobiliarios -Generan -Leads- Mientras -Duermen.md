@@ -1,7 +1,9 @@
- --- layout: 
- post title: " Cómo Los Mejores Agentes Inmobiliarios Generan Leads Mientras Duermen" 
- date: 2026-02-05
- categories: diseño estrategia ---
+---
+layout: post
+title: "Cómo los Mejores Agentes Inmobiliarios Multiplican Sus Leads"
+date: 2026-02-05
+categories: [inmobiliario, estrategia]
+---
  
   
                     Son las 2am. Tu competencia duerme. Pero su sitio web acaba de capturar 3 leads 

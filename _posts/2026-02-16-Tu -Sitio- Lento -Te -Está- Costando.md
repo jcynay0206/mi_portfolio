@@ -1,7 +1,9 @@
---- layout: 
-post title: "Tu Sitio Lento Te Está Costando $10K/Mes (Y Cómo Arreglarlo)" 
-date: 2026-02-16 
-categories: diseño estrategia ---
+---
+layout: post
+title: "Tu Sitio Lento Te Está Costando $10K/Mes (Y Cómo Arreglarlo)"
+date: 2026-02-16
+categories: [diseño, estrategia]
+---
             
                     Google hizo un estudio en 2024 con 11 millones de páginas web.
               

@@ -1,7 +1,10 @@
- --- layout: 
- post title: "5 Errores Que Matan Tu Tasa de Conversión (Y Cómo Arreglarlos)" 
- date: 2026-01-23
- categories: diseño estrategia ---
+---
+layout: post
+title: "5 Errores Que Matan Tu Tasa de Conversión (Y Cómo Arreglarlos)"
+date: 2026-01-23
+categories: [diseño, estrategia]
+---
+
 Tu sitio web recibe 1,000 visitantes al mes. Solo 10 dejan su información. 
 Tasa de conversión: 1%. Eso es terrible.
 El problema no es que necesites más tráfico. El problema es que tu sitio 

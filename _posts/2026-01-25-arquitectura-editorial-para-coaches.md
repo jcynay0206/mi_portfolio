@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Arquitectura editorial para coaches"
+title: "Arquitectura Editorial para Coaches"
 date: 2026-01-25
-categories: contenido coaching
+categories: [diseño, estrategia]
 ---
 
 **Resumen**  

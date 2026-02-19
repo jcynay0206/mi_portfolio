@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Errores que matan tus conversiones"
+title: "Errores que Matan tus Conversiones"
 date: 2026-02-10
-categories: estrategia ux
+categories: [diseño, conversiones]
 ---
 
 **Resumen**  
