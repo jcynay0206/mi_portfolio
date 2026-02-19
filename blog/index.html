@@ -4,54 +4,16 @@ title: "Blog"
 permalink: /blog/
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title }} | Azure Gold Studio</title>
-  <meta name="description" content="Artículos sobre estrategia, diseño editorial y arquitectura digital." />
-  <link rel="stylesheet" href="/style.css" />
-</head>
-<body>
-  <header class="wrapper">
-    <div class="logo">Azure Gold STUDIO</div>
-  </header>
+<div class="wrapper">
+  <h1>Blog</h1>
+  <p class="muted">Ideas, estrategia y diseño.</p>
 
-  <main class="wrapper">
-    <h1>Blog</h1>
-    <p class="muted">Ideas, estrategia y diseño.</p>
-
-    <ul class="blog-list">
-      {% if paginator %}
-        {% for post in paginator.posts %}
-          <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
-          </li>
-        {% endfor %}
-      {% else %}
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
-          </li>
-        {% endfor %}
-      {% endif %}
-    </ul>
-
-    <nav class="pagination">
-      {% if paginator and paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}">← Anterior</a>
-      {% endif %}
-      {% if paginator and paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}">Siguiente →</a>
-      {% endif %}
-    </nav>
-  </main>
-
-  <footer class="wrapper">
-    © {{ site.time | date: "%Y" }} Azure Gold Studio
-  </footer>
-</body>
-</html>
+  <ul class="blog-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
