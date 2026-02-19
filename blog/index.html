@@ -4,16 +4,52 @@ title: "Blog"
 permalink: /blog/
 ---
 
-<div class="wrapper">
-  <h1>Blog</h1>
-  <p class="muted">Ideas, estrategia y diseño.</p>
+<section class="blog-hero wrapper reveal">
+  <h1 class="blog-hero-title">Blog</h1>
+  <p class="blog-hero-subtitle">Ideas, estrategia y diseño para marcas de servicios que quieren crecer con intención.</p>
+  <div class="blog-hero-line"></div>
+</section>
 
-  <ul class="blog-list">
+<section class="blog-filters wrapper reveal">
+  <button class="blog-filter-btn is-active" data-category="all">Todo</button>
+  <button class="blog-filter-btn" data-category="diseño">Diseño</button>
+  <button class="blog-filter-btn" data-category="estrategia">Estrategia</button>
+  <button class="blog-filter-btn" data-category="coaching">Coaching</button>
+  <button class="blog-filter-btn" data-category="inmobiliario">Inmobiliario</button>
+</section>
+
+<section class="wrapper reveal">
+  <ul class="blog-list" id="blog-list">
     {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="muted"> — {{ post.date | date: "%d %b %Y" }}</span>
+      <li class="blog-item"
+          data-categories="{{ post.categories | join: ' ' }}">
+        <a href="{{ post.url | relative_url }}" class="blog-item-title">{{ post.title }}</a>
+        <span class="blog-item-date">{{ post.date | date: "%d %b %Y" }}</span>
       </li>
     {% endfor %}
   </ul>
-</div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var buttons = document.querySelectorAll('.blog-filter-btn');
+    var items = document.querySelectorAll('.blog-item');
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        buttons.forEach(function(b){ b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+
+        var cat = btn.getAttribute('data-category');
+        items.forEach(function(item){
+          var itemCats = item.getAttribute('data-categories') || '';
+          if(cat === 'all' || itemCats.includes(cat)){
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
