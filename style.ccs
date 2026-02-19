@@ -119,3 +119,53 @@ footer{padding:2.5rem 0 2rem;font-size:.9rem;color:var(--muted);border-top:1px s
   .case-metric{min-width:auto;width:100%}
   .case-cta-inner{flex-direction:column;gap:.6rem}
 }
+/* Post layout */
+.post { padding: 3rem 1.5rem; }
+
+.post-header { margin-bottom: 2rem; }
+.post-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: .5rem;
+}
+.post-date {
+  color: var(--muted);
+  font-size: .9rem;
+  letter-spacing: .03em;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+.post-content h2 {
+  font-family: "Playfair Display", serif;
+  margin-top: 2rem;
+  margin-bottom: .8rem;
+  font-size: 1.6rem;
+}
+.post-content p,
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.2rem;
+  color: var(--muted);
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 1.2rem;
+}
+
+.post-cta {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+.post-cta h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+}
