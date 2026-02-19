@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo diseñar una web que convierta"
 date: 2026-02-17
-categories: diseño estrategia
+categories: [diseño,estrategia]
 ---
 
 **Resumen**  
