@@ -2,9 +2,8 @@
 layout: post
 title: "Arquitectura Editorial para Coaches"
 date: 2026-01-25
-categories: [diseño_estrategia]
+categories: [diseño,estrategia]
 ---
-
 **Resumen**  
 Organizar contenido en pilares y rutas de conversión transforma visitantes en clientes. Aquí un mapa práctico.
 
