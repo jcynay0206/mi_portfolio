@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo los Mejores Agentes Inmobiliarios Multiplican Sus Leads"
 date: 2026-02-05
-categories: [inmobiliario, estrategia]
+categories: [inmobiliario,estrategia]
 ---
  
   
