@@ -453,4 +453,83 @@ a:hover {
   color: var(--muted);
   margin-bottom: 1.5rem;
 }
+/* HOME HERO */
+.home-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  max-width: 900px;
+}
+.home-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+.home-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+/* HOME SECTIONS */
+.home-section {
+  padding: 3rem 0;
+  max-width: 900px;
+}
+.home-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* SERVICES GRID */
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+  transition: all .3s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* CASES GRID */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.case-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+  text-decoration: none;
+  color: var(--text);
+  transition: all .3s ease;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.home-cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.home-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
