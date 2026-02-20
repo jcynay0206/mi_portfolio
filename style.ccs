@@ -616,3 +616,171 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* HERO */
+.cases-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.cases-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.cases-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+.cases-hero-line {
+  width: 80px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+}
+
+/* INTRO */
+.cases-intro {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.cases-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cases-intro p {
+  color: var(--muted);
+}
+
+/* GRID */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0 3rem;
+}
+.case-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+  text-decoration: none;
+  color: var(--text);
+  transition: all .3s ease;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.case-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+.case-card p {
+  color: var(--muted);
+}
+
+/* CTA */
+.cases-cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.cases-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cases-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* HERO */
+.contact-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.contact-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.contact-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+.contact-hero-line {
+  width: 80px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.contact-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btn-whatsapp {
+  background: #25D366;
+  border-color: #25D366;
+  color: #fff;
+}
+
+/* CONTACT DETAILS */
+.contact-details {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.contact-details h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  margin-bottom: .8rem;
+  color: var(--muted);
+}
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* CTA */
+.contact-cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.contact-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
