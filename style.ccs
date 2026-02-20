@@ -532,4 +532,87 @@ a:hover {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+/* HERO */
+.services-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.services-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.services-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+.services-hero-line {
+  width: 80px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+}
+
+/* INTRO */
+.services-intro {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.services-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.services-intro p {
+  color: var(--muted);
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0 3rem;
+}
+.service-block {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+  transition: all .3s ease;
+}
+.service-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.service-block h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: .8rem;
+}
+.service-block p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.service-block ul {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+/* CTA */
+.services-cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.services-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.services-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
 
