@@ -784,3 +784,92 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* HERO */
+.pricing-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.pricing-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.pricing-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+.pricing-hero-line {
+  width: 80px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+}
+
+/* INTRO */
+.pricing-intro {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.pricing-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.pricing-intro p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* BENEFITS */
+.pricing-benefits {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.pricing-benefits h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.pricing-list {
+  list-style: none;
+  padding: 0;
+}
+.pricing-list li {
+  margin-bottom: .8rem;
+  color: var(--muted);
+}
+
+/* PROCESS */
+.pricing-process {
+  max-width: 760px;
+  padding: 2rem 0;
+}
+.pricing-process h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.pricing-steps {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+.pricing-steps li {
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.pricing-cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.pricing-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.pricing-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
