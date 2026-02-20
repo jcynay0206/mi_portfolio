@@ -400,3 +400,57 @@ a:hover {
 .btn, .btn-outline {
   transition: all .25s ease;
 }
+.about-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.about-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+.about-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+.about-hero-line {
+  width: 80px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 2.5rem 0;
+  max-width: 760px;
+}
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+.about-section ol {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.about-cta {
+  padding: 3rem 0 4rem;
+  text-align: center;
+}
+.about-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
