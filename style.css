@@ -3,14 +3,24 @@
    ========================= */
 
 /* Variables */
-:root{
-  --bg: #f7f3ee;
-  --bg-alt: #ffffff;
-  --text: #1b1b1b;
-  --muted: #7b6f63;
-  --accent: #c9a27b;
-  --border: #e0d6c9;
-  --max-width: 1120px;
+
+:root {
+  --bg: #f5f1eb;        /* crema editorial */
+  --bg-alt: #ffffff;     /* blanco limpio */
+  --text: #1a1714;       /* negro suave */
+  --muted: #6f645c;      /* topo elegante */
+  --border: #d8cfc7;     /* beige premium */
+  --gold: #c7a97a;       /* dorado editorial */
+}
+
+/* MODO OSCURO EDITORIAL */
+.dark-mode {
+  --bg: #1a1817;
+  --bg-alt: #242220;
+  --text: #f5f1eb;
+  --muted: #b8b1a8;
+  --border: #3a3633;
+  --gold: #d8c28a;
 }
 
 /* Base */
