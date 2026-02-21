@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: 'Contacto – Trabajemos juntas en tu proyecto digital.' }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include header.html %}
+
+  <main class="wrapper">
+
+    <!-- HERO -->
+    <section class="contact-hero wrapper reveal">
+      <h1 class="contact-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="contact-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="contact-line"></div>
+    </section>
+
+    <!-- INTRO -->
+    {% if page.intro %}
+    <section class="contact-intro wrapper reveal">
+      <p>{{ page.intro }}</p>
+    </section>
+    {% endif %}
+
+    <!-- FORMULARIO -->
+    <section class="contact-form wrapper reveal">
+      <form action="https://formspree.io/f/{{ page.form_id }}" method="POST" class="form">
+
+        <label>Nombre completo</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Tipo de proyecto</label>
+        <select name="project">
+          <option value="Arquitectura Web Editorial">Arquitectura Web Editorial</option>
+          <option value="Branding Editorial">Branding Editorial</option>
+          <option value="Estrategia Digital">Estrategia Digital</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <label>Cuéntame sobre tu proyecto</label>
+        <textarea name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="contact-cta wrapper reveal">
+      <a href="/calendly/" class="btn">Prefiero agendar una llamada</a>
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries, observer){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function(r){ obs.observe(r); });
+      } else {
+        reveals.forEach(function(r){ r.classList.add('visible'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
