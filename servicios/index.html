@@ -4,55 +4,137 @@
   <meta charset="UTF-8">
   <title>Servicios — Azure Gold Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon.ico">
 </head>
 
 <body>
 
+<!-- MENÚ -->
 <nav class="menu">
   <div class="menu-inner">
-    <a href="/index.html" class="menu-logo">AZURE GOLD</a>
+
+    <a href="/" class="menu-logo desktop-logo">
+      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
+    </a>
+
+    <a href="/" class="menu-logo mobile-logo">
+      <span>AZURE GOLD</span> STUDIO
+    </a>
 
     <div class="menu-links">
-      <a href="/sobre-mi.html" class="nav-sobre">Sobre mí</a>
-      <a href="/servicios.html" class="nav-servicios">Servicios</a>
-      <a href="/casos.html" class="nav-casos">Casos</a>
-      <a href="/blog/index.html" class="nav-blog">Blog</a>
-      <a href="/contacto.html" class="nav-contacto">Contacto</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/casos/">Casos</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contacto/">Contacto</a>
     </div>
+
+    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
   </div>
 </nav>
 
-  
-<header class="sub-hero">
-  <h1>Servicios</h1>
-  <p>Branding editorial, arquitectura web y estrategia premium.</p>
+<!-- HERO EDITORIAL -->
+<header class="hero hero-watermark">
+  <div class="wrapper">
+    <div class="hero-eyebrow">Servicios premium</div>
+    <h1 class="hero-title">Diseño Web Editorial para Marcas que Quieren Escalar con Claridad</h1>
+    <p class="hero-subtitle">
+      Transformamos tu presencia digital en un ecosistema estratégico que comunica, conecta y convierte.
+    </p>
+  </div>
 </header>
 
-<section class="section">
-  <div class="services-grid">
+<!-- CONTENIDO -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Qué hacemos</div>
+    <h2 class="section-title">Servicios diseñados para elevar tu autoridad y tus resultados</h2>
 
-    <div class="service-card">
-      <h3>Branding Editorial</h3>
-      <p>Identidad visual completa: logo, monograma, paleta, tipografía y sistema editorial.</p>
+    <div class="cards-3">
+
+      <article class="card">
+        <div class="card-label">01 • Diseño Web Editorial</div>
+        <h3 class="card-title">Sitios premium con intención estratégica</h3>
+        <p class="card-text">Diseño limpio, moderno y editorial que refleja el nivel real de tu marca.</p>
+        <ul class="card-list">
+          <li>Arquitectura estratégica</li>
+          <li>Diseño editorial premium</li>
+          <li>Implementación completa</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-label">02 • Rediseño Web</div>
+        <h3 class="card-title">Transformación completa de tu presencia digital</h3>
+        <p class="card-text">De una web confusa a un ecosistema claro, profesional y listo para convertir.</p>
+        <ul class="card-list">
+          <li>Optimización de contenido</li>
+          <li>Mejora de conversión</li>
+          <li>Integraciones clave</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-label">03 • Ecosistemas Digitales</div>
+        <h3 class="card-title">Tu negocio funcionando en piloto automático</h3>
+        <p class="card-text">Automatizaciones, funnels, email marketing y sistemas que venden por ti.</p>
+        <ul class="card-list">
+          <li>Funnels estratégicos</li>
+          <li>Email marketing</li>
+          <li>CRM + integraciones</li>
+        </ul>
+      </article>
+
     </div>
-
-    <div class="service-card">
-      <h3>Arquitectura Web</h3>
-      <p>Diseño y desarrollo de sitios web editoriales, minimalistas y estratégicos.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>Estrategia Digital</h3>
-      <p>Narrativa, posicionamiento, estructura de contenido y optimización para conversión.</p>
-    </div>
-
   </div>
 </section>
 
-<footer class="footer">
-  <p>© 2026 Azure Gold Studio</p>
+<!-- CTA -->
+<section id="contacto">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para elevar tu presencia digital?</h2>
+    <p>Agendemos una consulta estratégica y diseñemos juntas tu próxima versión digital.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+
+      <div>
+        <img src="/assets/img/branding/logo.png" class="footer-logo">
+        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/casos/">Casos</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contacto</div>
+        <ul class="footer-links">
+          <li>Basada en NJ / NY</li>
+          <li><a href="mailto:hello@yunersystudio.com">hello@yunersystudio.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Azure Gold Studio</span>
+      <span>Diseño editorial & estrategia digital</span>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </footer>
 
 </body>
