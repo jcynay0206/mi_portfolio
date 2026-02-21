@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: 'Sobre mí – Diseño editorial, estrategia digital y arquitectura web.' }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include header.html %}
+
+  <main class="wrapper">
+
+    <!-- HERO -->
+    <section class="about-hero wrapper reveal">
+      <h1 class="about-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="about-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="about-line"></div>
+    </section>
+
+    <!-- INTRO -->
+    {% if page.intro %}
+    <section class="about-intro wrapper reveal">
+      <p>{{ page.intro }}</p>
+    </section>
+    {% endif %}
+
+    <!-- BLOQUES EDITORIALES -->
+    <section class="about-blocks wrapper reveal">
+      {% for block in page.blocks %}
+      <div class="about-block">
+        <h2 class="block-title">{{ block.title }}</h2>
+        <p class="block-text">{{ block.text }}</p>
+      </div>
+      {% endfor %}
+    </section>
+
+    <!-- VALORES -->
+    {% if page.values %}
+    <section class="about-values wrapper reveal">
+      <h2 class="values-title">Mis valores</h2>
+      <ul class="values-list">
+        {% for value in page.values %}
+        <li>{{ value }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <!-- CTA FINAL -->
+    <section class="about-cta wrapper reveal">
+      <a href="/contacto/" class="btn">Trabajemos juntas</a>
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries, observer){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function(r){ obs.observe(r); });
+      } else {
+        reveals.forEach(function(r){ r.classList.add('visible'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
