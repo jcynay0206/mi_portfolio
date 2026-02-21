@@ -383,4 +383,146 @@ h3 {
   .home-title {
     font-size: 2.2rem;
   }
+
+/* ============================================================
+   AJUSTES FINOS — RITMO EDITORIAL Y ESPACIADOS
+   ============================================================ */
+
+/* Más aire entre secciones */
+section {
+  padding: 100px 0;
+}
+
+/* Más espacio entre H2 y contenido */
+h2 {
+  margin-bottom: 25px;
+}
+
+/* --------------------------------------------- */
+/* HOME — Ajustes finos */
+/* --------------------------------------------- */
+
+.home-title {
+  line-height: 1.25;
+}
+
+.home-cta {
+  padding-top: 120px;
+}
+
+/* --------------------------------------------- */
+/* SOBRE MÍ — Ajustes finos */
+/* --------------------------------------------- */
+
+.about-blocks {
+  row-gap: 60px;
+}
+
+@media (max-width: 900px) {
+  .about-blocks {
+    row-gap: 80px;
+  }
+}
+
+/* --------------------------------------------- */
+/* SERVICIOS — Ajustes finos */
+/* --------------------------------------------- */
+
+.service-card {
+  padding: 40px;
+}
+
+.service-title {
+  font-weight: 600;
+}
+
+/* --------------------------------------------- */
+/* PRECIOS — Ajustes finos */
+/* --------------------------------------------- */
+
+.pricing-card {
+  padding: 40px;
+}
+
+.plan-price {
+  font-size: 1.3rem;
+}
+
+/* --------------------------------------------- */
+/* CONTACTO — Ajustes finos */
+/* --------------------------------------------- */
+
+.form button {
+  padding: 16px;
+}
+
+.form textarea {
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------- */
+/* BLOG — Ajustes finos */
+/* --------------------------------------------- */
+
+.blog-card {
+  padding: 35px;
+}
+
+.blog-list {
+  row-gap: 40px;
+}
+
+.blog-post h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------- */
+/* CASOS — Ajustes finos */
+/* --------------------------------------------- */
+
+.case-card {
+  padding: 35px;
+}
+
+.case-card h3 {
+  font-size: 1.35rem;
+}
+
+.case-card p {
+  opacity: 0.75;
+}
+
+.case-cta {
+  margin-top: 80px;
+}
+
+/* --------------------------------------------- */
+/* MOBILE — Ajustes finos */
+/* --------------------------------------------- */
+
+@media (max-width: 600px) {
+  section {
+    padding: 80px 0;
+  }
+
+  .home-title {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .pricing-card,
+  .service-card,
+  .case-card,
+  .blog-card {
+    padding: 28px;
+  }
+
+  .process-step {
+    padding: 25px;
+  }
 }
