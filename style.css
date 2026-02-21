@@ -45,6 +45,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 25px;
 }
 
 h3 {
@@ -93,11 +94,37 @@ h3 {
 .about-line,
 .services-line,
 .pricing-line,
-.contact-line {
+.contact-line,
+.home-line {
   width: 60px;
   height: 2px;
   background: #000;
-  margin: 20px auto 0;
+  margin: 40px auto 0;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.site-header {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav a {
+  letter-spacing: 0.5px;
 }
 
 /* ============================================================
@@ -106,26 +133,25 @@ h3 {
 
 .home-hero {
   text-align: center;
-  padding: 120px 0 100px;
+  padding: 140px 0 100px;
 }
 
 .home-title {
   font-size: 2.8rem;
-  line-height: 1.2;
-  max-width: 900px;
-  margin: 0 auto 20px;
+  line-height: 1.25;
+  margin-bottom: 30px;
 }
 
 .home-subtitle {
   font-size: 1.3rem;
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
   opacity: 0.8;
 }
 
 .value {
   text-align: center;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .value-text {
@@ -136,7 +162,7 @@ h3 {
 }
 
 .differentiators {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .diff-title {
@@ -183,12 +209,8 @@ h3 {
 }
 
 .process-step {
-  padding: 20px;
+  padding: 25px;
   border-left: 2px solid #000;
-}
-
-.process-step h3 {
-  margin-bottom: 10px;
 }
 
 .step-note {
@@ -215,7 +237,7 @@ h3 {
 }
 
 .case-card {
-  padding: 30px;
+  padding: 35px;
   border: 1px solid rgba(0,0,0,0.1);
   transition: all 0.3s ease;
   text-align: left;
@@ -224,15 +246,6 @@ h3 {
 .case-card:hover {
   border-color: #000;
   transform: translateY(-4px);
-}
-
-/* ============================================================
-   CTA FINAL
-   ============================================================ */
-
-.home-cta {
-  text-align: center;
-  padding: 100px 0;
 }
 
 /* ============================================================
@@ -255,11 +268,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-}
-
-.about-values {
-  text-align: center;
-  margin-top: 80px;
+  row-gap: 60px;
 }
 
 .values-list {
@@ -281,17 +290,27 @@ h3 {
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
 }
 
 .service-card {
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 30px;
+  padding: 40px;
   transition: all 0.3s ease;
 }
 
 .service-card:hover {
   border-color: #000;
+}
+
+.service-title {
+  font-weight: 600;
+  font-size: 1.55rem;
+}
+
+.service-price {
+  margin-top: 25px;
+  font-size: 1.15rem;
 }
 
 /* ============================================================
@@ -306,12 +325,21 @@ h3 {
 
 .pricing-card {
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 30px;
+  padding: 40px;
   transition: all 0.3s ease;
 }
 
 .pricing-card:hover {
   border-color: #000;
+}
+
+.plan-price {
+  font-size: 1.35rem;
+  margin-top: 25px;
+}
+
+.plan-features li {
+  padding: 8px 0;
 }
 
 /* ============================================================
@@ -334,8 +362,14 @@ h3 {
 .form select {
   width: 100%;
   padding: 12px;
-  border: 1px solid rgba(0,0,0,0.2);
-  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.form button {
+  padding: 18px;
+  font-size: 1.05rem;
 }
 
 /* ============================================================
@@ -346,10 +380,11 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  row-gap: 45px;
 }
 
 .blog-card {
-  padding: 30px;
+  padding: 35px;
   border: 1px solid rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
@@ -358,9 +393,9 @@ h3 {
   border-color: #000;
 }
 
-.blog-post {
-  max-width: 800px;
-  margin: 0 auto;
+.post-title {
+  font-size: 2.4rem;
+  line-height: 1.25;
 }
 
 /* ============================================================
@@ -383,123 +418,7 @@ h3 {
   .home-title {
     font-size: 2.2rem;
   }
-
-/* ============================================================
-   AJUSTES FINOS — RITMO EDITORIAL Y ESPACIADOS
-   ============================================================ */
-
-/* Más aire entre secciones */
-section {
-  padding: 100px 0;
 }
-
-/* Más espacio entre H2 y contenido */
-h2 {
-  margin-bottom: 25px;
-}
-
-/* --------------------------------------------- */
-/* HOME — Ajustes finos */
-/* --------------------------------------------- */
-
-.home-title {
-  line-height: 1.25;
-}
-
-.home-cta {
-  padding-top: 120px;
-}
-
-/* --------------------------------------------- */
-/* SOBRE MÍ — Ajustes finos */
-/* --------------------------------------------- */
-
-.about-blocks {
-  row-gap: 60px;
-}
-
-@media (max-width: 900px) {
-  .about-blocks {
-    row-gap: 80px;
-  }
-}
-
-/* --------------------------------------------- */
-/* SERVICIOS — Ajustes finos */
-/* --------------------------------------------- */
-
-.service-card {
-  padding: 40px;
-}
-
-.service-title {
-  font-weight: 600;
-}
-
-/* --------------------------------------------- */
-/* PRECIOS — Ajustes finos */
-/* --------------------------------------------- */
-
-.pricing-card {
-  padding: 40px;
-}
-
-.plan-price {
-  font-size: 1.3rem;
-}
-
-/* --------------------------------------------- */
-/* CONTACTO — Ajustes finos */
-/* --------------------------------------------- */
-
-.form button {
-  padding: 16px;
-}
-
-.form textarea {
-  border: 1px solid rgba(0,0,0,0.15);
-}
-
-/* --------------------------------------------- */
-/* BLOG — Ajustes finos */
-/* --------------------------------------------- */
-
-.blog-card {
-  padding: 35px;
-}
-
-.blog-list {
-  row-gap: 40px;
-}
-
-.blog-post h1 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-/* --------------------------------------------- */
-/* CASOS — Ajustes finos */
-/* --------------------------------------------- */
-
-.case-card {
-  padding: 35px;
-}
-
-.case-card h3 {
-  font-size: 1.35rem;
-}
-
-.case-card p {
-  opacity: 0.75;
-}
-
-.case-cta {
-  margin-top: 80px;
-}
-
-/* --------------------------------------------- */
-/* MOBILE — Ajustes finos */
-/* --------------------------------------------- */
 
 @media (max-width: 600px) {
   section {
@@ -524,5 +443,9 @@ h2 {
 
   .process-step {
     padding: 25px;
+  }
+
+  .about-blocks {
+    row-gap: 90px;
   }
 }
