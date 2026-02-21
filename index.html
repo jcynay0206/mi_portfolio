@@ -5,126 +5,102 @@
   <title>Azure Gold Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-
-  <!-- CSS -->
+  <!-- RUTAS CORRECTAS PARA GITHUB PAGES + DOMINIO PERSONAL -->
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
 </head>
 
 <body>
 
-  <nav class="menu">
+<!-- MENÚ EDITORIAL -->
+<nav class="menu">
   <div class="menu-inner">
-    <a href="/index.html" class="menu-logo">AZURE GOLD</a>
+    <a href="index.html" class="menu-logo">AZURE GOLD</a>
 
     <div class="menu-links">
-      <a href="/sobre-mi.html" class="nav-sobre">Sobre mí</a>
-      <a href="/servicios.html" class="nav-servicios">Servicios</a>
-      <a href="/casos.html" class="nav-casos">Casos</a>
-      <a href="/blog/index.html" class="nav-blog">Blog</a>
-      <a href="/contacto.html" class="nav-contacto">Contacto</a>
+      <a href="sobre-mi.html" class="nav-sobre">Sobre mí</a>
+      <a href="servicios.html" class="nav-servicios">Servicios</a>
+      <a href="casos.html" class="nav-casos">Casos</a>
+      <a href="precios.html" class="nav-precios">Precios</a>
+      <a href="blog/index.html" class="nav-blog">Blog</a>
+      <a href="contacto.html" class="nav-contacto">Contacto</a>
     </div>
   </div>
 </nav>
 
-  <!-- ===========================
-       HERO / LOGO
-       =========================== -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="logo-block">
-        <p class="logo-line-1">AZURE GOLD</p>
-        <p class="logo-line-2">STUDIO</p>
-      </div>
+<!-- HERO CON IMAGEN EDITORIAL -->
+<header class="hero" style="background-image: url('assets/img/home/hero-texture.jpg');">
+  <div class="hero-overlay"></div>
 
-      <div class="hero-text">
-        <h1>Branding editorial y arquitectura web para marcas premium.</h1>
-        <p>Diseño estratégico, estética impecable y experiencias digitales que elevan tu autoridad.</p>
-        <a href="#servicios" class="btn-primary">Ver servicios</a>
-      </div>
+  <div class="hero-inner fade-in">
+    <div class="logo-block">
+      <p class="logo-line-1">AZURE GOLD</p>
+      <p class="logo-line-2">STUDIO</p>
     </div>
-  </header>
 
-  <!-- ===========================
-       SERVICIOS
-       =========================== -->
-  <section id="servicios" class="section">
-    <h2 class="section-title">Servicios</h2>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-        <h3>Branding Editorial</h3>
-        <p>Identidad visual premium, logo, monograma, paleta, tipografía y sistema editorial completo.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Arquitectura Web</h3>
-        <p>Diseño y desarrollo de sitios web editoriales, minimalistas y estratégicos.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Estrategia Digital</h3>
-        <p>Posicionamiento, narrativa, estructura de contenido y optimización para conversión.</p>
-      </div>
-
+    <div class="hero-text slide-up">
+      <h1>Branding editorial y arquitectura web para marcas premium.</h1>
+      <p>Diseño estratégico, estética impecable y experiencias digitales que elevan tu autoridad.</p>
+      <a href="servicios.html" class="btn-primary">Ver servicios</a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- ===========================
-       CASOS
-       =========================== -->
-  <section id="casos" class="section">
-    <h2 class="section-title">Casos de Estudio</h2>
+<!-- SECCIÓN SERVICIOS -->
+<section class="section">
+  <h2 class="section-title">Servicios</h2>
 
-    <div class="cases-grid">
+  <div class="services-grid">
 
-      <div class="case-card">
-        <div class="case-img"></div>
-        <h3>JC Nay Real Estate</h3>
-        <p>Rediseño editorial completo, narrativa estratégica y arquitectura web premium.</p>
-        <a href="#" class="case-link">Ver caso completo</a>
-      </div>
-
-      <div class="case-card">
-        <div class="case-img"></div>
-        <h3>Luxury Coaching</h3>
-        <p>Identidad visual, storytelling y sistema editorial para marca personal premium.</p>
-        <a href="#" class="case-link">Ver caso completo</a>
-      </div>
-
-      <div class="case-card">
-        <div class="case-img"></div>
-        <h3>Wellness Boutique</h3>
-        <p>Branding, web y experiencia sensorial para marca de bienestar de lujo.</p>
-        <a href="#" class="case-link">Ver caso completo</a>
-      </div>
-
+    <div class="service-card fade-in">
+      <h3>Branding Editorial</h3>
+      <p>Identidad visual premium, logo, monograma, paleta, tipografía y sistema editorial completo.</p>
     </div>
-  </section>
 
-  <!-- ===========================
-       CTA FINAL
-       =========================== -->
-  <section class="cta">
-    <h2>¿Lista para elevar tu marca?</h2>
-    <p>Construyamos una identidad editorial que te posicione como referente.</p>
-    <a href="#contacto" class="btn-primary">Agendar diagnóstico</a>
-  </section>
+    <div class="service-card fade-in">
+      <h3>Arquitectura Web</h3>
+      <p>Diseño y desarrollo de sitios web editoriales, minimalistas y estratégicos.</p>
+    </div>
 
-  <!-- ===========================
-       FOOTER
-       =========================== -->
-  <footer class="footer">
-    <p>© 2026 Azure Gold Studio — Diseño editorial & arquitectura web</p>
-  </footer>
+    <div class="service-card fade-in">
+      <h3>Estrategia Digital</h3>
+      <p>Posicionamiento, narrativa, estructura de contenido y optimización para conversión.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN CASOS -->
+<section class="section">
+  <h2 class="section-title">Casos de Estudio</h2>
+
+  <div class="cases-grid">
+
+    <div class="case-card slide-up">
+      <div class="case-img"></div>
+      <h3>JC Nay Real Estate</h3>
+      <p>Rediseño editorial completo, narrativa estratégica y arquitectura web premium.</p>
+    </div>
+
+    <div class="case-card slide-up">
+      <div class="case-img"></div>
+      <h3>Luxury Coaching</h3>
+      <p>Identidad visual, storytelling y sistema editorial para marca personal premium.</p>
+    </div>
+
+    <div class="case-card slide-up">
+      <div class="case-img"></div>
+      <h3>Wellness Boutique</h3>
+      <p>Branding, web y experiencia sensorial para marca de bienestar de lujo.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Azure Gold Studio</p>
+</footer>
 
 </body>
 </html>
-
