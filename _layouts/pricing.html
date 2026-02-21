@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: 'Planes y precios de diseño editorial, estrategia digital y arquitectura web.' }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include header.html %}
+
+  <main class="wrapper">
+
+    <!-- HERO -->
+    <section class="pricing-hero wrapper reveal">
+      <h1 class="pricing-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="pricing-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="pricing-line"></div>
+    </section>
+
+    <!-- INTRO -->
+    {% if page.intro %}
+    <section class="pricing-intro wrapper reveal">
+      <p>{{ page.intro }}</p>
+    </section>
+    {% endif %}
+
+    <!-- PLANES -->
+    <section class="pricing-grid wrapper reveal">
+      {% for plan in page.plans %}
+      <div class="pricing-card">
+        <h2 class="plan-title">{{ plan.title }}</h2>
+        <p class="plan-description">{{ plan.description }}</p>
+
+        {% if plan.features %}
+        <ul class="plan-features">
+          {% for feature in plan.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if plan.price %}
+        <p class="plan-price">{{ plan.price }}</p>
+        {% endif %}
+
+        <a href="/contacto/" class="btn plan-btn">Elegir este plan</a>
+      </div>
+      {% endfor %}
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="pricing-cta wrapper reveal">
+      <a href="/contacto/" class="btn">Quiero empezar mi proyecto</a>
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries, observer){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function(r){ obs.observe(r); });
+      } else {
+        reveals.forEach(function(r){ r.classList.add('visible'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
