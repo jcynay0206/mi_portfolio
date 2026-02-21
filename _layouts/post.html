@@ -1,65 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <meta charset="UTF-8">
+  <title>{{ page.title }} — Azure Gold Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS + Favicon -->
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
-  {% include header.html %}
+<!-- MENÚ -->
+<nav class="menu">
+  <div class="menu-inner">
+    <a href="../index.html" class="menu-logo">AZURE GOLD</a>
 
-  <main class="wrapper">
+    <div class="menu-links">
+      <a href="../sobre-mi.html">Sobre mí</a>
+      <a href="../servicios.html">Servicios</a>
+      <a href="../casos/index.html">Casos</a>
+      <a href="../precios.html">Precios</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </div>
+</nav>
 
-    <article class="blog-post wrapper reveal">
+<!-- HERO DEL POST -->
+<header class="post-hero">
+  <h1>{{ page.title }}</h1>
+  <p class="post-date">{{ page.date | date: "%d de %B de %Y" }}</p>
+</header>
 
-      <a class="back-link" href="/blog/">← Volver al blog</a>
+<!-- CONTENIDO DEL POST -->
+<section class="section post-content">
+  {{ content }}
+</section>
 
-      <h1 class="post-title">{{ page.title }}</h1>
-
-      <p class="post-meta">
-        Publicado el {{ page.date | date: "%d de %B de %Y" }}
-      </p>
-
-      {% if page.subtitle %}
-      <p class="post-subtitle">{{ page.subtitle }}</p>
-      {% endif %}
-
-      <section class="post-content reveal">
-        {{ content }}
-      </section>
-
-      <section class="post-cta reveal">
-        <a href="/contacto/" class="btn">Quiero trabajar mi estrategia</a>
-      </section>
-
-    </article>
-
-  </main>
-
-  {% include footer.html %}
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      var reveals = document.querySelectorAll('.reveal');
-      if('IntersectionObserver' in window){
-        var obs = new IntersectionObserver(function(entries, observer){
-          entries.forEach(function(entry){
-            if(entry.isIntersecting){
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        reveals.forEach(function(r){ obs.observe(r); });
-      } else {
-        reveals.forEach(function(r){ r.classList.add('visible'); });
-      }
-    });
-  </script>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Azure Gold Studio</p>
+</footer>
 
 </body>
 </html>
