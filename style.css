@@ -1,272 +1,386 @@
-/* ----------------------------------------------------
-   PALETA LUXURY EDITORIAL
----------------------------------------------------- */
-:root {
-  --bg: #f5f1eb;        /* crema editorial */
-  --bg-alt: #ffffff;     /* blanco limpio */
-  --text: #1a1714;       /* negro suave */
-  --muted: #6f645c;      /* topo elegante */
-  --border: #d8cfc7;     /* beige premium */
-  --gold: #c7a97a;       /* dorado editorial */
+/* ============================================================
+   AZURE GOLD STUDIO — CSS EDITORIAL PREMIUM COMPLETO
+   ============================================================ */
+
+/* --------------------------------------------- */
+/* GLOBAL */
+/* --------------------------------------------- */
+
+* {
+  box-sizing: border-box;
 }
 
-/* MODO OSCURO EDITORIAL */
-.dark-mode {
-  --bg: #1a1817;
-  --bg-alt: #242220;
-  --text: #f5f1eb;
-  --muted: #b8b1a8;
-  --border: #3a3633;
-  --gold: #d8c28a;
-}
-
-/* ----------------------------------------------------
-   BASE
----------------------------------------------------- */
 body {
-  font-family: "Inter", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
   margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  color: var(--text);
-}
-
-a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color .3s ease;
-}
-
-a:hover {
-  color: var(--gold);
+  font-family: "Inter", sans-serif;
+  color: #000;
+  background: #fff;
+  line-height: 1.6;
 }
 
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 20px;
 }
 
-section {
-  padding: 3.5rem 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* ----------------------------------------------------
-   HEADER / MENÚ EDITORIAL
----------------------------------------------------- */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 0;
-}
+/* --------------------------------------------- */
+/* TYPOGRAPHY */
+/* --------------------------------------------- */
 
-.logo a {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-}
-
-.nav a {
+h1, h2, h3 {
   font-weight: 500;
-  transition: color .3s ease;
+  letter-spacing: -0.5px;
+  margin-top: 0;
 }
 
-.nav a:hover {
-  color: var(--gold);
+h1 {
+  font-size: 2.6rem;
 }
 
-/* Botón modo oscuro */
-.dark-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  padding: .4rem .7rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all .3s ease;
+h2 {
+  font-size: 2rem;
 }
 
-.dark-toggle:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+h3 {
+  font-size: 1.4rem;
 }
 
-/* ----------------------------------------------------
-   BOTONES PREMIUM
----------------------------------------------------- */
+/* --------------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------------- */
+
 .btn {
   display: inline-block;
-  padding: .9rem 1.6rem;
-  background: var(--gold);
+  padding: 12px 28px;
+  border: 1px solid #000;
+  background: #000;
   color: #fff;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all .3s ease;
-  border: 1px solid var(--gold);
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .btn:hover {
   background: transparent;
-  color: var(--gold);
+  color: #000;
 }
 
-.btn-outline {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
-}
+/* --------------------------------------------- */
+/* REVEAL ANIMATION */
+/* --------------------------------------------- */
 
-.btn-outline:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-/* ----------------------------------------------------
-   TARJETAS EDITORIALES
----------------------------------------------------- */
-.card, .service-card, .case-card, .service-block {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.8rem;
-  transition: all .3s ease;
-}
-
-.card:hover,
-.service-card:hover,
-.case-card:hover,
-.service-block:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-  border-color: var(--gold);
-}
-
-/* ----------------------------------------------------
-   HERO EDITORIAL
----------------------------------------------------- */
-.about-hero-line,
-.services-hero-line,
-.cases-hero-line,
-.pricing-hero-line,
-.contact-hero-line,
-.home-hero-line {
-  width: 90px;
-  height: 2px;
-  background: var(--gold);
-  margin: 1rem auto 0;
-}
-
-.about-hero-title,
-.services-hero-title,
-.cases-hero-title,
-.pricing-hero-title,
-.contact-hero-title,
-.home-hero-title {
-  font-size: 3rem;
-  text-align: center;
-}
-
-.about-hero-subtitle,
-.services-hero-subtitle,
-.cases-hero-subtitle,
-.pricing-hero-subtitle,
-.contact-hero-subtitle,
-.home-hero-subtitle {
-  color: var(--muted);
-  font-size: 1.1rem;
-  max-width: 650px;
-  margin: 0 auto 1.5rem;
-  text-align: center;
-}
-
-/* ----------------------------------------------------
-   HOME
----------------------------------------------------- */
-.home-hero {
-  padding: 5rem 0 3rem;
-  text-align: center;
-  max-width: 900px;
-}
-
-.home-services-grid,
-.cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* ----------------------------------------------------
-   SERVICIOS
----------------------------------------------------- */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-/* ----------------------------------------------------
-   CASOS
----------------------------------------------------- */
-.case-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: .5rem;
-}
-
-/* ----------------------------------------------------
-   PRECIOS
----------------------------------------------------- */
-.pricing-list {
-  list-style: none;
-  padding: 0;
-}
-
-.pricing-steps {
-  padding-left: 1.2rem;
-  color: var(--muted);
-}
-
-/* ----------------------------------------------------
-   CONTACTO
----------------------------------------------------- */
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.btn-whatsapp {
-  background: #25D366;
-  border-color: #25D366;
-  color: #fff;
-}
-
-/* ----------------------------------------------------
-   ANIMACIONES REVEAL
----------------------------------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: all .8s ease;
+  transition: all 0.6s ease;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* --------------------------------------------- */
+/* HERO LINES */
+/* --------------------------------------------- */
+
+.about-line,
+.services-line,
+.pricing-line,
+.contact-line {
+  width: 60px;
+  height: 2px;
+  background: #000;
+  margin: 20px auto 0;
+}
+
+/* ============================================================
+   HOME
+   ============================================================ */
+
+.home-hero {
+  text-align: center;
+  padding: 120px 0 100px;
+}
+
+.home-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.8;
+}
+
+.value {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.value-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.differentiators {
+  padding: 80px 0;
+}
+
+.diff-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.diff-list {
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.diff-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+}
+
+/* ============================================================
+   PROCESO EDITORIAL
+   ============================================================ */
+
+.process {
+  padding: 100px 0;
+}
+
+.process-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.process-subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.process-step {
+  padding: 20px;
+  border-left: 2px solid #000;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+}
+
+.step-note {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   CASOS DESTACADOS
+   ============================================================ */
+
+.featured-cases {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.case-card {
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.case-card:hover {
+  border-color: #000;
+  transform: translateY(-4px);
+}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+
+.home-cta {
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* ============================================================
+   SOBRE MÍ
+   ============================================================ */
+
+.about-hero {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.about-intro {
+  max-width: 800px;
+  margin: 40px auto 60px;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.about-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-values {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.values-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ============================================================
+   SERVICIOS
+   ============================================================ */
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.service-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: #000;
+}
+
+/* ============================================================
+   PRECIOS
+   ============================================================ */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.pricing-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  border-color: #000;
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.blog-card {
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  border-color: #000;
+}
+
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .cases-grid,
+  .pricing-grid,
+  .services-list,
+  .blog-list {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps,
+  .about-blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .home-title {
+    font-size: 2.2rem;
+  }
 }
