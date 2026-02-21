@@ -1,7 +1,6 @@
 /* ===========================
-   SISTEMA EDITORIAL BASE
+   PALETA EDITORIAL
    =========================== */
-
 :root {
   --black-luxury: #0E0E0E;
   --cream-luxury: #F5F1EB;
@@ -10,113 +9,179 @@
   --warm-gray: #D8D3CC;
 }
 
-/* Reset suave */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--black-luxury);
-  background: #111111;
+  font-family: "Inter", sans-serif;
+  background: #111;
+  color: var(--soft-white);
+  line-height: 1.5;
 }
 
 /* ===========================
-   HERO / CONTENEDOR
+   HERO
    =========================== */
-
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  background: radial-gradient(circle at top, #2b2b2b 0, #111111 55%, #050505 100%);
+  padding: 120px 40px;
+  background: radial-gradient(circle at top, #2b2b2b 0, #111 55%, #050505 100%);
 }
 
 .hero-inner {
-  max-width: 960px;
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: center;
-}
-
-@media (max-width: 800px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* ===========================
-   LOGO PRINCIPAL
-   =========================== */
-
-.logo-block {
-  color: var(--soft-white);
 }
 
 .logo-line-1 {
   font-family: "Playfair Display", serif;
   font-size: 86px;
-  letter-spacing: 0.04em; /* +40 tracking aprox */
+  letter-spacing: 0.04em;
   line-height: 0.9;
 }
 
 .logo-line-2 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
-  letter-spacing: 0.14em; /* +140 tracking aprox */
+  letter-spacing: 0.14em;
   color: var(--gold-editorial);
   margin-top: -12px;
 }
 
-/* ===========================
-   MONOGRAMA / FAVICON
-   =========================== */
-
-.monogram-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.monogram-square {
-  width: 160px;
-  height: 160px;
-  background: var(--cream-luxury);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-}
-
-.monogram-text {
+.hero-text h1 {
   font-family: "Playfair Display", serif;
-  font-size: 72px;
-  letter-spacing: -0.06em; /* -10 tracking aprox */
-  color: var(--black-luxury);
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.monogram-caption {
-  font-size: 14px;
-  letter-spacing: 0.16em;
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--gold-editorial);
+  color: #111;
   text-transform: uppercase;
-  color: rgba(250, 249, 247, 0.7);
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 /* ===========================
-   FIN
+   SECCIONES
    =========================== */
+.section {
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 50px;
+  color: var(--soft-white);
+}
+
+/* ===========================
+   SERVICIOS
+   =========================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.service-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  opacity: 0.8;
+}
+
+/* ===========================
+   CASOS
+   =========================== */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.case-card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.case-img {
+  height: 180px;
+  background: var(--warm-gray);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.case-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.case-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--gold-editorial);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* ===========================
+   CTA FINAL
+   =========================== */
+.cta {
+  text-align: center;
+  padding: 120px 40px;
+  background: #1a1a1a;
+}
+
+.cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: #0d0d0d;
+  font-size: 14px;
+  opacity: 0.6;
+}
