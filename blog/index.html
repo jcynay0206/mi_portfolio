@@ -6,50 +6,20 @@ permalink: /blog/
 
 <section class="blog-hero wrapper reveal">
   <h1 class="blog-hero-title">Blog</h1>
-  <p class="blog-hero-subtitle">Ideas, estrategia y diseño para marcas de servicios que quieren crecer con intención.</p>
+  <p class="blog-hero-subtitle">
+    Estrategia, diseño editorial y arquitectura digital para marcas de servicios.
+  </p>
   <div class="blog-hero-line"></div>
 </section>
 
-<section class="blog-filters wrapper reveal">
-  <button class="blog-filter-btn is-active" data-category="all">Todo</button>
-  <button class="blog-filter-btn" data-category="diseño">Diseño</button>
-  <button class="blog-filter-btn" data-category="estrategia">Estrategia</button>
-  <button class="blog-filter-btn" data-category="coaching">Coaching</button>
-  <button class="blog-filter-btn" data-category="inmobiliario">Inmobiliario</button>
+<section class="blog-list wrapper reveal">
+
+  {% for post in site.posts %}
+  <a href="{{ post.url }}" class="blog-card">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    <span class="blog-card-date">{{ post.date | date: "%d %b %Y" }}</span>
+  </a>
+  {% endfor %}
+
 </section>
-
-<section class="wrapper reveal">
-  <ul class="blog-list" id="blog-list">
-    {% for post in site.posts %}
-      <li class="blog-item"
-          data-categories="{{ post.categories | join: ' ' }}">
-        <a href="{{ post.url | relative_url }}" class="blog-item-title">{{ post.title }}</a>
-        <span class="blog-item-date">{{ post.date | date: "%d %b %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function(){
-    var buttons = document.querySelectorAll('.blog-filter-btn');
-    var items = document.querySelectorAll('.blog-item');
-
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        buttons.forEach(function(b){ b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-
-        var cat = btn.getAttribute('data-category');
-        items.forEach(function(item){
-          var itemCats = item.getAttribute('data-categories') || '';
-          if(cat === 'all' || itemCats.includes(cat)){
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
-    });
-  });
-</script>
