@@ -330,6 +330,55 @@ body {
 
 .footer {
   text-align: center;
+
+   /* ===========================
+   PRECIOS
+   =========================== */
+
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.price-card {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  text-align: left;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.price-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.price-card .price {
+  font-size: 22px;
+  color: var(--gold-editorial);
+  margin-bottom: 20px;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.price-card ul li {
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .prices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   padding: 40px;
   background: #0d0d0d;
   font-size: 14px;
