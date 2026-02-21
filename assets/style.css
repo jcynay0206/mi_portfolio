@@ -185,3 +185,12 @@ body {
   font-size: 14px;
   opacity: 0.6;
 }
+/* ===========================
+   MENÚ ACTIVO
+   =========================== */
+
+.menu-links a.active {
+  color: var(--gold-editorial);
+  opacity: 1;
+}
+
