@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: 'Servicios de diseño editorial, estrategia digital y arquitectura web.' }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include header.html %}
+
+  <main class="wrapper">
+
+    <!-- HERO -->
+    <section class="services-hero wrapper reveal">
+      <h1 class="services-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="services-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="services-line"></div>
+    </section>
+
+    <!-- INTRO -->
+    {% if page.intro %}
+    <section class="services-intro wrapper reveal">
+      <p>{{ page.intro }}</p>
+    </section>
+    {% endif %}
+
+    <!-- LISTA DE SERVICIOS -->
+    <section class="services-list wrapper reveal">
+      {% for service in page.services %}
+      <div class="service-card">
+        <h2 class="service-title">{{ service.title }}</h2>
+        <p class="service-description">{{ service.description }}</p>
+
+        {% if service.items %}
+        <ul class="service-items">
+          {% for item in service.items %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if service.price %}
+        <p class="service-price">{{ service.price }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="services-cta wrapper reveal">
+      <a href="/contacto/" class="btn">Quiero trabajar mi proyecto</a>
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries, observer){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function(r){ obs.observe(r); });
+      } else {
+        reveals.forEach(function(r){ r.classList.add('visible'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
