@@ -448,4 +448,70 @@ h3 {
   .about-blocks {
     row-gap: 90px;
   }
+   /* ============================================================
+   TARJETAS DE CASOS — ULTRA LUXURY
+   ============================================================ */
+
+.luxury-card {
+  background: var(--soft-white);
+  border: 1px solid var(--warm-gray);
+  padding: 45px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 22px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* Hover editorial */
+.luxury-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-editorial);
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.08);
+}
+
+/* Monograma */
+.case-monogram {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: var(--gold-editorial);
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+
+/* Línea editorial */
+.case-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold-editorial);
+  margin-top: 6px;
+}
+
+/* Títulos */
+.case-title {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.case-subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* Imagen editorial */
+.case-image img {
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Descripción */
+.case-description {
+  opacity: 0.85;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
 }
