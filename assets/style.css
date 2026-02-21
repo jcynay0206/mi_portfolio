@@ -9,20 +9,120 @@
   --warm-gray: #D8D3CC;
 }
 
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ===========================
+   RESET
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: #111;
   color: var(--soft-white);
   line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   ANIMACIONES EDITORIALES
+   =========================== */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   MENÚ EDITORIAL
+   =========================== */
+
+.menu {
+  width: 100%;
+  padding: 24px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.menu-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  color: var(--soft-white);
+  text-decoration: none;
+}
+
+.menu-links a {
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--soft-white);
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.menu-links a:hover {
+  opacity: 1;
+}
+
+/* Estado activo */
+.menu-links a.active {
+  color: var(--gold-editorial);
+  opacity: 1;
+}
+
+/* Móvil */
+@media (max-width: 800px) {
+  .menu-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-links a {
+    margin-left: 0;
+    margin-right: 16px;
+  }
 }
 
 /* ===========================
    HERO
    =========================== */
+
 .hero {
-  padding: 120px 40px;
+  padding: 140px 40px;
   background: radial-gradient(circle at top, #2b2b2b 0, #111 55%, #050505 100%);
 }
 
@@ -75,8 +175,29 @@ body {
 }
 
 /* ===========================
+   SUB-HERO
+   =========================== */
+
+.sub-hero {
+  padding: 120px 40px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.sub-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+.sub-hero p {
+  opacity: 0.8;
+}
+
+/* ===========================
    SECCIONES
    =========================== */
+
 .section {
   padding: 100px 40px;
   max-width: 1200px;
@@ -93,6 +214,7 @@ body {
 /* ===========================
    SERVICIOS
    =========================== */
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -104,6 +226,7 @@ body {
   padding: 40px;
   border-radius: 12px;
   border: 1px solid #2a2a2a;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 .service-card h3 {
@@ -119,6 +242,7 @@ body {
 /* ===========================
    CASOS
    =========================== */
+
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -130,6 +254,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   border: 1px solid #2a2a2a;
+  animation: slideUp 1.2s ease forwards;
 }
 
 .case-img {
@@ -156,28 +281,53 @@ body {
 }
 
 /* ===========================
-   CTA FINAL
+   BLOG
    =========================== */
-.cta {
-  text-align: center;
-  padding: 120px 40px;
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.blog-card {
   background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  color: var(--soft-white);
+  transition: transform 0.2s ease;
 }
 
-.cta h2 {
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+.blog-card h3 {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
-.cta p {
-  opacity: 0.8;
-  margin-bottom: 30px;
+/* ===========================
+   CONTACTO
+   =========================== */
+
+.contact-box {
+  background: #1a1a1a;
+  padding: 60px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
 }
 
 /* ===========================
    FOOTER
    =========================== */
+
 .footer {
   text-align: center;
   padding: 40px;
@@ -185,12 +335,3 @@ body {
   font-size: 14px;
   opacity: 0.6;
 }
-/* ===========================
-   MENÚ ACTIVO
-   =========================== */
-
-.menu-links a.active {
-  color: var(--gold-editorial);
-  opacity: 1;
-}
-
