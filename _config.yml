@@ -6,8 +6,11 @@ url: "https://azurewebstudio.com"
 markdown: kramdown
 highlighter: rouge
 
+# Desactivar theme por completo
+theme: null
+
 # Permalinks limpios
-permalink: /:categories/:title/
+permalink: /:title/
 
 # Incluir carpetas necesarias
 include:
@@ -20,16 +23,12 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
 
-# Activar colecciones si las necesitas
+# Colección de casos
 collections:
   casos:
     output: true
     permalink: /casos/:name/
 
-# Configuración del blog
-paginate: 10
-paginate_path: "/blog/page:num/"
-
-# Idioma
 lang: es
