@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: page.subtitle }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include header.html %}
+
+  <main class="wrapper">
+
+    <section class="case wrapper reveal">
+
+      <a class="back-link" href="/casos/">← Volver a casos</a>
+
+      <div class="case-overview">Caso de estudio</div>
+
+      <h1 class="case-title">{{ page.title }}</h1>
+
+      {% if page.subtitle %}
+      <p class="case-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+
+      <!-- MÉTRICAS -->
+      {% if page.metrics %}
+      <section class="case-metrics">
+        {% for metric in page.metrics %}
+        <div class="metric">
+          <div class="metric-value">{{ metric.value }}</div>
+          <div class="metric-label">{{ metric.label }}</div>
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      <!-- CONTENIDO DEL CASO -->
+      <section class="case-section reveal">
+        {{ content }}
+      </section>
+
+      <!-- CTA -->
+      <section class="case-cta reveal">
+        <a href="/contacto/" class="btn">Quiero resultados así</a>
+      </section>
+
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries, observer){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function(r){ obs.observe(r); });
+      } else {
+        reveals.forEach(function(r){ r.classList.add('visible'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
