@@ -1,20 +1,35 @@
 title: "Azure Gold Studio"
-description: "Estrategia, diseño editorial y arquitectura digital."
-theme: minima
-markdown: kramdown
+description: "Diseño editorial, estrategia digital y arquitectura web para marcas de servicios."
+baseurl: ""
+url: "https://azurewebstudio.com"
 
-# Paginación
-paginate: 6
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks limpios
+permalink: /:categories/:title/
+
+# Incluir carpetas necesarias
+include:
+  - _includes
+  - _layouts
+  - _posts
+
+# Excluir archivos que no deben procesarse
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Activar colecciones si las necesitas
+collections:
+  casos:
+    output: true
+    permalink: /casos/:name/
+
+# Configuración del blog
+paginate: 10
 paginate_path: "/blog/page:num/"
 
-# Rutas y despliegue
-baseurl: ""
-url: ""
-
-# Plugins (GitHub Pages soporta jekyll-paginate)
-plugins:
-  - jekyll-paginate
-
-# Si prefieres no mover posts desde blog/_posts, descomenta:
-# include:
-#   - blog/_posts
+# Idioma
+lang: es
