@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Por Qué los Coaches Necesitan un Sitio Editorial"
+title: "por que los coaches necesitan un sitio web editorial"
 date: 2026-01-30
 categories: [coaching,diseño]
 ---
