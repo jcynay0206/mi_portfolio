@@ -2,10 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Agendar Consulta — Azure Gold Studio</title>
+  <title>Agendar consulta — Azure Gold Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="icon" href="/assets/favicon.ico">
+
+  <!-- Calendly Widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -13,19 +17,22 @@
 <!-- MENÚ -->
 <nav class="menu">
   <div class="menu-inner">
-
     <a href="/" class="menu-logo desktop-logo">
       <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
     </a>
-
     <a href="/" class="menu-logo mobile-logo">
       <span>AZURE GOLD</span> STUDIO
     </a>
 
     <div class="menu-links">
+      <a href="/">Inicio</a>
       <a href="/servicios/">Servicios</a>
       <a href="/casos/">Casos</a>
+      <a href="/resultados/">Resultados</a>
+      <a href="/procesos/">Procesos</a>
+      <a href="/sobre-mi/">Sobre mí</a>
       <a href="/blog/">Blog</a>
+      <a href="/precios/">Precios</a>
       <a href="/contacto/">Contacto</a>
     </div>
 
@@ -33,39 +40,39 @@
   </div>
 </nav>
 
-<!-- HERO EDITORIAL -->
-<header class="hero hero-watermark">
+<!-- HERO -->
+<header class="hero hero-watermark fade-in">
   <div class="wrapper">
-    <div class="hero-eyebrow">Agenda tu consulta</div>
-    <h1 class="hero-title">Tu proyecto merece claridad, estrategia y dirección editorial</h1>
+    <div class="hero-eyebrow">Consulta estratégica</div>
+    <h1 class="hero-title">Agenda una llamada conmigo</h1>
     <p class="hero-subtitle">
-      Reserva una llamada de 20 minutos para revisar tu marca, tus objetivos y el camino ideal para escalar.
+      Conversemos sobre tu proyecto, tus objetivos y cómo puedo ayudarte a elevar tu marca con diseño editorial y estrategia digital.
     </p>
   </div>
 </header>
 
-<!-- CONTENIDO -->
+<!-- WIDGET CALENDLY -->
 <section>
-  <div class="wrapper">
-    <div class="section-label">Reserva tu espacio</div>
-    <h2 class="section-title">Selecciona el día y la hora que mejor te funcione</h2>
-    <p class="section-subtitle">Esta llamada es 100% estratégica. No es una venta agresiva. Es claridad.</p>
+  <div class="wrapper fade-up delay-1">
+    <div id="calendly-inline" style="min-width:320px;height:700px;"></div>
 
-    <div style="margin-top: 2rem;">
-      <!-- Inserta tu widget de Calendly aquí -->
-      <p style="color: var(--muted); font-size: 0.9rem;">
-        Aquí irá tu widget de Calendly. Si aún no lo tienes, puedo ayudarte a integrarlo.
-      </p>
-    </div>
+    <script type="text/javascript">
+      Calendly.initInlineWidget({
+        url: 'https://calendly.com/azuregoldstudio/30min',
+        parentElement: document.getElementById('calendly-inline'),
+        prefill: {},
+        utm: {}
+      });
+    </script>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="contacto">
+<!-- CTA FINAL -->
+<section class="fade-in delay-2">
   <div class="wrapper cta-final">
-    <h2>¿Tienes preguntas antes de agendar?</h2>
-    <p>Escríbeme y te respondo personalmente.</p>
-    <a href="/contacto/" class="btn">Ir a contacto</a>
+    <h2>¿Tienes dudas antes de agendar?</h2>
+    <p>Puedes escribirme directamente por WhatsApp o correo electrónico.</p>
+    <a href="https://wa.me/19086774196" target="_blank" class="btn">Enviar mensaje</a>
   </div>
 </section>
 
@@ -73,25 +80,19 @@
 <footer>
   <div class="wrapper">
     <div class="footer-grid">
-
       <div>
         <img src="/assets/img/branding/logo.png" class="footer-logo">
         <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
       </div>
 
       <div>
-     <div class="footer-title">Contacto</div>
-<ul class="footer-links">
-  <li>Basada en NJ / NY</li>
-  <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
-  <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
-  <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
-  <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
-</ul>
-
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
           <li><a href="/servicios/">Servicios</a></li>
           <li><a href="/casos/">Casos</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
           <li><a href="/blog/">Blog</a></li>
+          <li><a href="/precios/">Precios</a></li>
           <li><a href="/contacto/">Contacto</a></li>
         </ul>
       </div>
@@ -100,10 +101,12 @@
         <div class="footer-title">Contacto</div>
         <ul class="footer-links">
           <li>Basada en NJ / NY</li>
-          <li><a href="mailto:hello@yunersystudio.com">hello@yunersystudio.com</a></li>
+          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
+          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
+          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
