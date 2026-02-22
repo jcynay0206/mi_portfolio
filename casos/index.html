@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <title>Casos de Estudio — Azure Gold Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS + Favicon (RUTAS CORRECTAS) -->
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon.ico">
 </head>
 
 <body>
@@ -15,59 +13,125 @@
 <!-- MENÚ -->
 <nav class="menu">
   <div class="menu-inner">
-    <a href="../index.html" class="menu-logo">AZURE GOLD</a>
+
+    <a href="/" class="menu-logo desktop-logo">
+      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
+    </a>
+
+    <a href="/" class="menu-logo mobile-logo">
+      <span>AZURE GOLD</span> STUDIO
+    </a>
 
     <div class="menu-links">
-      <a href="../sobre-mi.html">Sobre mí</a>
-      <a href="../servicios.html">Servicios</a>
-      <a href="index.html" class="active">Casos</a>
-      <a href="../precios.html">Precios</a>
-      <a href="../blog/index.html">Blog</a>
-      <a href="../contacto.html">Contacto</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/casos/">Casos</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contacto/">Contacto</a>
     </div>
+
+    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="sub-hero">
-  <h1>Casos de Estudio</h1>
-  <p>Resultados reales para marcas reales. Estrategia, diseño editorial y arquitectura digital aplicada.</p>
+<!-- HERO EDITORIAL -->
+<header class="hero hero-watermark">
+  <div class="wrapper">
+    <div class="hero-eyebrow">Casos de estudio</div>
+    <h1 class="hero-title">Proyectos que combinan diseño editorial, estrategia y conversión</h1>
+    <p class="hero-subtitle">
+      Una selección de trabajos donde transformamos marcas, elevamos presencia digital y generamos resultados reales.
+    </p>
+  </div>
 </header>
 
-<!-- GRID DE CASOS -->
-<section class="section">
-  <div class="cases-grid">
+<!-- CONTENIDO -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Portfolio selecto</div>
+    <h2 class="section-title">Resultados que hablan por sí solos</h2>
 
-    <a href="beacons-marketing.html" class="case-card fade-in">
-      <div class="case-img" style="background-image:url('../img/beacons.jpg');"></div>
-      <h3>Beacons Marketing</h3>
-      <p>+220% ventas en 30 días.</p>
-    </a>
+    <div class="portfolio-grid">
 
-    <a href="elite-properties-nj.html" class="case-card fade-in">
-      <div class="case-img" style="background-image:url('../img/elite.jpg');"></div>
-      <h3>Elite Properties NJ</h3>
-      <p>$2.3M en ventas generadas.</p>
-    </a>
+      <article class="portfolio-card">
+        <div class="portfolio-thumb"></div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Coaching & educación digital</div>
+          <h3 class="portfolio-title">Escalando ventas de guías digitales con Beacons</h3>
+          <p class="portfolio-result">+220% en ventas en 30 días.</p>
+          <a href="#" class="portfolio-link">Ver caso completo</a>
+        </div>
+      </article>
 
-    <a href="jcynay-vida-team.html" class="case-card fade-in">
-      <div class="case-img" style="background-image:url('../img/jcny.jpg');"></div>
-      <h3>JC Nay Vida Team</h3>
-      <p>Ecosistema digital editorial.</p>
-    </a>
+      <article class="portfolio-card">
+        <div class="portfolio-thumb"></div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Inmobiliaria de lujo</div>
+          <h3 class="portfolio-title">Web editorial para agentes con listings premium</h3>
+          <p class="portfolio-result">Más leads cualificados y presencia profesional.</p>
+          <a href="#" class="portfolio-link">Ver caso completo</a>
+        </div>
+      </article>
 
-    <a href="transform-leadership-academy.html" class="case-card fade-in">
-      <div class="case-img" style="background-image:url('../img/transform.jpg');"></div>
-      <h3>Transform Leadership Academy</h3>
-      <p>+450% leads en 90 días.</p>
-    </a>
+      <article class="portfolio-card">
+        <div class="portfolio-thumb"></div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Servicios profesionales</div>
+          <h3 class="portfolio-title">Posicionamiento digital para marca de servicios</h3>
+          <p class="portfolio-result">Incremento en consultas directas y autoridad.</p>
+          <a href="#" class="portfolio-link">Ver caso completo</a>
+        </div>
+      </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contacto">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para transformar tu presencia digital?</h2>
+    <p>Agendemos una consulta estratégica y revisemos tu proyecto.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Azure Gold Studio</p>
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+
+      <div>
+        <img src="/assets/img/branding/logo.png" class="footer-logo">
+        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/casos/">Casos</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contacto</div>
+        <ul class="footer-links">
+          <li>Basada en NJ / NY</li>
+          <li><a href="mailto:hello@yunersystudio.com">hello@yunersystudio.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Azure Gold Studio</span>
+      <span>Diseño editorial & estrategia digital</span>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </footer>
 
 </body>
