@@ -1,17 +1,11 @@
----
-layout: none
----
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Blog — Azure Gold Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS + Favicon -->
-  <link rel="stylesheet" href="../assets/styles.css">
-  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon.ico">
 </head>
 
 <body>
@@ -19,42 +13,125 @@ layout: none
 <!-- MENÚ -->
 <nav class="menu">
   <div class="menu-inner">
-    <a href="../index.html" class="menu-logo">AZURE GOLD</a>
+    <a href="/" class="menu-logo desktop-logo">
+      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
+    </a>
+    <a href="/" class="menu-logo mobile-logo">
+      <span>AZURE GOLD</span> STUDIO
+    </a>
 
     <div class="menu-links">
-      <a href="../sobre-mi.html">Sobre mí</a>
-      <a href="../servicios.html">Servicios</a>
-      <a href="../casos/index.html">Casos</a>
-      <a href="../precios.html">Precios</a>
-      <a href="index.html" class="active">Blog</a>
-      <a href="../contacto.html">Contacto</a>
+      <a href="/">Inicio</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/casos/">Casos</a>
+      <a href="/resultados/">Resultados</a>
+      <a href="/procesos/">Procesos</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+      <a href="/blog/">Blog</a>
+      <a href="/precios/">Precios</a>
+      <a href="/contacto/">Contacto</a>
     </div>
+
+    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="sub-hero">
-  <h1>Blog</h1>
-  <p>Estrategia, diseño editorial y arquitectura digital aplicada.</p>
+<header class="hero hero-watermark fade-in">
+  <div class="wrapper">
+    <div class="hero-eyebrow">Blog editorial</div>
+    <h1 class="hero-title">Ideas, estrategia y diseño para marcas que quieren crecer</h1>
+    <p class="hero-subtitle">
+      Artículos claros, profesionales y humanos sobre diseño editorial, estrategia digital y presencia online.
+    </p>
+  </div>
 </header>
 
-<!-- LISTA DE POSTS -->
-<section class="section">
-  <div class="blog-grid">
+<!-- POSTS -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Artículos</div>
+    <h2 class="section-title fade-up delay-1">Últimos posts</h2>
 
-    {% for post in site.posts %}
-      <a href="{{ post.url }}" class="blog-card fade-in">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    <div class="posts-grid fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <!-- POST 1 -->
+      <a href="/blog/como-elevar-tu-marca/" class="post-card">
+        <h3>Cómo elevar tu marca con diseño editorial</h3>
+        <p>Los elementos clave para transformar tu presencia digital en una experiencia premium.</p>
       </a>
-    {% endfor %}
 
+      <!-- POST 2 -->
+      <a href="/blog/arquitectura-digital/" class="post-card">
+        <h3>Arquitectura digital: la base de un sitio profesional</h3>
+        <p>Por qué la estructura importa más que el diseño y cómo organizar tu contenido.</p>
+      </a>
+
+      <!-- POST 3 -->
+      <a href="/blog/claridad-conversion/" class="post-card">
+        <h3>Claridad y conversión: el dúo que toda marca necesita</h3>
+        <p>Cómo comunicar tu valor real sin confundir a tu audiencia.</p>
+      </a>
+
+      <!-- POST 4 -->
+      <a href="/blog/errores-web/" class="post-card">
+        <h3>5 errores comunes en sitios web de emprendedoras</h3>
+        <p>Y cómo evitarlos para elevar tu presencia digital.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="fade-in delay-2">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para llevar tu marca al siguiente nivel?</h2>
+    <p>Agendemos una consulta estratégica y revisemos tu proyecto.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Azure Gold Studio</p>
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div>
+        <img src="/assets/img/branding/logo.png" class="footer-logo">
+        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/casos/">Casos</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/precios/">Precios</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contacto</div>
+        <ul class="footer-links">
+          <li>Basada en NJ / NY</li>
+          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
+          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
+          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Azure Gold Studio</span>
+      <span>Diseño editorial & estrategia digital</span>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </footer>
 
 </body>
