@@ -1,273 +1,179 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <title>Azure Gold Studio — Arquitectura Web Editorial</title> <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- CSS + Favicon --> <link rel="stylesheet" href="assets/styles.css"> <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> </head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Gold Studio — Diseño Editorial & Estrategia Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
 
 <body>
 
-<!-- MENÚ EDITORIAL --> <nav class="menu"> <div class="menu-inner">
+<!-- MENÚ -->
+<nav class="menu">
+  <div class="menu-inner">
+    <a href="/" class="menu-logo desktop-logo">
+      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
+    </a>
+    <a href="/" class="menu-logo mobile-logo">
+      <span>AZURE GOLD</span> STUDIO
+    </a>
 
-<!-- LOGO DESKTOP (PNG) -->
-<a href="/" class="menu-logo desktop-logo">
-  <img src="assets/img/branding/logo.png" alt="Azure Gold Studio">
-</a>
-
-<!-- LOGO MOBILE (TIPOGRÁFICO) -->
-<a href="/" class="menu-logo mobile-logo">
-  <span>AZURE GOLD</span> STUDIO
-</a>
-
-<div class="menu-links">
-  <a href="#servicios">Servicios</a>
-  <a href="#resultados">Resultados</a>
-  <a href="#proceso">Proceso</a>
-  <a href="#portfolio">Casos</a>
-  <a href="blog/">Blog</a>
-  <a href="contacto/">Contacto</a>
-</div>
-
-<a href="calendly/" class="btn btn-outline">Agendar consulta</a>
-
-</div> </nav>
-
-<!-- HERO EDITORIAL CON MARCA DE AGUA --> <header class="hero hero-watermark"> <div class="wrapper hero-grid">
-
-<div>
-  <div class="hero-eyebrow">Diseño y rediseño web estratégico</div>
-  <h1 class="hero-title">Arquitectura Web Premium para Marcas que Quieren Escalar en Serio</h1>
-  <p class="hero-subtitle">
-    Creamos ecosistemas digitales que elevan tu autoridad, conectan emocionalmente y convierten visitantes en clientes reales.
-    Especializadas en coaches, inmobiliarias y marcas de servicios premium.
-  </p>
-
-  <div class="hero-cta-row">
-    <a href="calendly/" class="btn">Agendar consulta estratégica</a>
-    <a href="#portfolio" class="btn btn-outline">Ver casos de estudio</a>
-  </div>
-
-  <p class="hero-meta">Estudio boutique • Máx. 3 proyectos al mes • 4–6 semanas por proyecto</p>
-</div>
-
-<div class="hero-card">
-  <div class="hero-metrics">
-    <div class="metric">
-      <div class="metric-value">300%</div>
-      <div class="metric-label">Aumento en conversiones</div>
-      <p class="hero-note">Sitios rediseñados con foco en claridad, confianza y acción.</p>
+    <div class="menu-links">
+      <a href="/">Inicio</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/casos/">Casos</a>
+      <a href="/resultados/">Resultados</a>
+      <a href="/procesos/">Procesos</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+      <a href="/blog/">Blog</a>
+      <a href="/precios/">Precios</a>
+      <a href="/contacto/">Contacto</a>
     </div>
 
-    <div class="metric">
-      <div class="metric-value">$50K+</div>
-      <div class="metric-label">Ingresos generados</div>
-      <p class="hero-note">Ecosistemas digitales que venden servicios, guías y programas de alto valor.</p>
+    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero fade-in">
+  <div class="wrapper">
+    <div class="hero-eyebrow">Diseño editorial premium</div>
+    <h1 class="hero-title">Transformo marcas en experiencias digitales claras, profesionales y estratégicas</h1>
+    <p class="hero-subtitle">
+      Diseño editorial, arquitectura digital y narrativa estratégica para emprendedoras y marcas de servicios que quieren elevar su presencia y convertir con intención.
+    </p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
+  </div>
+</header>
+
+<!-- SERVICIOS DESTACADOS -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Servicios</div>
+    <h2 class="section-title fade-up delay-1">Lo que puedo crear para tu marca</h2>
+
+    <div class="cards-3 fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <article class="card">
+        <div class="card-label">01</div>
+        <h3 class="card-title">Diseño editorial web</h3>
+        <p class="card-text">
+          Sitios web modernos, profesionales y alineados a tu identidad visual y propósito.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-label">02</div>
+        <h3 class="card-title">Arquitectura digital</h3>
+        <p class="card-text">
+          Estructura clara, navegación intuitiva y experiencia de usuario optimizada.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-label">03</div>
+        <h3 class="card-title">Estrategia & narrativa</h3>
+        <p class="card-text">
+          Mensajes claros, profesionales y orientados a comunicar tu valor real.
+        </p>
+      </article>
+
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="/servicios/" class="btn btn-outline">Ver servicios</a>
     </div>
   </div>
+</section>
 
-  <div class="hero-mockup">
-    <div class="hero-mockup-tag">Vista previa de ecosistema digital</div>
-    <div class="hero-mockup-window">
-      <div class="hero-mockup-title">Dashboard de resultados</div>
-      <div class="hero-mockup-sub">Tráfico cualificado, leads consistentes y ventas automatizadas.</div>
+<!-- CASOS DESTACADOS -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Casos de estudio</div>
+    <h2 class="section-title fade-up delay-1">Proyectos recientes</h2>
 
-      <div class="hero-mockup-bars">
-        <div class="bar"><span style="width: 82%;"></span></div>
-        <div class="bar"><span style="width: 64%;"></span></div>
-        <div class="bar"><span style="width: 91%;"></span></div>
+    <div class="cases-grid fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <a href="/casos/beacons-marketing/" class="case-card">
+        <h3>Beacons Marketing</h3>
+        <p>Presencia digital moderna y estratégica.</p>
+      </a>
+
+      <a href="/casos/elite-properties-nj/" class="case-card">
+        <h3>Elite Properties NJ</h3>
+        <p>Identidad editorial premium para bienes raíces.</p>
+      </a>
+
+      <a href="/casos/transform-leadership-academy/" class="case-card">
+        <h3>Transform Leadership Academy</h3>
+        <p>Experiencia editorial inspiradora.</p>
+      </a>
+
+      <a href="/casos/jcnay-vida-team/" class="case-card">
+        <h3>JC Nay Vida Team</h3>
+        <p>Presencia humana y profesional.</p>
+      </a>
+
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="/casos/" class="btn btn-outline">Ver todos los casos</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="fade-in delay-2">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para elevar tu marca?</h2>
+    <p>Agendemos una consulta estratégica y revisemos tu proyecto.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div>
+        <img src="/assets/img/branding/logo.png" class="footer-logo">
+        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
       </div>
 
-      <div class="hero-mockup-footer">
-        <span>Coaches • Inmobiliarias • Servicios</span>
-        <span>Diseño editorial & estrategia</span>
+      <div>
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/casos/">Casos</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/precios/">Precios</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contacto</div>
+        <ul class="footer-links">
+          <li>Basada en NJ / NY</li>
+          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
+          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
+          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
 
-</div> </header>
-
-<!-- PARA QUIÉN --> <section id="servicios"> <div class="wrapper"> <div class="section-label">Para quién es</div> <h2 class="section-title">Trabajamos con marcas que valoran la excelencia y los resultados medibles</h2> <p class="section-subtitle"> Si tu negocio ya tiene tracción y quieres que tu presencia digital refleje el nivel de tu trabajo, diseñamos y rediseñamos tu ecosistema para que venda con claridad y confianza. </p>
-
-<div class="cards-3">
-  <article class="card">
-    <div class="card-label">01 • Coaches & educadores digitales</div>
-    <h3 class="card-title">Coaches, mentoras y creadoras que venden transformación</h3>
-    <p class="card-text">Desde una página caótica con mil links hasta un ecosistema claro que guía a tu audiencia a la acción correcta.</p>
-    <ul class="card-list">
-      <li>Beacons, páginas de venta y funnels optimizados</li>
-      <li>Integración con email marketing y automatizaciones</li>
-      <li>Venta de guías, workshops y programas online</li>
-    </ul>
-  </article>
-
-  <article class="card">
-    <div class="card-label">02 • Inmobiliarias & agentes de lujo</div>
-    <h3 class="card-title">Propiedades de alto valor, presencia digital a la altura</h3>
-    <p class="card-text">Webs que inspiran confianza, muestran tu portafolio con claridad y capturan leads cualificados todos los días.</p>
-    <ul class="card-list">
-      <li>Integración IDX y tours 360</li>
-      <li>Formularios de leads y seguimiento automatizado</li>
-      <li>Branding editorial para listings de lujo</li>
-    </ul>
-  </article>
-
-  <article class="card">
-    <div class="card-label">03 • Seguros & servicios profesionales</div>
-    <h3 class="card-title">Autoridad, claridad y confianza en cada interacción</h3>
-    <p class="card-text">Sitios que explican lo complejo de forma simple, elevan tu reputación y facilitan el contacto directo.</p>
-    <ul class="card-list">
-      <li>Arquitectura de contenido estratégica</li>
-      <li>Posicionamiento local y captación de leads</li>
-      <li>Integración con CRM y herramientas internas</li>
-    </ul>
-  </article>
-</div>
-
-</div> </section>
-
-<!-- RESULTADOS --> <section id="resultados"> <div class="wrapper"> <div class="section-label">Resultados</div> <h2 class="section-title">Diseño bonito no es suficiente. Medimos impacto.</h2> <p class="section-subtitle">Cada proyecto se diseña con KPIs claros: más leads, más ventas, más claridad. Menos fricción, menos dudas, menos “luego lo veo”.</p>
-
-<div class="metrics-row">
-  <div class="metric-block">
-    <div class="metric-block-value">300%</div>
-    <div class="metric-block-label">Más conversiones</div>
-    <p class="metric-block-text">Rediseños que convierten webs estáticas en máquinas de captación de clientes.</p>
-  </div>
-
-  <div class="metric-block">
-    <div class="metric-block-value">$50K+</div>
-    <div class="metric-block-label">Ingresos generados</div>
-    <p class="metric-block-text">Ecosistemas digitales que venden servicios, guías y programas de alto valor.</p>
-  </div>
-
-  <div class="metric-block">
-    <div class="metric-block-value">4–6</div>
-    <div class="metric-block-label">Semanas por proyecto</div>
-    <p class="metric-block-text">Procesos claros, sin caos, con entregas y revisiones bien definidas.</p>
-  </div>
-
-  <div class="metric-block">
-    <div class="metric-block-value">100%</div>
-    <div class="metric-block-label">Clientes satisfechos</div>
-    <p class="metric-block-text">Comunicación transparente, acompañamiento y soporte post-lanzamiento.</p>
-  </div>
-</div>
-
-</div> </section>
-
-<!-- PROCESO --> <section id="proceso"> <div class="wrapper"> <div class="section-label">Nuestro proceso</div> <h2 class="section-title">Un proceso diseñado para eliminar fricción y maximizar impacto</h2> <p class="section-subtitle">No solo diseñamos pantallas. Diseñamos decisiones. Cada etapa está pensada para que tu web trabaje a favor de tu negocio, no al revés.</p>
-
-<div class="process-grid">
-  <article class="process-step">
-    <div class="process-step-number">01 • Discovery estratégico</div>
-    <h3 class="process-step-title">Claridad radical antes de diseñar</h3>
-    <p class="process-step-text">Definimos objetivos, KPIs, audiencia y propuesta de valor. Auditamos tu presencia actual y trazamos el mapa de tu nuevo ecosistema digital.</p>
-  </article>
-
-  <article class="process-step">
-    <div class="process-step-number">02 • Diseño editorial premium</div>
-    <h3 class="process-step-title">Experiencia visual que se siente “a tu nivel”</h3>
-    <p class="process-step-text">Creamos una interfaz limpia, aspiracional y funcional. Cada sección tiene un propósito, cada palabra guía a la acción.</p>
-  </article>
-
-  <article class="process-step">
-    <div class="process-step-number">03 • Desarrollo & integraciones</div>
-    <h3 class="process-step-title">Tecnología al servicio de tu estrategia</h3>
-    <p class="process-step-text">Implementamos tu web con foco en velocidad, SEO, responsive y conexiones clave: CRM, email marketing, plataformas de cursos, Beacons, IDX y más.</p>
-  </article>
-
-  <article class="process-step">
-    <div class="process-step-number">04 • Lanzamiento & optimización</div>
-    <h3 class="process-step-title">Listo para salir al mundo (y medir)</h3>
-    <p class="process-step-text">Revisamos, probamos y lanzamos. Te entregamos guías de uso, analítica configurada y opciones de soporte continuo si lo necesitas.</p>
-  </article>
-</div>
-
-</div> </section>
-
-<!-- PORTFOLIO --> <section id="portfolio"> <div class="wrapper"> <div class="section-label">Portfolio selecto</div> <h2 class="section-title">Casos de estudio que combinan diseño, estrategia y conversión</h2> <p class="section-subtitle">Una selección de proyectos donde el diseño editorial se encuentra con la estrategia de negocio. Cada caso tiene un objetivo claro: convertir mejor.</p>
-
-<div class="portfolio-grid">
-  <article class="portfolio-card">
-    <div class="portfolio-thumb"></div>
-    <div class="portfolio-body">
-      <div class="portfolio-tag">Coaching & educación digital</div>
-      <h3 class="portfolio-title">Escalando ventas de guías digitales con Beacons</h3>
-      <p class="portfolio-result">+220% en ventas de guías en 30 días.</p>
-      <a href="casos/beacons-marketing.html" class="portfolio-link">Ver caso completo</a>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Azure Gold Studio</span>
+      <span>Diseño editorial & estrategia digital</span>
     </div>
-  </article>
-
-  <article class="portfolio-card">
-    <div class="portfolio-thumb"></div>
-    <div class="portfolio-body">
-      <div class="portfolio-tag">Inmobiliaria de lujo</div>
-      <h3 class="portfolio-title">Web editorial para agentes con listings premium</h3>
-      <p class="portfolio-result">Más leads cualificados y presencia a la altura de sus propiedades.</p>
-      <a href="casos/elite-properties-nj.html" class="portfolio-link">Ver caso completo</a>
-    </div>
-  </article>
-
-  <article class="portfolio-card">
-    <div class="portfolio-thumb"></div>
-    <div class="portfolio-body">
-      <div class="portfolio-tag">Servicios profesionales</div>
-      <h3 class="portfolio-title">Posicionamiento digital para marca de servicios</h3>
-      <p class="portfolio-result">Más consultas directas y percepción de autoridad.</p>
-      <a href="casos/servicios-profesionales.html" class="portfolio-link">Ver caso completo</a>
-    </div>
-  </article>
-</div>
-
-</div> </section>
-
-<!-- TESTIMONIO --> <section> <div class="wrapper"> <div class="section-label">Testimonio</div> <div class="testimonial"> <p class="testimonial-quote">“Pasé de tener una web que me daba vergüenza compartir a un ecosistema que vende por mí todos los días. El proceso fue claro, cuidado y profundamente estratégico.”</p> <div class="testimonial-meta">Nombre del cliente • Coach de bienestar y productividad<br> Caso de estudio: Escalando ventas de guías digitales con Beacons</div> </div> </div> </section>
-
-<!-- CTA FINAL --> <section id="contacto"> <div class="wrapper cta-final"> <h2>Tu próxima versión digital empieza aquí.</h2> <p>Si tu marca ya está lista para jugar en otra liga, tu presencia digital también. Diseñemos juntas un ecosistema que refleje el nivel de tu trabajo y convierta con intención.</p> <a href="calendly/" class="btn">Agendar consulta estratégica</a> </div> </section>
-
-<!-- FOOTER --> <footer> <div class="wrapper"> <div class="footer-grid">
-
-  <div>
-    <img src="assets/img/branding/logo.png" alt="Azure Gold Studio" class="footer-logo">
-    <p>Diseño y rediseño web editorial para marcas de servicios, coaches y negocios que quieren escalar con claridad, confianza y conversión.</p>
   </div>
 
-  <div>
-   <div class="footer-title">Contacto</div>
-<ul class="footer-links">
-  <li>Basada en NJ / NY</li>
-  <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
-  <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
-  <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
-  <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
-</ul>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</footer>
 
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#resultados">Resultados</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#portfolio">Casos de estudio</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="contacto/">Contacto</a></li>
-    </ul>
-  </div>
-
-  <div>
-    <div class="footer-title">Contacto</div>
-    <ul class="footer-links">
-      <li>Basada en NJ / NY</li>
-      <li><a href="mailto:hello@yunersystudio.com">hello@yunersystudio.com</a></li>
-      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-      <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-    </ul>
-  </div>
-
-</div>
-
-<div class="footer-bottom">
-  <span>© <span id="year"></span> Azure Gold Studio. Todos los derechos reservados.</span>
-  <span>Diseño editorial & estrategia digital.</span>
-</div>
-
-</div>
-
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script> </footer>
-
-</body> </html>
+</body>
+</html>
