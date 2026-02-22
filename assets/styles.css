@@ -53,6 +53,10 @@ a {
   width: 100%;
   background: var(--bg); /* ← ESTA ES LA LÍNEA QUE FALTABA */
 }
+/* Ajuste para menú fijo */
+main.wrapper {
+  padding-top: 100px;
+}
 
 .menu-inner {
   display: flex;
