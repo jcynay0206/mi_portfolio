@@ -55,29 +55,12 @@
 
     <div class="posts-grid fade-up delay-2" style="margin-top: 2.5rem;">
 
-      <!-- POST 1 -->
-      <a href="/blog/como-elevar-tu-marca/" class="post-card">
-        <h3>Cómo elevar tu marca con diseño editorial</h3>
-        <p>Los elementos clave para transformar tu presencia digital en una experiencia premium.</p>
+      {% for post in site.posts %}
+      <a href="{{ post.url }}" class="post-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
       </a>
-
-      <!-- POST 2 -->
-      <a href="/blog/arquitectura-digital/" class="post-card">
-        <h3>Arquitectura digital: la base de un sitio profesional</h3>
-        <p>Por qué la estructura importa más que el diseño y cómo organizar tu contenido.</p>
-      </a>
-
-      <!-- POST 3 -->
-      <a href="/blog/claridad-conversion/" class="post-card">
-        <h3>Claridad y conversión: el dúo que toda marca necesita</h3>
-        <p>Cómo comunicar tu valor real sin confundir a tu audiencia.</p>
-      </a>
-
-      <!-- POST 4 -->
-      <a href="/blog/errores-web/" class="post-card">
-        <h3>5 errores comunes en sitios web de emprendedoras</h3>
-        <p>Y cómo evitarlos para elevar tu presencia digital.</p>
-      </a>
+      {% endfor %}
 
     </div>
   </div>
