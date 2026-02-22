@@ -2,101 +2,106 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Título del Post — Azure Gold Studio</title>
+  <title>{{ page.title }} — Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS y Favicon (RUTAS CORRECTAS PARA /blog/) -->
-  <link rel="stylesheet" href="../assets/styles.css">
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon.ico">
 </head>
 
 <body>
 
-<!-- MENÚ EDITORIAL -->
+<!-- MENÚ -->
 <nav class="menu">
   <div class="menu-inner">
-    <a href="../index.html" class="menu-logo">AZURE GOLD</a>
+    <a href="/" class="menu-logo desktop-logo">
+      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
+    </a>
+    <a href="/" class="menu-logo mobile-logo">
+      <span>AZURE GOLD</span> STUDIO
+    </a>
 
     <div class="menu-links">
-      <a href="../sobre-mi.html" class="nav-sobre">Sobre mí</a>
-      <a href="../servicios.html" class="nav-servicios">Servicios</a>
-      <a href="../casos.html" class="nav-casos">Casos</a>
-      <a href="index.html" class="nav-blog active">Blog</a>
-      <a href="../precios.html" class="nav-precios">Precios</a>
-      <a href="../contacto.html" class="nav-contacto">Contacto</a>
+      <a href="/">Inicio</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/casos/">Casos</a>
+      <a href="/resultados/">Resultados</a>
+      <a href="/procesos/">Procesos</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+      <a href="/blog/">Blog</a>
+      <a href="/precios/">Precios</a>
+      <a href="/contacto/">Contacto</a>
     </div>
+
+    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
   </div>
 </nav>
 
 <!-- HERO DEL POST -->
-<header class="post-hero">
-  <div class="post-hero-inner fade-in">
-    <p class="post-meta">12 Feb 2026 — Branding Editorial</p>
-    <h1 class="post-title">Título del Post Editorial Premium</h1>
-    <p class="post-subtitle">Un subtítulo elegante que introduce el tema con claridad y estilo.</p>
+<header class="hero fade-in">
+  <div class="wrapper">
+    <div class="hero-eyebrow">Artículo</div>
+    <h1 class="hero-title">{{ page.title }}</h1>
+    <p class="hero-subtitle">{{ page.description }}</p>
+    <div class="post-date">{{ page.date | date: "%d de %B, %Y" }}</div>
   </div>
 </header>
 
-<!-- IMAGEN DESTACADA -->
-<div class="post-featured fade-in"></div>
-
-<!-- CONTENIDO DEL POST -->
-<section class="section">
-  <article class="post-content fade-in">
-
-    <p>
-      Este es el contenido del artículo. Aquí puedes desarrollar tu narrativa editorial,
-      explicar procesos, compartir estrategias o educar a tu audiencia con claridad y
-      estética. El diseño está pensado para una lectura premium, limpia y profesional.
-    </p>
-
-    <h2>Subtítulo editorial</h2>
-    <p>
-      Cada sección mantiene un ritmo visual consistente, con espaciados amplios y
-      tipografía elegante. Esto permite que el contenido respire y se sienta premium.
-    </p>
-
-    <div class="post-quote">
-      “Una marca editorial no se construye con estética, sino con intención.”
-    </div>
-
-    <p>
-      Las citas editoriales ayudan a reforzar ideas clave y aportan ritmo visual al
-      artículo. Son un elemento clásico del diseño editorial.
-    </p>
-
-    <h3>Sección más pequeña</h3>
-    <p>
-      Puedes usar subtítulos de tercer nivel para dividir ideas dentro de una misma
-      sección sin romper la jerarquía principal.
-    </p>
-
-    <div class="post-separator"></div>
-
-    <p>
-      También puedes agregar separadores editoriales para marcar cambios de tema,
-      conclusiones o transiciones importantes.
-    </p>
-
-  </article>
+<!-- CONTENIDO -->
+<section>
+  <div class="wrapper post-content fade-up delay-1">
+    {{ content }}
+  </div>
 </section>
 
-<!-- CTA FINAL DEL POST -->
-<section class="post-cta fade-in">
-  <h3>¿Lista para elevar tu marca?</h3>
-  <p>Construyamos una identidad editorial que te posicione como referente.</p>
-  <a href="../contacto.html" class="btn-primary">Agendar diagnóstico</a>
-</section>
-
-<!-- NAVEGACIÓN ENTRE POSTS -->
-<section class="post-nav fade-in">
-  <a href="post.html" class="post-prev">← Artículo anterior</a>
-  <a href="post.html" class="post-next">Siguiente artículo →</a>
+<!-- CTA FINAL -->
+<section class="fade-in delay-2">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para elevar tu marca?</h2>
+    <p>Agendemos una consulta estratégica y revisemos tu proyecto.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Azure Gold Studio</p>
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div>
+        <img src="/assets/img/branding/logo.png" class="footer-logo">
+        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navegación</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/casos/">Casos</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/precios/">Precios</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contacto</div>
+        <ul class="footer-links">
+          <li>Basada en NJ / NY</li>
+          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
+          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
+          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Azure Gold Studio</span>
+      <span>Diseño editorial & estrategia digital</span>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </footer>
 
 </body>
