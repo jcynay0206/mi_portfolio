@@ -11,93 +11,113 @@
 <body>
 
 <!-- MENÚ -->
-<nav class="menu">
-  <div class="menu-inner">
-    <a href="/" class="menu-logo desktop-logo">
-      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
-    </a>
-    <a href="/" class="menu-logo mobile-logo">
-      <span>AZURE GOLD</span> STUDIO
-    </a>
-
-    <div class="menu-links">
-      <a href="/">Inicio</a>
-      <a href="/servicios/">Servicios</a>
-      <a href="/casos/">Casos</a>
-      <a href="/resultados/">Resultados</a>
-      <a href="/procesos/">Procesos</a>
-      <a href="/sobre-mi/">Sobre mí</a>
-      <a href="/blog/">Blog</a>
-      <a href="/precios/">Precios</a>
-      <a href="/contacto/">Contacto</a>
-    </div>
-
-    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
-  </div>
-</nav>
+{% include header.html %}
 
 <!-- HERO -->
 <header class="hero hero-watermark fade-in">
   <div class="wrapper">
     <div class="hero-eyebrow">Procesos</div>
-    <h1 class="hero-title">Mi proceso editorial</h1>
+    <h1 class="hero-title">Un proceso editorial claro, estratégico y humano</h1>
     <p class="hero-subtitle">
-      Un método claro, profesional y estratégico para transformar tu marca en una experiencia digital premium.
+      Así es como transformo marcas: con intención, claridad y una metodología que combina diseño editorial, estrategia digital y una experiencia premium.
     </p>
   </div>
 </header>
 
-<!-- CONTENIDO -->
+<!-- PASO A PASO -->
 <section>
   <div class="wrapper">
-
     <div class="section-label">Metodología</div>
-    <h2 class="section-title fade-up delay-1">Cómo trabajo tu proyecto</h2>
+    <h2 class="section-title fade-up delay-1">Cómo trabajamos juntas</h2>
 
-    <div class="cards-3" style="margin-top: 2.5rem;">
+    <div class="cards-grid fade-up delay-2" style="margin-top: 2.5rem;">
 
-      <article class="card fade-up delay-1">
+      <div class="card">
         <div class="card-label">01</div>
-        <h3 class="card-title">Diagnóstico estratégico</h3>
+        <h3 class="card-title">Descubrimiento estratégico</h3>
         <p class="card-text">
-          Analizo tu marca, tu mensaje, tu público y tus objetivos para definir una dirección clara y profesional.
+          Analizo tu marca, tu visión, tus objetivos y tu mercado.  
+          Identifico oportunidades, debilidades y el camino más claro para elevar tu presencia digital.
         </p>
-      </article>
+      </div>
 
-      <article class="card fade-up delay-2">
+      <div class="card">
         <div class="card-label">02</div>
-        <h3 class="card-title">Arquitectura digital</h3>
+        <h3 class="card-title">Arquitectura y narrativa</h3>
         <p class="card-text">
-          Construyo la estructura de tu sitio: navegación, jerarquía, secciones y experiencia editorial.
+          Construyo la estructura editorial de tu sitio: mensajes, jerarquías, secciones y flujo de navegación.  
+          Todo con intención, claridad y estrategia.
         </p>
-      </article>
+      </div>
 
-      <article class="card fade-up delay-3">
+      <div class="card">
         <div class="card-label">03</div>
         <h3 class="card-title">Diseño editorial premium</h3>
         <p class="card-text">
-          Diseño cada sección con estética limpia, moderna y alineada a tu identidad visual.
+          Diseño una experiencia visual elegante, moderna y profesional.  
+          Cada detalle comunica autoridad, confianza y valor.
         </p>
-      </article>
+      </div>
 
-      <article class="card fade-up delay-4">
+      <div class="card">
         <div class="card-label">04</div>
-        <h3 class="card-title">Implementación técnica</h3>
+        <h3 class="card-title">Desarrollo y optimización</h3>
         <p class="card-text">
-          Desarrollo tu sitio con precisión: responsive, SEO básico, integraciones y rendimiento.
+          Implemento tu sitio con código limpio, SEO básico, velocidad optimizada y una experiencia fluida en todos los dispositivos.
         </p>
-      </article>
+      </div>
 
-      <article class="card fade-up delay-5">
+      <div class="card">
         <div class="card-label">05</div>
-        <h3 class="card-title">Optimización & conversión</h3>
+        <h3 class="card-title">Revisión y ajustes</h3>
         <p class="card-text">
-          Ajusto textos, llamadas a la acción y estructura para maximizar claridad y resultados.
+          Revisamos juntas cada sección, ajustamos detalles y aseguramos que todo refleje tu esencia y tus objetivos.
         </p>
-      </article>
+      </div>
+
+      <div class="card">
+        <div class="card-label">06</div>
+        <h3 class="card-title">Entrega y acompañamiento</h3>
+        <p class="card-text">
+          Te entrego tu sitio listo para usar, con guía de uso y soporte inicial para que te sientas segura y en control.
+        </p>
+      </div>
 
     </div>
+  </div>
+</section>
 
+<!-- EXPERIENCIA PREMIUM -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Experiencia</div>
+    <h2 class="section-title fade-up delay-1">Una experiencia clara, humana y profesional</h2>
+
+    <div class="cards-grid fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <div class="card">
+        <h3 class="card-title">Comunicación clara</h3>
+        <p class="card-text">
+          Te acompaño en cada paso con explicaciones simples, decisiones guiadas y un proceso sin estrés.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Diseño con intención</h3>
+        <p class="card-text">
+          Nada es al azar. Cada sección, cada palabra y cada elemento visual tiene un propósito estratégico.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Entrega impecable</h3>
+        <p class="card-text">
+          Tu sitio se entrega pulido, funcional y listo para convertir.  
+          Sin complicaciones, sin tecnicismos innecesarios.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -105,52 +125,13 @@
 <section class="fade-in delay-2">
   <div class="wrapper cta-final">
     <h2>¿Lista para comenzar tu proyecto?</h2>
-    <p>Agendemos una consulta estratégica y revisemos tu marca.</p>
+    <p>Agendemos una consulta estratégica y definamos el camino ideal para tu marca.</p>
     <a href="/calendly/" class="btn">Agendar consulta</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="wrapper">
-    <div class="footer-grid">
-      <div>
-        <img src="/assets/img/branding/logo.png" class="footer-logo">
-        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
-      </div>
-
-      <div>
-        <div class="footer-title">Navegación</div>
-        <ul class="footer-links">
-          <li><a href="/servicios/">Servicios</a></li>
-          <li><a href="/casos/">Casos</a></li>
-          <li><a href="/sobre-mi/">Sobre mí</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/precios/">Precios</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer-title">Contacto</div>
-        <ul class="footer-links">
-          <li>Basada en NJ / NY</li>
-          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
-          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
-          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
-          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Azure Gold Studio</span>
-      <span>Diseño editorial & estrategia digital</span>
-    </div>
-  </div>
-
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</footer>
+{% include footer.html %}
 
 </body>
 </html>
