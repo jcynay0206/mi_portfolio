@@ -976,4 +976,45 @@ footer {
   font-style: italic;
   margin: 1.5rem 0;
 }
-   
+/* AJUSTES EDITORIALES FINOS PARA POSTS */
+.post-wrapper {
+  padding-top: 7rem !important;
+  padding-bottom: 4rem !important;
+  max-width: 760px;
+}
+
+@media (max-width: 768px) {
+  .post-wrapper {
+    max-width: 92% !important;
+  }
+
+  .post-title {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+.post-date {
+  margin-bottom: 1.2rem !important;
+}
+
+.post-content p {
+  margin-bottom: 1.2rem !important;
+}
+
+.post-content ol {
+  padding-left: 1.4rem !important;
+  margin-bottom: 1.6rem !important;
+}
+
+.post-content ol li {
+  margin-bottom: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.post-intro {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
