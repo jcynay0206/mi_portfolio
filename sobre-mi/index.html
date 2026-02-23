@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,129 +13,130 @@
 
 <body>
 
-<!-- MENÚ -->
-<nav class="menu">
-  <div class="menu-inner">
-    <a href="/" class="menu-logo desktop-logo">
-      <img src="/assets/img/branding/logo.png" alt="Azure Gold Studio">
-    </a>
-    <a href="/" class="menu-logo mobile-logo">
-      <span>AZURE GOLD</span> STUDIO
-    </a>
+{% include header.html %}
 
-    <div class="menu-links">
-      <a href="/servicios/">Servicios</a>
-      <a href="/casos/">Casos</a>
-      <a href="/sobre-mi/">Sobre mí</a>
-      <a href="/blog/">Blog</a>
-      <a href="/precios/">Precios</a>
-      <a href="/contacto/">Contacto</a>
-    </div>
-
-    <a href="/calendly/" class="btn btn-outline">Agendar consulta</a>
-  </div>
-</nav>
+<main class="wrapper">
 
 <!-- HERO -->
 <header class="hero hero-watermark fade-in">
   <div class="wrapper">
     <div class="hero-eyebrow">Sobre mí</div>
-    <h1 class="hero-title">Diseño editorial con intención, estrategia y humanidad</h1>
+    <h1 class="hero-title">Soy Yuny Alfonso, directora creativa y diseñadora editorial</h1>
     <p class="hero-subtitle">
-      Ayudo a marcas de servicios a comunicar con claridad, elevar su presencia y convertir con diseño editorial premium.
+      Ayudo a profesionales y marcas de servicios a verse, sentirse y comunicarse como la versión más clara, estratégica y premium de sí mismas.
     </p>
   </div>
 </header>
 
-<!-- SECCIÓN PRINCIPAL -->
+<!-- SECCIÓN 1: HISTORIA HUMANA -->
 <section>
-  <div class="wrapper about-grid">
+  <div class="wrapper">
+    <div class="section-label">Mi historia</div>
+    <h2 class="section-title fade-up delay-1">Una mezcla de estrategia, diseño y humanidad</h2>
 
-    <!-- TEXTO -->
-    <div class="about-text fade-up delay-1">
-      <div class="section-label">Quién soy</div>
-      <h2 class="section-title">Yunersy — Diseñadora editorial & estratega digital</h2>
-
-      <p class="section-subtitle">
-        Soy diseñadora editorial especializada en crear experiencias digitales claras, profesionales y profundamente humanas.  
-        Mi enfoque combina estética premium, estructura estratégica y comunicación que conecta.
-      </p>
-
-      <p>
-        Trabajo con coaches, agentes de bienes raíces, consultores y emprendedores de servicios que necesitan una presencia digital que inspire confianza, eleve su autoridad y convierta más clientes.
-      </p>
-
-      <p>
-        Mi misión es transformar marcas en experiencias editoriales que se sienten profesionales, modernas y alineadas con su propósito.  
-        No solo diseño: traduzco tu valor en una narrativa visual clara, elegante y estratégica.
-      </p>
-
-      <h3 class="section-subtitle" style="margin-top:2rem;">Mi enfoque</h3>
-
-      <ul class="about-list">
-        <li>Diseño editorial premium con intención</li>
-        <li>Estrategia digital centrada en claridad y conversión</li>
-        <li>Arquitectura web limpia, profesional y funcional</li>
-        <li>Experiencias que elevan la percepción de marca</li>
-        <li>Procesos organizados, humanos y transparentes</li>
-      </ul>
-
-      <p style="margin-top:2rem;">
-        Si buscas una presencia digital que refleje tu valor real, te acompañaré a construirla con estrategia, estética y propósito.
-      </p>
-
-      <a href="/calendly/" class="btn" style="margin-top:2rem;">Agendar consulta</a>
-    </div>
-
-    <!-- FOTO -->
-    <div class="about-photo fade-up delay-2">
-      <img src="/assets/img/branding/sobre-mi.jpg" alt="Foto de Yunersy" class="about-img">
-    </div>
-
+    <p class="section-subtitle fade-up delay-2">
+      No siempre tuve claridad. Empecé como muchas emprendedoras: con talento, con visión, pero sin una estructura que realmente comunicara mi valor.  
+      Con el tiempo entendí que el diseño no es solo estética: es claridad, intención y estrategia.  
+      Y desde entonces, mi misión ha sido ayudar a otras mujeres a lograr lo mismo.
+    </p>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<!-- SECCIÓN 2: FILOSOFÍA -->
+<section>
   <div class="wrapper">
-    <div class="footer-grid">
-      <div>
-        <img src="/assets/img/branding/logo.png" class="footer-logo">
-        <p>Diseño editorial para marcas que quieren escalar con claridad, confianza y conversión.</p>
+    <div class="section-label">Filosofía</div>
+    <h2 class="section-title fade-up delay-1">Creo en el diseño que transforma</h2>
+
+    <div class="cards-grid fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <div class="card">
+        <h3 class="card-title">Diseño con intención</h3>
+        <p class="card-text">
+          Cada palabra, cada sección y cada decisión visual tiene un propósito.  
+          Nada es al azar. Todo comunica.
+        </p>
       </div>
 
-      <div>
-        <div class="footer-title">Navegación</div>
-        <ul class="footer-links">
-          <li><a href="/servicios/">Servicios</a></li>
-          <li><a href="/casos/">Casos</a></li>
-          <li><a href="/sobre-mi/">Sobre mí</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/precios/">Precios</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-        </ul>
+      <div class="card">
+        <h3 class="card-title">Estrategia antes que estética</h3>
+        <p class="card-text">
+          Primero entendemos tu negocio, tu cliente ideal y tu mensaje.  
+          Luego diseñamos una experiencia que convierta.
+        </p>
       </div>
 
-      <div>
-        <div class="footer-title">Contacto</div>
-        <ul class="footer-links">
-          <li>Basada en NJ / NY</li>
-          <li><a href="mailto:azuregoldstudio@gmail.com">azuregoldstudio@gmail.com</a></li>
-          <li><a href="https://instagram.com/azuregoldstudio" target="_blank">Instagram</a></li>
-          <li><a href="https://facebook.com/azuregoldstudio" target="_blank">Facebook</a></li>
-          <li><a href="https://wa.me/19086774196" target="_blank">WhatsApp</a></li>
-        </ul>
+      <div class="card">
+        <h3 class="card-title">Experiencia humana</h3>
+        <p class="card-text">
+          Trabajo contigo, no para ti.  
+          Te acompaño en cada paso para que te sientas segura, clara y en control.
+        </p>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Azure Gold Studio</span>
-      <span>Diseño editorial & estrategia digital</span>
     </div>
   </div>
+</section>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</footer>
+<!-- SECCIÓN 3: MI ENFOQUE -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Mi enfoque</div>
+    <h2 class="section-title fade-up delay-1">Lo que me diferencia</h2>
+
+    <div class="cards-grid fade-up delay-2" style="margin-top: 2.5rem;">
+
+      <div class="card">
+        <h3 class="card-title">Editorial y premium</h3>
+        <p class="card-text">
+          Mi estilo combina elegancia, claridad y una estética moderna que eleva la percepción de tu marca.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Arquitectura clara</h3>
+        <p class="card-text">
+          Organizo tu contenido para que tus clientes entiendan quién eres, qué haces y por qué eres la mejor opción.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Acompañamiento real</h3>
+        <p class="card-text">
+          No solo diseño: te guío, te explico, te escucho y te ayudo a tomar decisiones estratégicas.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 4: BLOQUE EMOCIONAL -->
+<section>
+  <div class="wrapper">
+    <div class="section-label">Mi misión</div>
+    <h2 class="section-title fade-up delay-1">Quiero que tu marca se sienta como tú</h2>
+
+    <p class="section-subtitle fade-up delay-2">
+      Mi trabajo no es solo crear un sitio web bonito.  
+      Es ayudarte a construir una marca que te represente, que te dé orgullo, que te abra puertas y que te haga sentir profesional, preparada y poderosa.  
+      Una marca que te permita crecer sin disculpas.
+    </p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="fade-in delay-2">
+  <div class="wrapper cta-final">
+    <h2>¿Lista para elevar tu marca?</h2>
+    <p>Agendemos una consulta estratégica y definamos juntas el camino ideal para tu proyecto.</p>
+    <a href="/calendly/" class="btn">Agendar consulta</a>
+  </div>
+</section>
+
+</main>
+
+{% include footer.html %}
 
 </body>
 </html>
