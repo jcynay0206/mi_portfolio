@@ -658,3 +658,146 @@ footer {
 .delay-2 { animation-delay: 0.3s; }
 .delay-3 { animation-delay: 0.45s; }
 .delay-4 { animation-delay: 0.6s; }
+
+/* ============================================
+   MOBILE — AJUSTE EDITORIAL FINAL
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* ============================
+     MENÚ
+     ============================ */
+  .menu-inner {
+    padding: 0.7rem 0 !important;
+  }
+
+  .menu .btn-outline {
+    display: none !important;
+  }
+
+  .desktop-logo { display: none !important; }
+  .mobile-logo { display: block !important; }
+
+  .menu-links {
+    display: none !important;
+  }
+
+  /* ============================
+     WRAPPER GLOBAL
+     ============================ */
+  .wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* ============================
+     HERO
+     ============================ */
+  .hero {
+    padding-top: 6.2rem !important; /* compensación perfecta */
+    padding-bottom: 3rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.9rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 1.4rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2.4rem !important;
+  }
+
+  .hero .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* ============================
+     SECCIONES
+     ============================ */
+  section {
+    padding: 3rem 0 !important;
+  }
+
+  .section-label {
+    margin-bottom: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* ============================
+     CARDS / GRIDS
+     ============================ */
+  .cards-3,
+  .cases-grid {
+    gap: 2rem !important;
+  }
+
+  .cards-3 + div {
+    margin-top: 2.4rem !important;
+  }
+
+  .case-card,
+  .post-card,
+  .card {
+    padding: 1.5rem 1.3rem !important;
+  }
+
+  .case-card h3,
+  .post-card h3,
+  .card-title {
+    font-size: 1.15rem !important;
+  }
+
+  /* ============================
+     CTA FINAL
+     ============================ */
+  .cta-final h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .cta-final p {
+    margin-bottom: 2rem !important;
+  }
+
+  /* ============================
+     FOOTER
+     ============================ */
+  footer {
+    padding: 2rem 0 !important;
+  }
+
+  .footer-grid {
+    gap: 1.5rem !important;
+  }
+
+  /* ============================
+     AJUSTE GLOBAL DE TIPOGRAFÍA
+     ============================ */
+  h1, h2, h3 {
+    word-break: normal;
+    hyphens: auto;
+  }
+}
+
+/* ============================================
+   MOBILE PEQUEÑO (≤600px)
+   ============================================ */
+@media (max-width: 600px) {
+
+  .metrics-row,
+  .process-grid,
+  .portfolio-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
