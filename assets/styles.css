@@ -800,4 +800,101 @@ footer {
   .portfolio-grid {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+/* ===========================
+   POST INDIVIDUAL — EDITORIAL
+=========================== */
+
+.post-wrapper {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  max-width: 760px;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+.post-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  display: grid;
+  gap: 1.6rem;
+}
+
+.post-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.post-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.post-content img {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.4rem;
+  line-height: 1.7;
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+@media (max-width: 768px) {
+
+  .post-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .post-title {
+    font-size: 1.9rem;
+    line-height: 1.25;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    gap: 1.4rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.25rem;
+  }
 }
