@@ -811,3 +811,80 @@ footer {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0,0,0,0.06);
 }
+/* ============================
+   MOBILE FIXES — AZURE GOLD STUDIO
+   ============================ */
+@media (max-width: 768px) {
+
+  /* HERO — más aire, más editorial */
+  .hero {
+    padding-top: 4rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Contenedor centrado y con respiración */
+  .hero .container,
+  .section .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Título principal */
+  .hero h1 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  /* Subtítulo */
+  .hero p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* CTA — solo uno, centrado y elegante */
+  .hero .btn,
+  .hero a.button,
+  .hero button {
+    margin-bottom: 2.5rem !important;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* Eliminar CTA duplicado si existiera */
+  .hero .btn + .btn {
+    display: none !important;
+  }
+
+  /* Espaciado entre secciones */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Títulos de secciones */
+  section h2 {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Párrafos generales */
+  section p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Ajuste de listas o numeraciones editoriales */
+  .services-list li,
+  .steps li {
+    margin-bottom: 1.2rem !important;
+    line-height: 1.5 !important;
+  }
+}
