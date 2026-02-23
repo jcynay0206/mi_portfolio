@@ -588,6 +588,18 @@ footer {
   gap: 1rem;
   flex-wrap: wrap;
 }
+/* FOTO EDITORIAL SOBRE MÍ */
+.sobre-mi-foto img {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  background: #fff;
+  display: block;
+  margin-left: auto;
+}
+
 
 /* ===========================
    RESPONSIVE
