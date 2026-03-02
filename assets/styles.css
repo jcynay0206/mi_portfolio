@@ -1018,3 +1018,135 @@ footer {
   margin-bottom: 2rem;
   line-height: 1.6;
 }
+/* ============================================
+   AJUSTES EDITORIALES PARA PÁGINA AGENCIA IA
+   ============================================ */
+
+/* Normalización de enlaces dentro de textos (IA + Blog) */
+p a,
+li a,
+.card-text a,
+.post-content a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+p a:hover,
+li a:hover,
+.card-text a:hover,
+.post-content a:hover {
+  opacity: 0.7;
+}
+
+/* Evitar scroll lateral en secciones IA */
+.ia-wrapper,
+.ia-container,
+.ia-section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Grids IA */
+.ia-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ia-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Ajustes responsive IA */
+@media (max-width: 768px) {
+
+  /* Tipografías IA */
+  .ia-hero-title,
+  .ia-section-title,
+  .ia-block-title {
+    font-size: 1.7rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .ia-hero-subtitle,
+  .ia-section-text,
+  .ia-block-text,
+  .ia-feature-text {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Wrapper IA */
+  .ia-wrapper {
+    padding-left: 1.4rem !important;
+    padding-right: 1.4rem !important;
+  }
+
+  /* Grids IA responsive */
+  .ia-grid-3,
+  .ia-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.6rem !important;
+  }
+
+  /* Espaciado IA */
+  .ia-section {
+    padding: 2.8rem 0 !important;
+  }
+}
+
+/* Ajuste editorial para títulos IA */
+.ia-hero-title,
+.ia-section-title,
+.ia-block-title {
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* ============================================
+   AJUSTES EXTRA PARA BLOG (ARTÍCULOS)
+   ============================================ */
+
+/* Evitar enlaces azules en posts */
+.post-content a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+}
+
+.post-content a:hover {
+  opacity: 0.7;
+}
+
+/* Ajuste de imágenes en posts */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Ajuste de listas en posts */
+.post-content ul,
+.post-content ol {
+  padding-left: 1.4rem;
+  line-height: 1.7;
+}
+
+/* Ajuste de títulos en posts */
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .post-content h3 {
+    font-size: 1.25rem !important;
+  }
+}
